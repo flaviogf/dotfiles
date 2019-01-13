@@ -21,3 +21,4 @@ set relativenumber
 set number
 colorscheme onedark
 syntax on
+
