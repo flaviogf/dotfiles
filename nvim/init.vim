@@ -15,7 +15,7 @@ nmap <leader>d <Plug>(ale_fix)
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
-\   'python': ['autopep8'],
+\   'python': ['autopep8', 'isort'],
 \}
 let g:ale_fix_on_save = 1
 
