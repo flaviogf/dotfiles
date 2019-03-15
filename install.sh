@@ -1,9 +1,6 @@
 # git
 apt install git -y
 
-# curl
-apt install curl -y
-
 # chromium
 snap install chromium
 
