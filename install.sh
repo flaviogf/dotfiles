@@ -8,4 +8,4 @@ snap install chromium
 snap install vscode --classic
 
 # tmux
-snap install tmux
+snap install tmux --classic
