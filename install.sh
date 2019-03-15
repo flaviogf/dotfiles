@@ -1,6 +1,9 @@
 # git
 apt install git -y
 
+# neovim
+apt install neovim -y
+
 # chromium
 snap install chromium
 
