@@ -7,21 +7,22 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'joshdick/onedark.vim'
 call plug#end()
 
+" vim
 let mapleader="\<space>"
+colorscheme onedark
+set relativenumber
+set number
+syntax on
 
+" nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
+" alefix
 nmap <leader>d <Plug>(ale_fix)
-
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \   'python': ['isort', 'yapf'],
 \}
 let g:ale_fix_on_save = 1
-
-set relativenumber
-set number
-
-colorscheme onedark
-syntax on

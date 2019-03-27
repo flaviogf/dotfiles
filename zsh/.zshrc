@@ -63,8 +63,8 @@ ZSH_THEME="kafeitu"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git,
-	zsh-completions,
+	git
+	zsh-completions
 	zsh-syntax-highlighting
 )
 

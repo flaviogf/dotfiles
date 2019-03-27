@@ -13,5 +13,13 @@ init_vim() {
 	curl -fLo $ARQUIVO --create-dirs $URL
 }
 
+# zsh
+zsh() {
+	local = ARQUIVO="$HOME/.zshrc"
+	local URL="https://raw.githubusercontent.com/flaviogf/dotfiles/master/zsh/.zshrc"
+	curl -fLo $ARQUIVO --create-dirs $URL
+}
+
 vim_plug
 init_vim
+zsh
