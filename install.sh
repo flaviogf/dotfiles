@@ -1,14 +1,14 @@
 # git
 echo "Instalando git"
-apt install git -yq
+apt install git -y
 
 # neovim
 echo "Instalando neovim"
-apt install neovim -yq
+apt install neovim -y
 
 # zsh
 echo "Instalando zsh"
-apt install zsh -yq
+apt install zsh -y
 
 echo "Configurando zsh"
 chsh -s /bin/zsh
