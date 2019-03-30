@@ -10,9 +10,6 @@ apt install neovim -y
 echo "Instalando zsh"
 apt install zsh -y
 
-echo "Configurando zsh"
-chsh -s /usr/bin/zsh
-
 # oh-my-zsh
 echo "Instalando oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
