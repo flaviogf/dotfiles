@@ -10,7 +10,17 @@ call plug#end()
 " vim
 let mapleader="\<space>"
 colorscheme onedark
+set encoding=utf-8
 set relativenumber
+set nowritebackup
+set softtabstop=2
+set shiftwidth=2
+set smartindent
+set noswapfile
+set expandtab
+set nobackup
+set hlsearch
+set nowrap
 set number
 syntax on
 
