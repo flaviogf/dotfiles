@@ -25,10 +25,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 echo "Instalando chromium"
 snap install chromium
 
-# vscode
-echo "Instalando vscode"
-snap install vscode --classic
-
 # tmux
 echo "Instalando tmux"
 snap install tmux --classic
