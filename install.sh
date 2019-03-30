@@ -11,7 +11,7 @@ echo "Instalando zsh"
 apt install zsh -y
 
 echo "Configurando zsh"
-chsh -s /bin/zsh
+chsh -s /usr/bin/zsh
 
 # oh-my-zsh
 echo "Instalando oh my zsh"
