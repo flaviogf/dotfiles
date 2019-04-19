@@ -11,8 +11,9 @@ init_vim() {
 	curl -fLo $ARQUIVO --create-dirs $URL
 }
 
-# zshrc
-zshrc() {
+# zsh
+zsh() {
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	local ARQUIVO="$HOME/.zshrc"
 	local URL="https://raw.githubusercontent.com/flaviogf/dotfiles/master/zsh/.zshrc"
 	curl -fLo $ARQUIVO --create-dirs $URL
@@ -22,4 +23,4 @@ zshrc() {
 
 vim_plug
 init_vim
-zshrc
+zsh
