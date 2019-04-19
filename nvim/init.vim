@@ -2,8 +2,8 @@ call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'mattn/emmet-vim'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'janko-m/vim-test'
 Plug 'joshdick/onedark.vim'
 call plug#end()
 
@@ -29,10 +29,15 @@ nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " alefix
-nmap <leader>d <Plug>(ale_fix)
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'python': ['isort', 'yapf'],
-\}
+nmap <leader>f <Plug>(ale_fix)
 let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace'],
+\}
+
+" jedi
+let g:jedi#completions_command = "<C-N>"
+
+" vim-test
+let test#python#runner = 'pytest'
+let test#strategy = 'neovim'
