@@ -32,7 +32,7 @@ let NERDTreeShowHidden=1
 nmap <leader>f <Plug>(ale_fix)
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 
 " jedi
