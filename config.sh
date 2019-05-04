@@ -20,6 +20,15 @@ config_zsh() {
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 }
 
+# tmux
+config_tmux() {
+	local ARQUIVO="$HOME/.tmux.conf"
+	local URL="https://raw.githubusercontent.com/flaviogf/dotfiles/master/tmux/.tmux.conf"
+	curl -fLo $ARQUIVO --create-dirs $URL
+}
+
 config_vim_plug
 config_nvim
 config_zsh
+config_tmux
+
