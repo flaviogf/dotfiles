@@ -8,6 +8,7 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " vim
+set guifont=Fira\ Code:h12
 let mapleader="\<space>"
 colorscheme onedark
 set encoding=utf-8
