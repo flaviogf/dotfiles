@@ -2,6 +2,14 @@
 echo "Instalando git"
 apt install git -y
 
+# build-essential
+echo "Installando build-essential"
+apt install build-essential -y
+
+# python
+echo "Installando python3.7"
+apt install python3.7 python3.7-dev python3.7-venv
+
 # neovim
 echo "Instalando neovim"
 apt install neovim -y
