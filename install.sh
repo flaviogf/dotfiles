@@ -10,7 +10,11 @@ apt install curl -y
 echo "Installing build-essential"
 apt install build-essential -y
 
-# python
+# python3
+echo "Installing python3"
+apt install python3 python3-dev python3-venv -y
+
+# python3.7
 echo "Installing python3.7"
 apt install python3.7 python3.7-dev python3.7-venv -y
 
