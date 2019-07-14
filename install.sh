@@ -29,7 +29,3 @@ snap install tmux --classic
 # vscode
 echo "Instalando vscode"
 snap install code --classic
-
-# pycharm
-echo "Instalando pycharm"
-snap install pycharm-professional --classic
