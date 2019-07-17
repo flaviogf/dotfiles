@@ -4,8 +4,6 @@ ZSH_THEME="kafeitu"
 
 DISABLE_AUTO_TITLE="true"
 
-ENABLE_CORRECTION="true"
-
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
