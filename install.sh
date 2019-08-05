@@ -1,11 +1,3 @@
-# git
-echo "Installing git"
-apt install git -y
-
-# curl
-echo "Installing curl"
-apt install curl -y
-
 # build-essential
 echo "Installing build-essential"
 apt install build-essential -y
