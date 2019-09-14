@@ -2,13 +2,10 @@ call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'davidhalter/jedi-vim'
-Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " vim
 let mapleader="\<space>"
-colorscheme onedark
 set encoding=utf-8
 set relativenumber
 set nowritebackup
@@ -35,5 +32,3 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 
-" jedi
-let g:jedi#completions_command = "<C-N>"
