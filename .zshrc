@@ -11,3 +11,6 @@ source $ZSH/oh-my-zsh.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte-2.91.sh
 fi
+
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
