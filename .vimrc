@@ -4,8 +4,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 call plug#end()
 
-" vim
-let mapleader="\<space>"
+let mapleader=","
 set encoding=utf-8
 set relativenumber
 set nowritebackup
@@ -20,15 +19,9 @@ set nowrap
 set number
 syntax on
 
-" nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-" alefix
 nmap <leader>f <Plug>(ale_fix)
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   'python': ['isort', 'autopep8'],
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
-
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
