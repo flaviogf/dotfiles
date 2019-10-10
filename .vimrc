@@ -1,6 +1,8 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/vim-emoji'
 Plug 'tomasr/molokai'
@@ -12,6 +14,7 @@ let mapleader=','
 colorscheme molokai
 
 set encoding=utf-8
+set guifont=Cascadia\ Code
 set relativenumber
 set nowritebackup
 set softtabstop=2

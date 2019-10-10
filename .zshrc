@@ -9,6 +9,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
+source $HOME/.asdf/plugins/java/set-java-home.sh
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte-2.91.sh
