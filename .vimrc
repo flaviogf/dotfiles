@@ -14,7 +14,7 @@ let mapleader=','
 colorscheme molokai
 
 set encoding=utf-8
-set guifont=Cascadia\ Code
+set guifont=Fira\ Code
 set relativenumber
 set nowritebackup
 set softtabstop=2
