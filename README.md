@@ -1,3 +1,23 @@
-# Dotfiles
+<h1 align="center">
+  Dotfiles
+</h1>
 
-Dotfiles.
+<p align="center">
+  <a href="#rocket-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
+
+## :rocket: Project
+
+:books: This repository is destined to save all my dotfiles. 
+
+## :computer: Techs
+
+- Vim
+- Windows Terminal.
+- Zsh
+
+## :memo: License
+
+This project contains the MIT license. See the file [LICENSE](LICENSE).
