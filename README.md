@@ -10,7 +10,7 @@
 
 ## :rocket: Project
 
-:books: This repository is destined to save all my dotfiles. 
+:scroll: This repository is destined to save all my dotfiles.
 
 ## :computer: Techs
 
