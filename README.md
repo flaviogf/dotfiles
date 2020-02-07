@@ -15,6 +15,7 @@
 ## :computer: Techs
 
 - Vim
+- VSCode
 - Windows Terminal.
 - Zsh
 
