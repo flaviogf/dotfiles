@@ -36,5 +36,4 @@ nmap <leader>f <Plug>(ale_fix)
 let g:ale_sign_error = emoji#for('exclamation')
 let g:ale_sign_warning = emoji#for('question')
 let g:ale_fix_on_save = 1
-let g:ale_linters = {'python': ['pylama']}
-let g:ale_fixers = {'javascript': ['eslint', 'prettier'], 'python': ['isort', 'autopep8'], '*': ['remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = {'javascript': ['eslint', 'prettier'], '*': ['remove_trailing_lines', 'trim_whitespace']}
