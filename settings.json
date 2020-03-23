@@ -1,26 +1,26 @@
 {
-  "editor.fontFamily": "Cascadia Code",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.rulers": [80],
-  "explorer.compactFolders": false,
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#abb2bf",
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.panel.defaultLocation": "right",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.rulers": [80],
+    "explorer.compactFolders": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.colorCustomizations": {
+      "editorRuler.foreground": "#abb2bf"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.panel.defaultLocation": "right",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
