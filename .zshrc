@@ -11,7 +11,7 @@ source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 
 export PATH="$(yarn global bin):$PATH"
-export JAVA_HOME=$(asdf which java)
+export JAVA_HOME=$(asdf where java)
 export NODEJS_CHECK_SIGNATURES=no
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
