@@ -7,7 +7,7 @@
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
   },
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
