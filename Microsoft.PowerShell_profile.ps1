@@ -15,3 +15,9 @@ function Invoke-Node {
 }
 
 Set-Alias node Invoke-Node
+
+function Invoke-Python {
+    docker run -it --rm python:3.8.2 python $args
+}
+
+Set-Alias python Invoke-Python
