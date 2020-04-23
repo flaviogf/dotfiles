@@ -9,7 +9,7 @@ function Invoke-DockerRun {
 }
 
 function Invoke-Haskell {
-    Invoke-DockerRun haskell:8 haskell $args
+    Invoke-DockerRun haskell:8 $args
 }
 
 function Invoke-Node {
