@@ -8,7 +8,7 @@
     "editorRuler.foreground": "#808080"
   },
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
   "workbench.sideBar.location": "right",
