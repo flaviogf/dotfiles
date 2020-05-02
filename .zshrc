@@ -12,9 +12,11 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-autoload -U compinit && compinit
-
+source $HOME/.asdf/plugins/java/set-java-home.zsh
 source $ZSH/oh-my-zsh.sh
 
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$(yarn global bin):$PATH"
+export PATH="/snap/bin:$PATH"
+
+autoload -U compinit && compinit
