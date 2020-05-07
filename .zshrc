@@ -1,4 +1,4 @@
-export ZSH="/home/flaviogf/.oh-my-zsh"
+export ZSH="/home/flavio/.oh-my-zsh"
 
 ZSH_THEME="half-life"
 
