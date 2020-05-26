@@ -15,8 +15,10 @@ plugins=(
 source $HOME/.asdf/plugins/java/set-java-home.zsh
 source $ZSH/oh-my-zsh.sh
 
+export DOTNET_ROOT=$(asdf where dotnet-core)
 export NODEJS_CHECK_SIGNATURES=no
-export PATH="$(yarn global bin):$PATH"
-export PATH="/snap/bin:$PATH"
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:/home/flavio/.dotnet/tools"
+export PATH="$PATH:/snap/bin"
 
 autoload -U compinit && compinit
