@@ -1,8 +1,11 @@
 {
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 17,
   "editor.rulers": [120],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "explorer.compactFolders": false,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
