@@ -12,6 +12,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+export DOTNET_ROOT=$(asdf where dotnet-core)
 source $HOME/.asdf/plugins/java/set-java-home.zsh
 source $ZSH/oh-my-zsh.sh
 
