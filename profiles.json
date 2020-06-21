@@ -7,8 +7,8 @@
       "name": "Windows PowerShell",
       "commandline": "powershell.exe",
       "hidden": false,
-      "fontFace": "Cascadia Code",
-      "fontSize": 10,
+      "fontFace": "Fira Code",
+      "fontSize": 12,
       "useAcrylic": true,
       "acrylicOpacity": 0.8,
       "cursorShape": "vintage"
@@ -18,8 +18,8 @@
       "name": "cmd",
       "commandline": "cmd.exe",
       "hidden": false,
-      "fontFace": "Cascadia Code",
-      "fontSize": 10,
+      "fontFace": "Fira Code",
+      "fontSize": 12,
       "useAcrylic": true,
       "acrylicOpacity": 0.8,
       "cursorShape": "vintage"
@@ -29,8 +29,8 @@
       "hidden": false,
       "name": "Ubuntu",
       "source": "Windows.Terminal.Wsl",
-      "fontFace": "Cascadia Code",
-      "fontSize": 10,
+      "fontFace": "Fira Code",
+      "fontSize": 12,
       "useAcrylic": true,
       "acrylicOpacity": 0.8,
       "cursorShape": "vintage"
