@@ -15,7 +15,6 @@ plugins=(
 source $HOME/.asdf/plugins/java/set-java-home.zsh
 source $ZSH/oh-my-zsh.sh
 
-export DOTNET_ROOT=$(asdf where dotnet-core)
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:/home/flavio/.dotnet/tools"
