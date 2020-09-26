@@ -4,9 +4,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/vim-emoji'
 Plug 'tomasr/molokai'
-Plug 'w0rp/ale'
 call plug#end()
 
 let mapleader=','
@@ -31,9 +29,3 @@ syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-nmap <leader>f <Plug>(ale_fix)
-let g:ale_sign_error = emoji#for('exclamation')
-let g:ale_sign_warning = emoji#for('question')
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {'javascript': ['eslint', 'prettier'], '*': ['remove_trailing_lines', 'trim_whitespace']}
