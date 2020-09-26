@@ -8,17 +8,17 @@ plugins=(
     asdf
     git
     yarn
+    zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
 )
 
-export DOTNET_ROOT=$(asdf where dotnet-core)
-source $HOME/.asdf/plugins/java/set-java-home.zsh
 source $ZSH/oh-my-zsh.sh
 
+export DOTNET_ROOT=$(asdf where dotnet-core)
+export MSBuildSDKsPath="$(asdf where dotnet-core)/sdk/3.1.402/Sdks"
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:/home/flavio/.dotnet/tools"
-export PATH="$PATH:/snap/bin"
 
 autoload -U compinit && compinit
