@@ -7,12 +7,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tomasr/molokai'
 call plug#end()
 
-let mapleader=','
-
-colorscheme molokai
-
 set encoding=utf-8
-set guifont=Fira\ Code
+set guifont=JetBrains\ Mono
 set relativenumber
 set nowritebackup
 set softtabstop=2
@@ -25,6 +21,7 @@ set hlsearch
 set nowrap
 set number
 
+colorscheme molokai
 syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
