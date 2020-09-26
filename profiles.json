@@ -4,9 +4,9 @@
   "profiles": [
     {
       "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\windows-minimal-back-to-basics-5k-kf-2560x1080.jpg",
-      "backgroundImageOpacity": 0.2,
-      "colorScheme": "Campbell",
+      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\synthwave_background-wallpaper-3440x1440.jpg",
+      "backgroundImageOpacity": 0.5,
+      "colorScheme": "synthwave-everything",
       "commandline": "powershell.exe",
       "cursorShape": "vintage",
       "fontFace": "Cascadia Code",
@@ -16,8 +16,8 @@
     },
     {
       "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\windows-minimal-back-to-basics-5k-kf-2560x1080.jpg",
-      "backgroundImageOpacity": 0.2,
+      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\synthwave_background-wallpaper-3440x1440.jpg",
+      "backgroundImageOpacity": 0.5,
       "colorScheme": "Campbell",
       "commandline": "cmd.exe",
       "cursorShape": "vintage",
@@ -28,8 +28,8 @@
     },
     {
       "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\windows-minimal-back-to-basics-5k-kf-2560x1080.jpg",
-      "backgroundImageOpacity": 0.2,
+      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\synthwave_background-wallpaper-3440x1440.jpg",
+      "backgroundImageOpacity": 0.5,
       "colorScheme": "Campbell",
       "cursorShape": "vintage",
       "hidden": false,
@@ -40,8 +40,8 @@
     },
     {
       "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\windows-minimal-back-to-basics-5k-kf-2560x1080.jpg",
-      "backgroundImageOpacity": 0.2,
+      "backgroundImage": "C:\\Users\\flavi\\OneDrive\\arquivos\\media\\imagens\\synthwave_background-wallpaper-3440x1440.jpg",
+      "backgroundImageOpacity": 0.5,
       "colorScheme": "Campbell",
       "cursorShape": "vintage",
       "hidden": false,
@@ -51,6 +51,28 @@
       "source": "Windows.Terminal.Azure"
     }
   ],
-  "schemes": [],
+  "schemes": [
+    {
+      "name": "synthwave-everything",
+      "black": "#fefefe",
+      "red": "#f97e72",
+      "green": "#72f1b8",
+      "yellow": "#fede5d",
+      "blue": "#6d77b3",
+      "purple": "#c792ea",
+      "cyan": "#f772e0",
+      "white": "#fefefe",
+      "brightBlack": "#fefefe",
+      "brightRed": "#f88414",
+      "brightGreen": "#72f1b8",
+      "brightYellow": "#fff951",
+      "brightBlue": "#36f9f6",
+      "brightPurple": "#e1acff",
+      "brightCyan": "#f92aad",
+      "brightWhite": "#fefefe",
+      "background": "#2a2139",
+      "foreground": "#f0eff1"
+    }
+  ],
   "keybindings": []
 }
