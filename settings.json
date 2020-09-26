@@ -2,7 +2,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.rulers": [120],
@@ -10,10 +10,11 @@
     "javascript": "javascriptreact"
   },
   "explorer.compactFolders": false,
+  "omnisharp.path": "latest",
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
   },
-  "workbench.colorTheme": "An Old Hope",
+  "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
