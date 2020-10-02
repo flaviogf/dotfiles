@@ -10,7 +10,6 @@
     "javascript": "javascriptreact"
   },
   "explorer.compactFolders": false,
-  "omnisharp.path": "latest",
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
   },
