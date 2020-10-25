@@ -1,6 +1,6 @@
 export ZSH="/home/flavio/.oh-my-zsh"
 
-ZSH_THEME="half-life"
+ZSH_THEME="spaceship"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -20,5 +20,8 @@ export MSBuildSDKsPath="$(asdf where dotnet-core)/sdk/3.1.402/Sdks"
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:/home/flavio/.dotnet/tools"
+
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
 
 autoload -U compinit && compinit
