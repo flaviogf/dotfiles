@@ -23,5 +23,6 @@ export PATH="$PATH:/home/flavio/.dotnet/tools"
 
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_USER_SHOW=always
 
 autoload -U compinit && compinit
