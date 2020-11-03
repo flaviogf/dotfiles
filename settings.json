@@ -5,7 +5,9 @@
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
+  "editor.insertSpaces": true,
   "editor.rulers": [120],
+  "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
