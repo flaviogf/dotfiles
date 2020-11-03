@@ -15,8 +15,8 @@
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
   },
-  "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
   "workbench.sideBar.location": "right",

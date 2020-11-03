@@ -4,7 +4,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
-Plug 'tomasr/molokai'
 call plug#end()
 
 set encoding=utf-8
@@ -21,7 +20,6 @@ set hlsearch
 set nowrap
 set number
 
-colorscheme molokai
 syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
