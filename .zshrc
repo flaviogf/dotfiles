@@ -16,7 +16,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export DOTNET_ROOT=$(asdf where dotnet-core)
-export MSBuildSDKsPath="$(asdf where dotnet-core)/sdk/5.0.102/Sdks"
+export MSBuildSDKsPath="$(asdf where dotnet-core)/sdk/5.0.103/Sdks"
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:/home/flavio/.dotnet/tools"
