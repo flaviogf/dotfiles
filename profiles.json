@@ -4,88 +4,37 @@
   "profiles": [
     {
       "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-      "colorScheme": "One Dark",
       "commandline": "powershell.exe",
-      "cursorShape": "vintage",
       "fontFace": "JetBrains Mono",
-      "fontSize": 15,
-      "hidden": false,
-      "name": "Windows PowerShell"
+      "fontSize": 12,
+      "name": "Windows PowerShell",
+      "useAcrylic": true
     },
     {
       "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-      "colorScheme": "One Dark",
       "commandline": "cmd.exe",
-      "cursorShape": "vintage",
-      "hidden": false,
       "fontFace": "JetBrains Mono",
-      "fontSize": 15,
-      "name": "cmd"
+      "fontSize": 12,
+      "name": "cmd",
+      "useAcrylic": true
     },
     {
       "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-      "colorScheme": "One Dark",
-      "cursorShape": "vintage",
-      "hidden": false,
       "fontFace": "JetBrains Mono",
-      "fontSize": 15,
+      "fontSize": 12,
       "name": "Ubuntu",
-      "source": "Windows.Terminal.Wsl"
+      "source": "Windows.Terminal.Wsl",
+      "useAcrylic": true
     },
     {
       "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-      "colorScheme": "One Dark",
-      "cursorShape": "vintage",
-      "hidden": false,
       "fontFace": "JetBrains Mono",
-      "fontSize": 15,
+      "fontSize": 12,
       "name": "Azure Cloud Shell",
-      "source": "Windows.Terminal.Azure"
+      "source": "Windows.Terminal.Azure",
+      "useAcrylic": true
     }
   ],
-  "schemes": [
-    {
-      "name": "synthwave-everything",
-      "black": "#fefefe",
-      "red": "#f97e72",
-      "green": "#72f1b8",
-      "yellow": "#fede5d",
-      "blue": "#6d77b3",
-      "purple": "#c792ea",
-      "cyan": "#f772e0",
-      "white": "#fefefe",
-      "brightBlack": "#fefefe",
-      "brightRed": "#f88414",
-      "brightGreen": "#72f1b8",
-      "brightYellow": "#fff951",
-      "brightBlue": "#36f9f6",
-      "brightPurple": "#e1acff",
-      "brightCyan": "#f92aad",
-      "brightWhite": "#fefefe",
-      "background": "#2a2139",
-      "foreground": "#f0eff1"
-    },
-    {
-      "name": "One Dark",
-      "black": "#1e2127",
-      "red": "#e06c75",
-      "green": "#98c379",
-      "yellow": "#d19a66",
-      "blue": "#61afef",
-      "purple": "#c678dd",
-      "cyan": "#56b6c2",
-      "white": "#abb2bf",
-      "brightBlack": "#5c6370",
-      "brightRed": "#e06c75",
-      "brightGreen": "#98c379",
-      "brightYellow": "#d19a66",
-      "brightBlue": "#61afef",
-      "brightPurple": "#c678dd",
-      "brightCyan": "#56b6c2",
-      "brightWhite": "#ffffff",
-      "background": "#1e2127",
-      "foreground": "#abb2bf"
-    }
-  ],
+  "schemes": [],
   "keybindings": []
 }
