@@ -1,4 +1,4 @@
-export ZSH="/home/flavio/.oh-my-zsh"
+export ZSH="/home/flaviogf/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -15,11 +15,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export DOTNET_ROOT=$(asdf where dotnet-core)
-export MSBuildSDKsPath="$(asdf where dotnet-core)/sdk/5.0.103/Sdks"
 export NODEJS_CHECK_SIGNATURES=no
 export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:/home/flavio/.dotnet/tools"
 
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
