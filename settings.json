@@ -16,8 +16,8 @@
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
   },
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
   "workbench.sideBar.location": "right",
