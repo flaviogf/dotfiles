@@ -12,6 +12,9 @@
   },
   "explorer.compactFolders": false,
   "markdown.preview.fontSize": 16,
+  "remote.SSH.remotePlatform": {
+    "default": "linux"
+  },
   "terminal.integrated.fontSize": 16,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
