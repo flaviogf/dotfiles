@@ -4,6 +4,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 set encoding=utf-8
@@ -19,6 +20,8 @@ set nobackup
 set hlsearch
 set nowrap
 set number
+
+colorscheme dracula
 
 syntax on
 
