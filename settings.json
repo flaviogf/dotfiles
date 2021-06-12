@@ -11,10 +11,10 @@
     "javascript": "javascriptreact"
   },
   "explorer.compactFolders": false,
-  "markdown.preview.fontSize": 16,
-  "remote.SSH.remotePlatform": {
-    "default": "linux"
+  "files.associations": {
+    "*.erb": "html"
   },
+  "markdown.preview.fontSize": 16,
   "terminal.integrated.fontSize": 16,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
