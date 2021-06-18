@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 set encoding=utf-8
