@@ -6,7 +6,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 set encoding=utf-8
@@ -29,3 +31,9 @@ syntax on
 
 nmap <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'ruby': ['rubocop'] }
+let g:ale_linters = { 'ruby': ['rubocop'] }
+let g:ale_linters_explicit = 1
+
+let g:airline#extensions#ale#enabled = 1
