@@ -17,8 +17,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source $HOME/.fzf.zsh
+
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_USER_SHOW=always
 
 autoload -Uz compinit && compinit
+
+export PATH="$PATH:$(yarn global bin)"
