@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.fzf.zsh
 
-SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SYMBOL="$GREEN⬢"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_USER_SHOW=always
 
