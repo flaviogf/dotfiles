@@ -8,6 +8,7 @@ plugins=(
     asdf
     docker
     docker-compose
+    docker-machine
     git
     gitignore
     zsh-autosuggestions
