@@ -12,7 +12,7 @@ Plug 'w0rp/ale'
 call plug#end()
 
 set encoding=utf-8
-set guifont=JetBrains\ Mono\ 14
+set guifont=JetBrains\ Mono
 set relativenumber
 set nowritebackup
 set softtabstop=2
