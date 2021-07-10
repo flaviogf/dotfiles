@@ -1,14 +1,15 @@
 call plug#begin()
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 set encoding=utf-8
@@ -29,11 +30,15 @@ colorscheme dracula
 
 syntax on
 
-nmap <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeWinPos = "right"
 
 let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'ruby': ['rubocop'] }
 let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:ale_linters_explicit = 1
 
 let g:airline#extensions#ale#enabled = 1
+
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-f> :ALEFix<CR>
+nmap <C-p> :Files<CR>
