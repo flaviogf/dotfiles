@@ -12,6 +12,10 @@ Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
 call plug#end()
 
+colorscheme dracula
+
+syntax on
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -33,9 +37,7 @@ set hlsearch
 set nowrap
 set number
 
-colorscheme dracula
-
-syntax on
+let mapleader = '\'
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinPos = "right"
@@ -46,6 +48,6 @@ let g:ale_linters_explicit = 1
 
 let g:airline#extensions#ale#enabled = 1
 
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :ALEFix<CR>
-nnoremap <C-p> :FZF<CR>
+nnoremap <leader>b :NERDTreeToggle<CR>
+nnoremap <leader>f :ALEFix<CR>
+nnoremap <leader>p :FZF<CR>
