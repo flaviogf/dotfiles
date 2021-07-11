@@ -21,6 +21,7 @@ set shiftwidth=2
 set smartindent
 set noswapfile
 set expandtab
+set tabstop=2
 set nobackup
 set hlsearch
 set nowrap
@@ -39,6 +40,6 @@ let g:ale_linters_explicit = 1
 
 let g:airline#extensions#ale#enabled = 1
 
-nmap <C-n> :NERDTreeToggle<CR>
-nmap <C-f> :ALEFix<CR>
-nmap <C-p> :Files<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :ALEFix<CR>
+nnoremap <C-p> :FZF<CR>
