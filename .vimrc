@@ -12,16 +12,20 @@ Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
 call plug#end()
 
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+set wildmenu
+set wildmode=full
+
 set encoding=utf-8
 set guifont=JetBrains\ Mono
 set relativenumber
 set nowritebackup
-set softtabstop=2
-set shiftwidth=2
 set smartindent
 set noswapfile
-set expandtab
-set tabstop=2
 set nobackup
 set hlsearch
 set nowrap
