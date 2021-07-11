@@ -20,6 +20,8 @@ set expandtab
 set wildmenu
 set wildmode=full
 
+set history=200
+
 set encoding=utf-8
 set guifont=JetBrains\ Mono
 set relativenumber
