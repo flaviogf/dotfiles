@@ -26,6 +26,8 @@ set wildmode=full
 
 set history=200
 
+set mouse=a
+
 set encoding=utf-8
 set guifont=JetBrains\ Mono
 set relativenumber
@@ -50,4 +52,4 @@ let g:airline#extensions#ale#enabled = 1
 
 nnoremap <leader>b :NERDTreeToggle<CR>
 nnoremap <leader>f :ALEFix<CR>
-nnoremap <leader>p :FZF<CR>
+nnoremap <leader>p :Files<CR>
