@@ -48,5 +48,6 @@ let g:airline#extensions#ale#enabled = 1
 
 let mapleader = ','
 
+nnoremap <leader>e :Explore<CR>
 nnoremap <leader>f :ALEFix<CR>
 nnoremap <leader>p :Files<CR>
