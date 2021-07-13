@@ -23,11 +23,6 @@ set history=200
 
 set incsearch
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
 set mouse=a
 
 set nowrap
@@ -36,6 +31,11 @@ set relativenumber
 set number
 
 set smartindent
+
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 set wildmenu
 set wildmode=full
