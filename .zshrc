@@ -27,3 +27,5 @@ SPACESHIP_USER_SHOW=always
 autoload -Uz compinit && compinit
 
 export PATH="$PATH:$(yarn global bin)"
+
+export FZF_DEFAULT_COMMAND='fdfind -H -E .git -t f'
