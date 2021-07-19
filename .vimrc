@@ -30,6 +30,8 @@ set nowrap
 set relativenumber
 set number
 
+set smartcase
+
 set smartindent
 
 set tabstop=2
