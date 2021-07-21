@@ -50,10 +50,11 @@ let g:airline#extensions#ale#enabled = 1
 
 let mapleader = ','
 
+augroup ruby
+  autocmd!
+  autocmd FileType ruby nnoremap <f5> :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
+augroup END
+
 nnoremap <leader>e :Explore<CR>
-
 nnoremap <leader>f :ALEFix<CR>
-
 nnoremap <leader>p :Files<CR>
-
-nnoremap <f5> :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
