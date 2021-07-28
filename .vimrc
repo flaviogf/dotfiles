@@ -15,15 +15,23 @@ colorscheme dracula
 
 syntax on
 
+set colorcolumn=120
+
+set cursorline
+
 set encoding=utf-8
 
 set guifont=JetBrains\ Mono
 
 set history=200
 
+set ignorecase
+
 set incsearch
 
 set mouse=a
+
+set nocompatible
 
 set nowrap
 
