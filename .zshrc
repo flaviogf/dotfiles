@@ -20,9 +20,11 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.fzf.zsh
 
-SPACESHIP_CHAR_SYMBOL="➤"
 SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_USER_SHOW=always
+SPACESHIP_CHAR_SYMBOL="➤"
+SPACESHIP_USER_SHOW=needed
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_GCLOUD_SHOW=false
 
 autoload -Uz compinit && compinit
 
