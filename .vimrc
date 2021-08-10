@@ -31,6 +31,8 @@ set incsearch
 
 set mouse=a
 
+set paste
+
 set nocompatible
 
 set nowrap
