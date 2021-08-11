@@ -14,6 +14,7 @@ plugins=(
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
+    tmuxinator
 )
 
 source $ZSH/oh-my-zsh.sh
