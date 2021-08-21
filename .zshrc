@@ -33,4 +33,4 @@ export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND='fdfind -H -E .git -t f'
 
-export PATH="$PATH:$(yarn global bin)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
