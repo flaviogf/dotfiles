@@ -31,6 +31,6 @@ autoload -Uz compinit && compinit
 
 export EDITOR=vim
 
-export FZF_DEFAULT_COMMAND='fdfind -H -E .git -t f'
+export FZF_DEFAULT_COMMAND='fd -H -E .git -t f'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
