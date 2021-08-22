@@ -8,7 +8,6 @@ Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 colorscheme dracula
