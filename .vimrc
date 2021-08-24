@@ -14,6 +14,8 @@ colorscheme dracula
 
 syntax on
 
+set clipboard=unnamedplus
+
 set colorcolumn=120
 
 set cursorline
