@@ -24,8 +24,6 @@ source $HOME/.fzf.zsh
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_SYMBOL="➤"
 SPACESHIP_USER_SHOW=always
-SPACESHIP_PACKAGE_SHOW=false
-SPACESHIP_GCLOUD_SHOW=false
 
 autoload -Uz compinit && compinit
 
