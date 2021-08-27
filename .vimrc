@@ -16,7 +16,7 @@ syntax on
 
 set clipboard=unnamedplus
 
-set colorcolumn=120
+set colorcolumn=80,120
 
 set cursorline
 
