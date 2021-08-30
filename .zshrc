@@ -1,6 +1,6 @@
 export ZSH="/home/`whoami`/.oh-my-zsh"
 
-ZSH_THEME="spaceship"
+ZSH_THEME="dracula"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -21,9 +21,9 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.fzf.zsh
 
-SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_CHAR_SYMBOL="➤"
-SPACESHIP_USER_SHOW=always
+DRACULA_ARROW_ICON="➤ "
+DRACULA_DISPLAY_CONTEXT=1
+DRACULA_DISPLAY_TIME=0
 
 autoload -Uz compinit && compinit
 
