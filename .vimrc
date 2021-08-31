@@ -22,7 +22,7 @@ set cursorline
 
 set encoding=utf-8
 
-set guifont=JetBrains\ Mono
+set guifont=JetBrains\ Mono:h18
 
 set history=200
 
