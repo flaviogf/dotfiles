@@ -15,6 +15,11 @@
   },
   "explorer.compactFolders": false,
   "markdown.preview.fontSize": 16,
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.useLanguageServer": true,
   "terminal.integrated.fontSize": 16,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#808080"
