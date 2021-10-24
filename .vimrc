@@ -66,6 +66,11 @@ augroup ruby
   autocmd FileType ruby nnoremap <f5> :!ctags -R --languages=ruby --exclude=.git --exclude=log .<CR>
 augroup END
 
+augroup c
+  autocmd!
+  autocmd FileType c nnoremap <f5> :!ctags -R --languages=c --exclude=.git --exclude=log .<CR>
+augroup END
+
 nnoremap <leader>e :Explore<CR>
 nnoremap <leader>ve :Vex<CR>
 nnoremap <leader>f :ALEFix<CR>
