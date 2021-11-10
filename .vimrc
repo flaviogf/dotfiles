@@ -1,14 +1,16 @@
-call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'mattn/emmet-vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
-call plug#end()
+packadd minpac
+
+call minpac#init()
+
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('dracula/vim')
+call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('junegunn/fzf')
+call minpac#add('junegunn/fzf.vim')
+call minpac#add('mattn/emmet-vim')
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('w0rp/ale')
 
 colorscheme dracula
 
