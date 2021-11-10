@@ -27,7 +27,11 @@ DRACULA_DISPLAY_TIME=0
 
 autoload -Uz compinit && compinit
 
-export EDITOR=vim
+alias vim=nvim
+alias vi=nvim
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 export FZF_DEFAULT_COMMAND='fd -H -E .git -t f'
 
