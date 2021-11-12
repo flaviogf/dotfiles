@@ -8,6 +8,8 @@ call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('vim-airline/vim-airline')
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('w0rp/ale')
 
 colorscheme dracula
