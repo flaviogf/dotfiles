@@ -14,6 +14,8 @@ call minpac#add('w0rp/ale')
 
 colorscheme dracula
 
+filetype plugin indent on
+
 syntax on
 
 set clipboard=unnamedplus
@@ -55,8 +57,6 @@ set expandtab
 set wildmenu
 set wildmode=full
 
-let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'ruby': ['rubocop'] }
-let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:ale_linters_explicit = 1
 
 let g:airline#extensions#ale#enabled = 1
