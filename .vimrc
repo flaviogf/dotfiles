@@ -7,8 +7,6 @@ call minpac#add('dracula/vim')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
-call minpac#add('mattn/emmet-vim')
-call minpac#add('sheerun/vim-polyglot')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('w0rp/ale')
 
