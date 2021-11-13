@@ -66,7 +66,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
-let test#strategy = 'dispatch'
+let test#strategy = 'neovim'
 
 let mapleader = ','
 
