@@ -62,6 +62,9 @@ let g:ale_linters_explicit = 1
 
 let g:airline#extensions#ale#enabled = 1
 
+let g:grepper = {}
+let g:grepper.tools = ['grep', 'git', 'rg']
+
 let mapleader = ','
 
 nnoremap <leader>e :Explore<CR>
