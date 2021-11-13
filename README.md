@@ -14,10 +14,13 @@
 
 ## :computer: Techs
 
-- Vim
-- VSCode
-- Windows Terminal.
+- Neovim
+- Ctags
+- Tmux
 - Zsh
+- Alacritty
+- Windows Terminal
+- VSCode
 
 ## :memo: License
 
