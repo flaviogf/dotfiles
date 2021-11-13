@@ -11,6 +11,7 @@ call minpac#add('mhinz/vim-grepper')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-test/vim-test')
 call minpac#add('w0rp/ale')
 
 colorscheme dracula
@@ -64,6 +65,8 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
+
+let test#strategy = 'dispatch'
 
 let mapleader = ','
 
