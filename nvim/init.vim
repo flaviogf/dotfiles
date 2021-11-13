@@ -67,6 +67,7 @@ let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
 let test#strategy = 'neovim'
+let test#neovim#start_normal = 1
 
 let mapleader = ','
 
