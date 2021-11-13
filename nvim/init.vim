@@ -69,5 +69,10 @@ let mapleader = ','
 
 nnoremap <leader>e :Explore<CR>
 nnoremap <leader>ve :Vex<CR>
+
 nnoremap <leader>f :ALEFix<CR>
+
 nnoremap <leader>p :Files<CR>
+
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
