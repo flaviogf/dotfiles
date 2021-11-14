@@ -30,6 +30,8 @@ set encoding=utf-8
 
 set guifont=JetBrains\ Mono:h18
 
+set hidden
+
 set history=200
 
 set ignorecase
