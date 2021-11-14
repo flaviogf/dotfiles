@@ -19,7 +19,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 DRACULA_ARROW_ICON="➤ "
 DRACULA_DISPLAY_CONTEXT=1
@@ -35,4 +35,3 @@ export VISUAL=nvim
 
 export FZF_DEFAULT_COMMAND='fd -H -E .git -t f'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
