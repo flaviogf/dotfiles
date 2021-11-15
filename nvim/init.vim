@@ -54,6 +54,9 @@ set smartcase
 
 set smartindent
 
+set splitbelow
+set splitright
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -69,6 +72,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
+let test#neovim#term_position = 'vert'
 let test#strategy = 'neovim'
 
 let mapleader = ','
