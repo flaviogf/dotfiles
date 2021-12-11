@@ -13,6 +13,7 @@ call minpac#add('sheerun/vim-polyglot')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('vim-test/vim-test')
 call minpac#add('w0rp/ale')
 
