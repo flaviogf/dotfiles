@@ -1,7 +1,14 @@
-let b:ale_fixers = ['remove_trailing_lines', 'trim_whitespace', 'rubocop']
+" gem install neovim rubocop rubocop-rspec rubocop-rails
 
+let b:ale_fixers = ['remove_trailing_lines', 'trim_whitespace', 'rubocop']
 let b:ale_linters = ['rubocop']
 
+" {
+"   "spec/*_spec.rb": {
+"     "test.runner": "",
+"     "test.executable": ""
+"   }
+" }
 augroup projections
   autocmd!
   autocmd User ProjectionistActivate let s:executable = projectionist#query('test.runner') |
