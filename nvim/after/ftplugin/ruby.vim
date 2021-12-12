@@ -1,5 +1,7 @@
-" gem install neovim rubocop rubocop-rspec rubocop-rails
-
+" gem install neovim
+" gem install rubocop
+" gem install rubocop-rails
+" gem install rubocop-rspec
 let b:ale_fixers = ['remove_trailing_lines', 'trim_whitespace', 'rubocop']
 let b:ale_linters = ['rubocop']
 
