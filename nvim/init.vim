@@ -33,7 +33,7 @@ set cursorline
 
 set encoding=utf-8
 
-set guifont=JetBrains\ Mono:h18
+set guifont=Fira\ Code\ Medium:h18
 
 set hidden
 
