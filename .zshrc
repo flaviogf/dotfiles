@@ -11,6 +11,7 @@ plugins=(
     docker-machine
     git
     gitignore
+    kubectl
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
