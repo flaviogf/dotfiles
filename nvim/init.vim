@@ -19,6 +19,8 @@ call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('vim-test/vim-test')
 call minpac#add('w0rp/ale')
 
+call minpac#add('ryanoasis/vim-devicons')
+
 colorscheme dracula
 
 filetype plugin indent on
@@ -33,7 +35,7 @@ set cursorline
 
 set encoding=utf-8
 
-set guifont=Fira\ Code\ Medium:h18
+set guifont=FiraCode\ Nerd\ Font\ Medium\ 18
 
 set hidden
 
