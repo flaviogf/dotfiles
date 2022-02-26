@@ -82,6 +82,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:ctrlp_user_command = 'fd -H -E .git -t f'
+let g:ctrlp_working_path_mode = 'wa'
 
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
