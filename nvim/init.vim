@@ -76,8 +76,10 @@ set wildmode=full
 
 let g:ale_linters_explicit = 1
 
-let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:ctrlp_user_command = 'fd -H -E .git -t f'
 
@@ -103,5 +105,3 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-
-autocmd VimEnter * NERDTree
