@@ -3,11 +3,10 @@ packadd minpac
 call minpac#init()
 
 call minpac#add('airblade/vim-gitgutter')
+call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('dracula/vim')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('fatih/vim-go')
-call minpac#add('junegunn/fzf')
-call minpac#add('junegunn/fzf.vim')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('sebdah/vim-delve')
@@ -78,6 +77,8 @@ let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 
+let g:ctrlp_user_command = 'fd -H -E .git -t f'
+
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
@@ -91,7 +92,7 @@ nnoremap <leader>ve :Vex<CR>
 
 nnoremap <leader>f :ALEFix<CR>
 
-nnoremap <leader>p :Files<CR>
+nnoremap <leader>p :CtrlP<CR>
 
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
