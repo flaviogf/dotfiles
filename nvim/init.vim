@@ -87,6 +87,8 @@ let g:ctrlp_working_path_mode = 'wa'
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
+let NERDTreeShowHidden=1
+
 let test#neovim#term_position = 'vert'
 let test#strategy = 'neovim'
 
