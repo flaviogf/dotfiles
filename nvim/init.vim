@@ -8,6 +8,8 @@ call minpac#add('dracula/vim')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('fatih/vim-go')
 call minpac#add('mhinz/vim-grepper')
+call minpac#add('mhinz/vim-startify')
+call minpac#add('preservim/nerdtree')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('sebdah/vim-delve')
 call minpac#add('sheerun/vim-polyglot')
@@ -87,8 +89,7 @@ let test#strategy = 'neovim'
 
 let mapleader = ','
 
-nnoremap <leader>e :Explore<CR>
-nnoremap <leader>ve :Vex<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 nnoremap <leader>f :ALEFix<CR>
 
@@ -102,3 +103,5 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
+autocmd VimEnter * NERDTree
