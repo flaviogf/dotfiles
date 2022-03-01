@@ -36,8 +36,6 @@ set cursorline
 
 set encoding=utf-8
 
-set guifont=FiraCode\ Nerd\ Font\ Medium\ 18
-
 set hidden
 
 set history=200
