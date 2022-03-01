@@ -18,9 +18,6 @@
 - Ctags
 - Tmux
 - Zsh
-- Alacritty
-- Windows Terminal
-- VSCode
 
 ## :memo: License
 
