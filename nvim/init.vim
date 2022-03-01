@@ -100,9 +100,6 @@ nnoremap <leader>f :ALEFix<CR>
 
 nnoremap <leader>p :CtrlP<CR>
 
-nmap gs <plug>(GrepperOperator)
-xmap gs <plug>(GrepperOperator)
-
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
