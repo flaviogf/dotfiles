@@ -98,8 +98,8 @@ nnoremap <leader>f :ALEFix<CR>
 
 nnoremap <leader>p :CtrlP<CR>
 
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+nnoremap <silent> t<C-n> :TestNearest<CR>
+nnoremap <silent> t<C-f> :TestFile<CR>
+nnoremap <silent> t<C-s> :TestSuite<CR>
+nnoremap <silent> t<C-l> :TestLast<CR>
+nnoremap <silent> t<C-g> :TestVisit<CR>
