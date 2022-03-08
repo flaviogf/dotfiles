@@ -3,10 +3,11 @@ packadd minpac
 call minpac#init()
 
 call minpac#add('airblade/vim-gitgutter')
-call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('dracula/vim')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('fatih/vim-go')
+call minpac#add('junegunn/fzf')
+call minpac#add('junegunn/fzf.vim')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('preservim/nerdtree')
@@ -79,9 +80,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:ctrlp_user_command = 'fd -H -E .git -t f'
-let g:ctrlp_working_path_mode = 'wa'
-
 let g:grepper = {}
 let g:grepper.tools = ['grep', 'git', 'rg']
 
@@ -97,6 +95,8 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>f :ALEFix<CR>
 
 nnoremap <leader>p :CtrlP<CR>
+
+nnoremap <leader>p :Files<CR>
 
 nnoremap <silent> t<C-n> :TestNearest<CR>
 nnoremap <silent> t<C-f> :TestFile<CR>
