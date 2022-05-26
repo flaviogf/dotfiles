@@ -30,6 +30,7 @@
              :init
              (evil-mode 1)
              :custom
+             (evil-shift-width 2)
              (evil-want-C-u-scroll 1))
 
 (setq c-basic-offset 2
