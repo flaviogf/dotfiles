@@ -40,7 +40,8 @@
       inhibit-splash-screen t
       tab-width 2)
 
-(global-linum-mode)
+(column-number-mode)
+(global-display-line-numbers-mode 1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
