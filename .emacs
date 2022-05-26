@@ -1,37 +1,38 @@
 (require 'package)
 
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (package-initialize)
 
 (unless package-archive-contents
   (package-refresh-contents))
 
-(setq package-list '(all-the-icons
-                     doom-modeline
-                     dracula-theme
-                     evil
-                     use-package))
+(unless (package-installed-p 'dracula-theme)
+  (package-install 'dracula-theme))
 
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 
 (load-theme 'dracula t)
 
-(use-package all-the-icons)
-
 (use-package doom-modeline
+             :ensure t
              :init
              (doom-modeline-mode 1))
 
 (use-package evil
+             :ensure t
              :init
              (evil-mode 1)
              :custom
              (evil-shift-width 2)
              (evil-want-C-u-scroll 1))
+
+(use-package ivy
+             :ensure t
+             :init
+             (ivy-mode 1))
 
 (setq c-basic-offset 2
       cperl-indent-level 2
