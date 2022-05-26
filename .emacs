@@ -5,7 +5,9 @@
 (add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/") t)
 
 (package-initialize)
-(package-refresh-contents)
+
+(unless package-archive-contents
+  (package-refresh-contents))
 
 (unless (package-installed-p 'evil)
   (package-install 'evil))
