@@ -23,13 +23,10 @@
 (use-package all-the-icons)
 
 (use-package doom-modeline
-             :ensure
-             t
              :init
              (doom-modeline-mode 1))
 
 (use-package evil
-             :ensure t
              :init
              (evil-mode 1)
              :custom
