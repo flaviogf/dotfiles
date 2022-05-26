@@ -5,6 +5,8 @@
 
 (unless (package-installed-p 'evil)
   (package-install 'evil))
+(unless (package-installed-p 'dracula-theme)
+  (package-install 'dracula-theme))
 
 (require 'evil)
 (evil-mode 1)
@@ -18,4 +20,4 @@
 (set-fringe-mode 10)
 (menu-bar-mode -1)
 
-(load-theme 'tango-dark)
+(load-theme 'dracula-theme)
