@@ -34,12 +34,12 @@
              :init
              (ivy-mode 1))
 
-(setq c-basic-offset 2
-      cperl-indent-level 2
-      indent-tabs-mode nil
-      inhibit-startup-message t
-      inhibit-splash-screen t
-      tab-width 2)
+(setq-default c-basic-offset 2)
+(setq-default cperl-indent-level 2)
+(setq-default indent-tabs-mode nil)
+(setq-default inhibit-startup-message t)
+(setq-default inhibit-splash-screen t)
+(setq-default tab-width 2)
 
 (column-number-mode)
 (global-display-line-numbers-mode 1)
