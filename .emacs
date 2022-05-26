@@ -9,9 +9,10 @@
   (package-refresh-contents))
 
 (setq package-list '(all-the-icons
-		     doom-modeline
-		     dracula-theme
-		     evil))
+                     doom-modeline
+                     dracula-theme
+                     evil
+                     use-package))
 
 (dolist (package package-list)
   (unless (package-installed-p package)
@@ -19,14 +20,27 @@
 
 (load-theme 'dracula t)
 
-(require 'evil)
-(evil-mode 1)
+(use-package all-the-icons)
 
-(require 'doom-modeline)
-(doom-modeline-mode 1)
+(use-package doom-modeline
+             :ensure
+             t
+             :init
+             (doom-modeline-mode 1))
 
-(setq inhibit-startup-message t
-      inhibit-splash-screen t)
+(use-package evil
+             :ensure t
+             :init
+             (evil-mode 1)
+             :custom
+             (evil-want-C-u-scroll 1))
+
+(setq c-basic-offset 2
+      cperl-indent-level 2
+      indent-tabs-mode nil
+      inhibit-startup-message t
+      inhibit-splash-screen t
+      tab-width 2)
 
 (global-linum-mode)
 (menu-bar-mode -1)
