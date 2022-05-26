@@ -8,16 +8,22 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(setq package-list '(evil dracula-theme))
+(setq package-list '(all-the-icons
+		     doom-modeline
+		     dracula-theme
+		     evil))
 
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
 
+(load-theme 'dracula t)
+
 (require 'evil)
 (evil-mode 1)
 
-(load-theme 'dracula t)
+(require 'doom-modeline)
+(doom-modeline-mode 1)
 
 (setq inhibit-startup-message t
       inhibit-splash-screen t)
