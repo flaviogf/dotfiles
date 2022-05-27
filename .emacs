@@ -14,8 +14,8 @@
 (use-package doom-themes
              :ensure t
              :init
-             (setq doom-themes-enable-bold t)
              (setq doom-themes-enable-italic t)
+             (setq doom-themes-enable-bold t)
              (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
@@ -26,12 +26,12 @@
 (use-package evil
              :ensure t
              :init
-             (setq evil-want-integration t)
              (setq evil-want-keybinding nil)
+             (setq evil-want-integration t)
              (evil-mode 1)
              :custom
-             (evil-shift-width 2)
-             (evil-want-C-u-scroll 1))
+             (evil-want-C-u-scroll 1)
+             (evil-shift-width 2))
 
 (use-package evil-collection
              :ensure t
@@ -50,8 +50,9 @@
 (use-package projectile
              :ensure t
              :init
-             (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-switch-project-action #'projectile-dired)
+             (setq projectile-project-search-path '(("~/dev" . 1)))
+             (setq projectile-completion-system 'ivy)
              (projectile-mode 1)
              :bind
              (:map projectile-mode-map
