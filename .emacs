@@ -13,7 +13,7 @@
 
 (use-package doom-themes
              :ensure t
-             :config
+             :init
              (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
@@ -25,6 +25,9 @@
              :ensure t
              :init
              (evil-mode 1)
+             :config
+             (setq doom-themes-enable-bold t)
+             (setq doom-themes-enable-italic t)
              :custom
              (evil-shift-width 2)
              (evil-want-C-u-scroll 1))
@@ -34,10 +37,25 @@
              :init
              (ivy-mode 1))
 
+(use-package projectile
+             :ensure t
+             :init
+             (projectile-mode 1)
+             :config
+             (setq projectile-project-search-path '("~/dev"))
+             :bind
+             (:map projectile-mode-map
+                   ("C-c p" . projectile-command-map)))
+
+(use-package which-key
+             :ensure t
+             :init
+             (which-key-mode)
+             :config
+             (setq which-key-idle-delay 0))
+
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
-(setq-default doom-themes-enable-bold t)
-(setq-default doom-themes-enable-italic t)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
