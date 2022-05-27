@@ -34,7 +34,10 @@
              (evil-want-C-u-scroll 1))
 
 (use-package evil-collection
-             :ensure t)
+             :ensure t
+             :after evil
+             :init
+             (evil-collection-init))
 
 (use-package ivy
              :ensure t
