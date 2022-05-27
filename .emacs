@@ -8,13 +8,13 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(unless (package-installed-p 'dracula-theme)
-  (package-install 'dracula-theme))
-
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-(load-theme 'dracula t)
+(use-package doom-themes
+             :ensure t
+             :config
+             (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
              :ensure t
@@ -36,6 +36,8 @@
 
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
+(setq-default doom-themes-enable-bold t)
+(setq-default doom-themes-enable-italic t)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
