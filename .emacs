@@ -44,6 +44,15 @@
              :init
              (ivy-mode 1))
 
+(use-package lsp-mode
+             :ensure t
+             :init
+             (setq lsp-keymap-prefix "C-c l")
+             :hook
+             (ruby-mode . lsp-deferred)
+             :commands
+             (lsp lsp-deferred))
+
 (use-package magit
              :ensure t
              :custom
@@ -63,7 +72,7 @@
 (use-package which-key
              :ensure t
              :init
-             (setq which-key-idle-delay 0)
+             (setq which-key-idle-delay 0.3)
              (which-key-mode))
 
 (setq-default c-basic-offset 2)
