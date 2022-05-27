@@ -14,6 +14,8 @@
 (use-package doom-themes
              :ensure t
              :init
+             (setq doom-themes-enable-bold t)
+             (setq doom-themes-enable-italic t)
              (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
@@ -24,26 +26,30 @@
 (use-package evil
              :ensure t
              :init
+             (setq evil-want-integration t)
+             (setq evil-want-keybinding nil)
              (evil-mode 1)
-             :config
-             (setq doom-themes-enable-bold t)
-             (setq doom-themes-enable-italic t)
              :custom
              (evil-shift-width 2)
              (evil-want-C-u-scroll 1))
+
+(use-package evil-collection
+             :ensure t)
 
 (use-package ivy
              :ensure t
              :init
              (ivy-mode 1))
 
+(use-package magit
+             :ensure t)
+
 (use-package projectile
              :ensure t
              :init
-             (projectile-mode 1)
-             :config
              (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-switch-project-action #'projectile-dired)
+             (projectile-mode 1)
              :bind
              (:map projectile-mode-map
                    ("C-c p" . projectile-command-map)))
@@ -51,9 +57,8 @@
 (use-package which-key
              :ensure t
              :init
-             (which-key-mode)
-             :config
-             (setq which-key-idle-delay 0))
+             (setq which-key-idle-delay 0)
+             (which-key-mode))
 
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
