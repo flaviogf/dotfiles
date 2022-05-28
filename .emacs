@@ -3,9 +3,31 @@
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-(package-initialize)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'hl-line-mode)
+(add-hook 'prog-mode-hook #'whitespace-mode)
+
+(setq-default c-basic-offset 2)
+(setq-default cperl-indent-level 2)
+(setq-default fill-column 80)
+(setq-default indent-tabs-mode nil)
+(setq-default inhibit-startup-message t)
+(setq-default inhibit-splash-screen t)
+(setq-default tab-width 2)
+(setq-default use-package-always-ensure t)
+(setq-default whitespace-line-column 80)
+(setq-default whitespace-style '(face lines-tail))
+
+(column-number-mode)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
 
 (set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
+
+(package-initialize)
 
 (unless package-archive-contents
   (package-refresh-contents))
@@ -92,24 +114,3 @@
              :init
              (setq which-key-idle-delay 0.3)
              (which-key-mode))
-
-(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
-(add-hook 'prog-mode-hook #'hl-line-mode)
-(add-hook 'prog-mode-hook #'whitespace-mode)
-
-(setq-default c-basic-offset 2)
-(setq-default cperl-indent-level 2)
-(setq-default fill-column 80)
-(setq-default indent-tabs-mode nil)
-(setq-default inhibit-startup-message t)
-(setq-default inhibit-splash-screen t)
-(setq-default tab-width 2)
-(setq-default whitespace-line-column 80)
-(setq-default whitespace-style '(face lines-tail))
-
-(column-number-mode)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
