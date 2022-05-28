@@ -11,6 +11,9 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(use-package all-the-icons
+             :ensure t)
+
 (use-package company
              :ensure t
              :after lsp-mode
