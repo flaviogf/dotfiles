@@ -5,6 +5,8 @@
 
 (package-initialize)
 
+(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
+
 (unless package-archive-contents
   (package-refresh-contents))
 
@@ -57,6 +59,8 @@
              :ensure t
              :init
              (setq lsp-keymap-prefix "C-c l")
+             (unless (display-graphic-p)
+               (setq lsp-headerline-breadcrumb-icons-enable nil))
              :hook
              (ruby-mode . lsp-deferred)
              :commands
@@ -77,6 +81,11 @@
              :bind
              (:map projectile-mode-map
                    ("C-c p" . projectile-command-map)))
+
+(use-package seeing-is-believing
+             :ensure t
+             :hook
+             (ruby-mode . seeing-is-believing))
 
 (use-package which-key
              :ensure t
