@@ -11,6 +11,12 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(use-package company
+             :ensure t
+             :after lsp-mode
+             :hook
+             (lsp-mode . company-mode))
+
 (use-package doom-themes
              :ensure t
              :init
