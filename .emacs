@@ -1,7 +1,20 @@
 (require 'package)
 
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/"))
+
+(package-initialize)
+
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+
+(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
 
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
@@ -25,15 +38,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
-
-(package-initialize)
-
-(unless package-archive-contents
-  (package-refresh-contents))
-
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+(use-package exwm)
 
 (use-package all-the-icons)
 
@@ -90,5 +95,5 @@
 
 (use-package which-key
              :init
-             (setq which-key-idle-delay 0.3)
+             (setq which-key-idle-delay 2)
              (which-key-mode))
