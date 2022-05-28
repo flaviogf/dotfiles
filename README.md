@@ -14,8 +14,9 @@
 
 ## :computer: Techs
 
-- Neovim
 - Ctags
+- Emacs
+- Neovim
 - Tmux
 - Zsh
 
