@@ -38,8 +38,6 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(use-package exwm)
-
 (use-package all-the-icons)
 
 (use-package company
