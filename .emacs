@@ -87,6 +87,11 @@
              :after evil
              :init (evil-collection-init))
 
+(use-package inf-ruby
+             :init
+             (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+             (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter))
+
 (use-package ivy
              :init (ivy-mode 1))
 
@@ -115,7 +120,8 @@
              (setq rspec-use-docker-when-possible t)
              (setq rspec-docker-command "docker-compose exec")
              (setq rspec-docker-container "web")
-             (setq rspec-docker-cwd "/var/app/"))
+             (setq rspec-docker-cwd "/var/app/")
+             (add-hook 'after-init-hook 'inf-ruby-switch-setup))
 
 (use-package seeing-is-believing
              :hook (ruby-mode . seeing-is-believing))
