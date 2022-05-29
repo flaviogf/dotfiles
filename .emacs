@@ -27,6 +27,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
+(setq-default initial-scratch-message nil)
 (setq-default tab-width 2)
 (setq-default use-package-always-ensure t)
 (setq-default whitespace-line-column 80)
@@ -49,7 +50,6 @@
                                   (start-process-shell-command command nil command)))))
              (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
              (require 'exwm-systemtray)
-             (setq exwm-systemtray-height 32)
              (exwm-systemtray-enable)
              (exwm-enable))
 
@@ -112,3 +112,4 @@
              :init
              (setq which-key-idle-delay 2)
              (which-key-mode))
+
