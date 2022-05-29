@@ -112,4 +112,3 @@
              :init
              (setq which-key-idle-delay 2)
              (which-key-mode))
-
