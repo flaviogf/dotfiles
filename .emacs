@@ -41,7 +41,7 @@
 
 (use-package exwm
              :config
-             (setq exwm-workspace-number 4)
+             (setq exwm-workspace-number 5)
              (setq exwm-input-global-keys
                    `(([?\s-r] . exwm-reset)
                      ([?\s-w] . exwm-workspace-switch)
@@ -51,6 +51,10 @@
              (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
              (require 'exwm-systemtray)
              (exwm-systemtray-enable)
+             (add-hook 'exwm-update-class-hook
+                       (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
+             (add-hook 'exwm-update-title-hook
+                       (lambda () (exwm-workspace-rename-buffer exwm-title)))
              (exwm-enable))
 
 (use-package all-the-icons)
