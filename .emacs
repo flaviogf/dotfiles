@@ -3,6 +3,8 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("elpa" . "https://elpa.gnu.org/packages/"))
+(add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
+(add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
 (package-initialize)
 
@@ -90,11 +92,12 @@
 
 (use-package lsp-mode
              :init
+             (unless (display-graphic-p) (setq lsp-headerline-breadcrumb-icons-enable nil))
              (setq lsp-keymap-prefix "C-c l")
-             (unless (display-graphic-p)
-               (setq lsp-headerline-breadcrumb-icons-enable nil))
-             :hook (ruby-mode . lsp-deferred)
-             :commands (lsp lsp-deferred))
+             :hook
+             (ruby-mode . lsp)
+             (lsp-mode . lsp-enable-which-key-integration)
+             :commands lsp)
 
 (use-package magit
              :custom (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
