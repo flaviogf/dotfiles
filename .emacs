@@ -110,6 +110,13 @@
              (projectile-mode 1)
              :bind (:map projectile-mode-map ("C-c p" . projectile-command-map)))
 
+(use-package rspec-mode
+             :init
+             (setq rspec-use-docker-when-possible t)
+             (setq rspec-docker-command "docker-compose exec")
+             (setq rspec-docker-container "web")
+             (setq rspec-docker-cwd "/var/app/"))
+
 (use-package seeing-is-believing
              :hook (ruby-mode . seeing-is-believing))
 
