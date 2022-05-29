@@ -38,6 +38,21 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
+(use-package exwm
+             :config
+             (setq exwm-workspace-number 4)
+             (setq exwm-input-global-keys
+                   `(([?\s-r] . exwm-reset)
+                     ([?\s-w] . exwm-workspace-switch)
+                     ([?\s-&] . (lambda (command)
+                                  (interactive (list (read-shell-command "$ ")))
+                                  (start-process-shell-command command nil command)))))
+             (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
+             (require 'exwm-systemtray)
+             (setq exwm-systemtray-height 32)
+             (exwm-systemtray-enable)
+             (exwm-enable))
+
 (use-package all-the-icons)
 
 (use-package company
@@ -90,6 +105,8 @@
 
 (use-package seeing-is-believing
              :hook (ruby-mode . seeing-is-believing))
+
+(use-package vterm)
 
 (use-package which-key
              :init
