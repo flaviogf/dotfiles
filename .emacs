@@ -74,6 +74,7 @@
              (add-hook 'exwm-update-class-hook #'efs/update-class-name)
              (add-hook 'exwm-update-title-hook #'efs/update-title)
              (add-hook 'exwm-init-hook #'efs/exwm-init-hook)
+             (exwm-input-set-key (kbd "s-SPC") 'counsel-linux-app)
              (exwm-enable))
 
 (use-package all-the-icons)
@@ -81,6 +82,10 @@
 (use-package company
              :after lsp-mode
              :hook (lsp-mode . company-mode))
+
+(use-package counsel
+             :custom (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
+             :config (counsel-mode 1))
 
 (use-package doom-themes
              :init
