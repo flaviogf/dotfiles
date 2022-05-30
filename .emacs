@@ -41,6 +41,23 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
+(defun efs/update-class-name ()
+  (exwm-workspace-rename-buffer exwm-class-name))
+
+(defun efs/update-title ()
+  (exwm-workspace-rename-buffer exwm-title))
+
+(defun efs/run-in-background (command)
+  (let ((command-parts (split-string command "[ ]+")))
+    (apply #'call-process `(,(car command-parts) nil 0 nil ,@(cdr command-parts)))))
+
+(defun efs/exwm-init-hook ()
+  (setq display-time-day-and-date t)
+  (display-time-mode 1)
+  (efs/run-in-background "nm-applet")
+  (efs/run-in-background "pasystray")
+  (efs/run-in-background "blueman-applet"))
+
 (use-package exwm
              :config
              (setq exwm-workspace-number 5)
@@ -52,11 +69,11 @@
                                   (start-process-shell-command command nil command)))))
              (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
              (require 'exwm-systemtray)
+             (setq exwm-systemtray-height 22)
              (exwm-systemtray-enable)
-             (add-hook 'exwm-update-class-hook
-                       (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
-             (add-hook 'exwm-update-title-hook
-                       (lambda () (exwm-workspace-rename-buffer exwm-title)))
+             (add-hook 'exwm-update-class-hook #'efs/update-class-name)
+             (add-hook 'exwm-update-title-hook #'efs/update-title)
+             (add-hook 'exwm-init-hook #'efs/exwm-init-hook)
              (exwm-enable))
 
 (use-package all-the-icons)
