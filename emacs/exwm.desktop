@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=EXWM
+Exec=sh /home/flaviogf/.emacs.d/exwm.sh
+Type=Application
