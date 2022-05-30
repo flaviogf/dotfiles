@@ -37,6 +37,8 @@
 (setq-default whitespace-line-column 80)
 (setq-default whitespace-style '(face lines-tail))
 
+(global-set-key (kbd "C-i") 'universal-argument)
+
 (column-number-mode)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
