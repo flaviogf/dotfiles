@@ -30,6 +30,7 @@
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
 (setq-default initial-scratch-message nil)
+(setq-default make-backup-files nil)
 (setq-default tab-width 2)
 (setq-default use-package-always-ensure t)
 (setq-default whitespace-line-column 80)
@@ -134,6 +135,7 @@
              (setq projectile-switch-project-action #'projectile-dired)
              (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-completion-system 'ivy)
+             (setq projectile-git-submodule-command nil)
              (projectile-mode 1)
              :bind (:map projectile-mode-map ("C-c p" . projectile-command-map)))
 
