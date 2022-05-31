@@ -38,6 +38,7 @@
 (setq-default whitespace-line-column 80)
 (setq-default whitespace-style '(face lines-tail))
 
+(global-set-key (kbd "C-M-b") 'counsel-switch-buffer)
 (global-set-key (kbd "C-M-u") 'universal-argument)
 
 (column-number-mode)
