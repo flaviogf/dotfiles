@@ -38,9 +38,6 @@
 (setq-default whitespace-line-column 80)
 (setq-default whitespace-style '(face lines-tail))
 
-(global-set-key (kbd "C-M-b") 'counsel-switch-buffer)
-(global-set-key (kbd "C-M-u") 'universal-argument)
-
 (column-number-mode)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -86,8 +83,7 @@
              (add-hook 'exwm-update-class-hook #'efs/update-class-name)
              (add-hook 'exwm-update-title-hook #'efs/update-title)
              (add-hook 'exwm-init-hook #'efs/exwm-init-hook)
-             (exwm-input-set-key (kbd "C-M-SPC") 'counsel-linux-app)
-             (exwm-input-set-key (kbd "C-M-b") 'counsel-switch-buffer)
+             (exwm-input-set-key (kbd "s-SPC") 'counsel-linux-app)
              (exwm-enable))
 
 (use-package all-the-icons)
@@ -168,3 +164,6 @@
              :init
              (setq which-key-idle-delay 2)
              (which-key-mode))
+
+(global-set-key (kbd "C-x b") 'counsel-switch-buffer)
+(global-set-key (kbd "C-M-u") 'universal-argument)
