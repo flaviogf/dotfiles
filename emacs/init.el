@@ -32,7 +32,6 @@
 (setq-default initial-scratch-message nil)
 (setq-default make-backup-files nil)
 (setq-default tab-width 2)
-(setq-default tab-bar-show nil)
 (setq-default truncate-lines t)
 (setq-default use-package-always-ensure t)
 (setq-default whitespace-line-column 80)
@@ -41,7 +40,6 @@
 (column-number-mode)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
-(tab-bar-mode)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
@@ -137,6 +135,10 @@
 
 (use-package magit
              :custom (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+(use-package perspective
+             :init
+             (persp-mode))
 
 (use-package projectile
              :init
