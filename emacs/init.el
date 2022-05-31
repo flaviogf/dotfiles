@@ -65,7 +65,6 @@
 (use-package edwina
              :config
              (setq display-buffer-base-action '(display-buffer-below-selected))
-             (edwina-setup-dwm-keys)
              (edwina-mode 1))
 
 (use-package exwm
