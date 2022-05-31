@@ -18,6 +18,9 @@
 
 (set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
 
+(global-set-key (kbd "C-x b") 'counsel-switch-buffer)
+(global-set-key (kbd "C-M-u") 'universal-argument)
+
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'hl-line-mode)
@@ -137,6 +140,10 @@
              :custom (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
 (use-package perspective
+             :bind
+             ("C-x b" . persp-counsel-switch-buffer)
+             :custom
+             (persp-mode-prefix-key (kbd "C-c M-p"))
              :init
              (persp-mode))
 
@@ -166,6 +173,3 @@
              :init
              (setq which-key-idle-delay 2)
              (which-key-mode))
-
-(global-set-key (kbd "C-x b") 'counsel-switch-buffer)
-(global-set-key (kbd "C-M-u") 'universal-argument)
