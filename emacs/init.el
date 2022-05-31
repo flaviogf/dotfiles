@@ -86,7 +86,7 @@
              (add-hook 'exwm-update-class-hook #'efs/update-class-name)
              (add-hook 'exwm-update-title-hook #'efs/update-title)
              (add-hook 'exwm-init-hook #'efs/exwm-init-hook)
-             (exwm-input-set-key (kbd "s-SPC") 'counsel-linux-app)
+             (exwm-input-set-key (kbd "C-M-SPC") 'counsel-linux-app)
              (exwm-input-set-key (kbd "C-M-b") 'counsel-switch-buffer)
              (exwm-enable))
 
