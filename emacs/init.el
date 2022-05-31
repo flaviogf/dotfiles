@@ -33,6 +33,7 @@
 (setq-default make-backup-files nil)
 (setq-default tab-width 2)
 (setq-default tab-bar-show nil)
+(setq-default truncate-lines t)
 (setq-default use-package-always-ensure t)
 (setq-default whitespace-line-column 80)
 (setq-default whitespace-style '(face lines-tail))
