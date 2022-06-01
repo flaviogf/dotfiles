@@ -1,0 +1,9 @@
+[Unit]
+Description=Polybar
+
+[Service]
+Type=forking
+ExecStart=/home/flaviogf/.config/polybar/polybar.sh
+
+[Install]
+WantedBy=multi-user.target
