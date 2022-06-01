@@ -14,7 +14,6 @@
 
 (require 'use-package)
 
-(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'hl-line-mode)
 (add-hook 'prog-mode-hook #'whitespace-mode)
@@ -66,6 +65,11 @@
              :init
              (setq counsel-linux-app-format-function 'counsel-linux-app-format-function-name-only)
              (counsel-mode))
+
+(use-package display-fill-column-indicator
+             :ensure nil
+             :hook
+             (prog-mode . display-fill-column-indicator-mode))
 
 (use-package doom-themes
              :init
