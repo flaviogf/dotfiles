@@ -57,8 +57,6 @@
     (apply #'call-process `(,(car command-parts) nil 0 nil ,@(cdr command-parts)))))
 
 (defun efs/exwm-init-hook ()
-  (setq display-time-day-and-date t)
-  (display-time-mode 1)
   (efs/run-in-background "nm-applet")
   (efs/run-in-background "pasystray")
   (efs/run-in-background "blueman-applet"))
