@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Polybar
-Exec=/home/flaviogf/.config/polybar/launch.sh
-Hidden=false
-X-MATE-Autostart-enabled=true
