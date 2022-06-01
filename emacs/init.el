@@ -86,8 +86,8 @@
 (use-package all-the-icons)
 
 (use-package company
-             :after lsp-mode
-             :hook (lsp-mode . company-mode))
+             :init
+             (company-mode))
 
 (use-package counsel
              :custom (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
