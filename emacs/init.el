@@ -70,21 +70,17 @@
 
 (use-package exwm
              :config
-             (setq exwm-workspace-number 5)
-             (setq exwm-input-global-keys
-                   `(([?\s-r] . exwm-reset)
-                     ([?\s-w] . exwm-workspace-switch)
-                     ([?\s-&] . (lambda (command)
-                                  (interactive (list (read-shell-command "$ ")))
-                                  (start-process-shell-command command nil command)))))
-             (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
+             (setq exwm-workspace-number 4)
              (require 'exwm-systemtray)
              (setq exwm-systemtray-height 22)
              (exwm-systemtray-enable)
              (add-hook 'exwm-update-class-hook #'efs/update-class-name)
              (add-hook 'exwm-update-title-hook #'efs/update-title)
              (add-hook 'exwm-init-hook #'efs/exwm-init-hook)
+             (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
              (exwm-input-set-key (kbd "s-SPC") 'counsel-linux-app)
+             (exwm-input-set-key (kbd "s-r") 'exwm-reset)
+             (exwm-input-set-key (kbd "s-w") 'exwm-workspace-switch)
              (exwm-enable))
 
 (use-package all-the-icons)
@@ -95,37 +91,31 @@
 
 (use-package counsel
              :custom (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
-             :config (counsel-mode 1))
+             :config (counsel-mode))
 
 (use-package doom-themes
              :init
-             (setq doom-themes-enable-italic t)
              (setq doom-themes-enable-bold t)
+             (setq doom-themes-enable-italic t)
              (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
-             :init (doom-modeline-mode 1))
+             :init (doom-modeline-mode))
 
 (use-package evil
              :init
              (setq evil-want-keybinding nil)
              (setq evil-want-integration t)
-             (evil-mode 1)
+             (evil-mode)
              :custom
              (evil-want-C-u-scroll 1)
              (evil-shift-width 2))
 
 (use-package evil-collection
-             :after evil
              :init (evil-collection-init))
 
-(use-package inf-ruby
-             :init
-             (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
-             (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter))
-
 (use-package ivy
-             :init (ivy-mode 1))
+             :init (ivy-mode))
 
 (use-package lsp-mode
              :init
@@ -153,7 +143,7 @@
              (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
-             (projectile-mode 1)
+             (projectile-mode)
              :bind (:map projectile-mode-map ("C-c p" . projectile-command-map)))
 
 (use-package rspec-mode
@@ -163,9 +153,6 @@
              (setq rspec-docker-container "web")
              (setq rspec-docker-cwd "/var/app/")
              (add-hook 'after-init-hook 'inf-ruby-switch-setup))
-
-(use-package seeing-is-believing
-             :hook (ruby-mode . seeing-is-believing))
 
 (use-package vterm)
 
