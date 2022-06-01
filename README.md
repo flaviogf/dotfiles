@@ -14,7 +14,6 @@
 
 ## :computer: Techs
 
-- Ctags
 - Emacs
 - Neovim
 - Tmux
