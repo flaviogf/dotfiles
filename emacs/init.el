@@ -66,6 +66,10 @@
              (setq counsel-linux-app-format-function 'counsel-linux-app-format-function-name-only)
              (counsel-mode))
 
+(use-package desktop-environment
+             :init
+             (desktop-environment-mode))
+
 (use-package display-fill-column-indicator
              :ensure nil
              :hook
@@ -121,6 +125,10 @@
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
              (projectile-mode))
+
+(use-package rainbow-mode
+             :init
+             (rainbow-mode))
 
 (use-package rspec-mode
              :init
