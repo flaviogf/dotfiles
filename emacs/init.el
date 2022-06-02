@@ -52,7 +52,7 @@
              (exwm-enable)
              :hook
              (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
-             (exwm-update-title . (lambda () (exwm-workspace-rename-buffer exwm-title))))
+             (exwm-update-title . (lambda () (pcase exwm-class-name ("Google-chrome" (exwm-workspace-rename-buffer exwm-title))))))
 
 (use-package all-the-icons)
 
