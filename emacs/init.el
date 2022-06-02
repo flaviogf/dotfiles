@@ -14,7 +14,6 @@
 
 (require 'use-package)
 
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'prog-mode-hook #'hl-line-mode)
 (add-hook 'prog-mode-hook #'whitespace-mode)
 
@@ -75,6 +74,11 @@
              :hook
              (prog-mode . display-fill-column-indicator-mode))
 
+(use-package display-line-numbers
+             :ensure nil
+             :hook
+             (prog-mode . display-line-numbers-mode))
+
 (use-package doom-themes
              :init
              (setq doom-themes-enable-bold t)
@@ -127,8 +131,9 @@
              (projectile-mode))
 
 (use-package rainbow-mode
-             :init
-             (rainbow-mode))
+             :hook
+             (conf-unix-mode . rainbow-mode)
+             (prog-mode . rainbow-mode))
 
 (use-package rspec-mode
              :init
