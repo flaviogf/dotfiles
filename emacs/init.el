@@ -99,6 +99,8 @@
              (setq evil-shift-width 2)
              (evil-mode))
 
+(use-package haskell-mode)
+
 (use-package ivy
              :init
              (ivy-mode))
