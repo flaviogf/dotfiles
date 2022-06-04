@@ -45,6 +45,10 @@
              :init
              (company-mode))
 
+(use-package counsel
+             :init
+             (counsel-mode))
+
 (use-package display-fill-column-indicator
              :ensure nil
              :hook
