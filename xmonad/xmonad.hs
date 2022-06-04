@@ -1,9 +1,15 @@
+import qualified Data.Map as M
+
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Util.Ungrab
-import qualified Data.Map as M
+import XMonad.Layout.LayoutModifier
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Renamed
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.Spacing
 
 colorScheme = "dracula"
 colorBack = "#282a36"
@@ -43,8 +49,8 @@ myBrowser = "google-chrome-stable"
 myBorderWidth :: Dimension
 myBorderWidth = 2
 
-myNormalColor :: String
-myNormalColor = colorBack
+myNormColor :: String
+myNormColor = colorBack
 
 myFocusColor :: String
 myFocusColor = color15
@@ -54,14 +60,24 @@ myStartupHook = do
     spawn "/usr/bin/emacs --daemon=emacs"
 
 myWorkspaces = [" dev ", " www ", " chat "]
-myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..]
+
+mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
+mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
+
+myLayoutHook = withBorder myBorderWidth
+               $ renamed [Replace "Tall"]
+               $ mySpacing 4
+               $ ResizableTall 1 (3/100) (1/2) []
 
 myConfig = def
     { modMask = myModMask
     , terminal = myTerminal
     , startupHook = myStartupHook
+    , layoutHook = myLayoutHook
     , borderWidth = myBorderWidth
     , workspaces = myWorkspaces
+    , normalBorderColor = myNormColor
+    , focusedBorderColor = myFocusColor
     }
   `additionalKeysP`
     [ ("M-w", spawn myBrowser)
