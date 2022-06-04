@@ -13,6 +13,7 @@ import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
 import XMonad.Util.Run
 import XMonad.Util.Ungrab
+import XMonad.Util.SpawnOnce
 
 colorScheme = "dracula"
 colorBack = "#282a36"
@@ -71,6 +72,7 @@ myLayoutHook = avoidStruts
 
 myStartupHook = do
     spawn "/usr/bin/emacs --daemon=emacs"
+    spawnOnce "nitrogen --restore &"
 
 myWorkspaces = [" dev ", " www ", " chat "]
 
