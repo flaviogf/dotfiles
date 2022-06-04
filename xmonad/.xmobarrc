@@ -1,6 +1,5 @@
 Config { font = "xft:Fira Code Nerd Font:regular:pixelsize=11"
-       , additionalFonts = [ "xft:Font Awesome 6 Free Solid:pixelsize=12"
-                           ]
+       , additionalFonts = ["xft:Font Awesome 6 Free Solid:pixelsize=12"]
        , bgColor = "#282a36"
        , fgColor = "#f8f8f2"
        , position = TopSize L 100 24
