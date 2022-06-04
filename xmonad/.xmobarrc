@@ -15,9 +15,9 @@ Config { overrideRedirect = False
                         "--template", "Mem: <usedratio>%"
                       ] 10
                     , Run Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
-                    , Run XMonadLog
+                    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%XMonadLog% }{ %cpu% | %memory% | %date% "
+       , template = "%StdinReader% }{ %cpu% | %memory% | %date% "
        }

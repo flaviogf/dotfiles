@@ -1,9 +1,12 @@
 import XMonad
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Util.Ungrab
 
-main = xmonad $ ewmh $ def
+main = xmonad . ewmh =<< xmobar myConfig
+
+myConfig = def
     { modMask = mod4Mask
     }
   `additionalKeysP`
