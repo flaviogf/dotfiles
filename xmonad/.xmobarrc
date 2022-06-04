@@ -10,5 +10,5 @@ Config { font = "xft:Fira Code Nerd Font:regular:pixelsize=11"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %date% "
+       , template = "%UnsafeStdinReader% }{ <box type=Bottom width=2 color=#f1fa8c><fc=#f1fa8c>%cpu%</fc></box>  <box type=Bottom width=2 color=#ff5555><fc=#ff5555>%memory%</fc></box>  <box type=Bottom width=2 color=#caa9fa><fc=#caa9fa>%date%</fc></box> "
        }
