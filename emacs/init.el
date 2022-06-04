@@ -17,6 +17,9 @@
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
+(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+
+(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
 (set-face-attribute 'default nil :font "Fira Code Nerd Font" :height 150)
 
 (setq-default c-basic-offset 2)
@@ -136,16 +139,3 @@
              :ensure nil
              :hook
              (prog-mode . whitespace-mode))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(haskell-mode which-key vterm use-package seeing-is-believing rspec-mode rainbow-mode projectile perspective magit lsp-mode inf-ruby exwm evil-collection edwina doom-themes doom-modeline desktop-environment counsel company all-the-icons)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
