@@ -1,23 +1,13 @@
-Config { overrideRedirect = False
-       , font = "xft:iosevka-9"
-       , bgColor = "#5f5f5f"
-       , fgColor = "#f8f8f2"
-       , position = TopW L 100
-       , commands = [ Run Cpu
-                      [
-                        "-L", "3"
-                      , "-H", "50"
-                      , "--high", "red"
-                      , "--normal", "green"
-                      ] 10
-                    , Run Memory
-                      [
-                        "--template", "Mem: <usedratio>%"
-                      ] 10
-                    , Run Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
-                    , Run StdinReader
+Config { font = "xft:Fira Code Nerd Font:regular:pixelsize=11,xft:Font Awesome 6 Free Solid:pixelsize=12"
+       , bgColor = "#282c34"
+       , fgColor = "#ff6c6b"
+       , position = TopSize L 100 24
+       , commands = [ Run Cpu ["-t", "\xf2db cpu: (<total>%)", "-H", "50", "--high", "red"] 20
+                    , Run Memory ["-t", "\xf233 mem: <usedratio>%"] 20
+                    , Run Date "\xf133 %m/%d/%y %H:%M" "date" 50
+                    , Run UnsafeStdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %cpu% | %memory% | %date% "
+       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% | %date% "
        }
