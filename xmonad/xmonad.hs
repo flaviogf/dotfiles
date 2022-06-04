@@ -1,10 +1,9 @@
 import XMonad
-import XMonad.Layout.LayoutModifier
-import XMonad.Layout.Spacing
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Util.Ungrab
+import qualified Data.Map as M
 
 colorScheme = "doom-one"
 colorBlack = "#282c34"
@@ -54,17 +53,15 @@ myStartupHook :: X ()
 myStartupHook = do
     spawn "/usr/bin/emacs --daemon=emacs"
 
-mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
-mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
-
-mySpacing' :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
-mySpacing' i = spacingRaw True (Border i i i i) True (Border i i i i) True
+myWorkspaces = [" dev ", " www ", " chat "]
+myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..]
 
 myConfig = def
     { modMask = myModMask
     , terminal = myTerminal
     , startupHook = myStartupHook
     , borderWidth = myBorderWidth
+    , workspaces = myWorkspaces
     }
   `additionalKeysP`
     [ ("M-w", spawn myBrowser)
