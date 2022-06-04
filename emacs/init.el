@@ -14,9 +14,6 @@
 
 (require 'use-package)
 
-(add-hook 'prog-mode-hook #'hl-line-mode)
-(add-hook 'prog-mode-hook #'whitespace-mode)
-
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
@@ -42,32 +39,11 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 
-(use-package exwm
-             :config
-             (setq exwm-workspace-number 4)
-             (define-key exwm-mode-map [?\C-q] 'exwm-input-send-next-key)
-             (exwm-input-set-key (kbd "s-SPC") 'counsel-linux-app)
-             (exwm-input-set-key (kbd "s-r") 'exwm-reset)
-             (exwm-input-set-key (kbd "s-w") 'exwm-workspace-switch)
-             (exwm-enable)
-             :hook
-             (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
-             (exwm-update-title . (lambda () (pcase exwm-class-name ("Google-chrome" (exwm-workspace-rename-buffer exwm-title))))))
-
 (use-package all-the-icons)
 
 (use-package company
              :init
              (company-mode))
-
-(use-package counsel
-             :init
-             (setq counsel-linux-app-format-function 'counsel-linux-app-format-function-name-only)
-             (counsel-mode))
-
-(use-package desktop-environment
-             :init
-             (desktop-environment-mode))
 
 (use-package display-fill-column-indicator
              :ensure nil
@@ -89,17 +65,17 @@
              :init
              (doom-modeline-mode))
 
-(use-package edwina
-             :init
-             (setq display-buffer-base-action '(display-buffer-below-selected))
-             (edwina-mode))
-
 (use-package evil
              :init
              (setq evil-shift-width 2)
              (evil-mode))
 
 (use-package haskell-mode)
+
+(use-package hl-line
+             :ensure nil
+             :hook
+             (prog-mode . hl-line-mode))
 
 (use-package ivy
              :init
@@ -150,3 +126,8 @@
              :init
              (setq which-key-idle-delay 2)
              (which-key-mode))
+
+(use-package whitespace
+             :ensure nil
+             :hook
+             (prog-mode . whitespace-mode))
