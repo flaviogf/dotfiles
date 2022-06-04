@@ -17,8 +17,11 @@
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
+(set-face-attribute 'default nil :font "Fira Code Nerd Font" :height 150)
+
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
+(setq-default default-frame-alist '((font . "Fira Code Nerd Font")))
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
@@ -30,8 +33,6 @@
 (setq-default use-package-always-ensure t)
 (setq-default whitespace-line-column 80)
 (setq-default whitespace-style '(face lines-tail))
-
-(set-face-attribute 'default nil :font "FiraCode Nerd Font" :height 150)
 
 (column-number-mode)
 (menu-bar-mode -1)
