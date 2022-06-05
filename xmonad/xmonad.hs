@@ -72,7 +72,7 @@ myLayoutHook = avoidStruts
 
 myStartupHook = do
     spawn "/usr/bin/emacs --daemon=emacs"
-    spawnOnce "picom --experimental-backed"
+    spawnOnce "picom --experimental-backend"
     spawnOnce "nitrogen --restore &"
 
 myWorkspaces = [" dev ", " www ", " chat ", " mus ", " sys "]
