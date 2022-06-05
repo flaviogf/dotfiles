@@ -25,10 +25,12 @@
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
 (setq-default default-frame-alist '((font . "Fira Code Nerd Font")))
+(setq-default dired-listing-switches "-agho --group-directories-first")
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
+(setq-default initial-major-mode 'ruby-mode)
 (setq-default initial-scratch-message nil)
 (setq-default make-backup-files nil)
 (setq-default tab-width 2)
@@ -44,6 +46,10 @@
 (tooltip-mode -1)
 
 (use-package all-the-icons)
+
+(use-package all-the-icons-dired
+             :hook
+             (dired-mode . all-the-icons-dired-mode))
 
 (use-package company
              :init
