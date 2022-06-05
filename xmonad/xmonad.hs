@@ -74,7 +74,7 @@ myStartupHook = do
     spawn "/usr/bin/emacs --daemon=emacs"
     spawnOnce "nitrogen --restore &"
 
-myWorkspaces = [" dev ", " www ", " chat "]
+myWorkspaces = [" dev ", " www ", " chat ", " mus ", " sys "]
 
 main = do
     h <- spawnPipe "xmobar"
