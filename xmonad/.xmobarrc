@@ -3,7 +3,7 @@ Config { font = "xft:Fira Code Nerd Font:regular:pixelsize=11"
        , bgColor = "#282a36"
        , fgColor = "#f8f8f2"
        , position = TopSize L 100 24
-       , commands = [ Run Cpu ["-t", "<fn=1>\xf2db</fn> cpu: (<total>%)", "-H", "50", "--high", "red"] 20
+       , commands = [ Run Cpu ["-t", "<fn=1>\xf2db</fn> cpu: <total>%", "-H", "50", "--high", "red"] 20
                     , Run Memory ["-t", "<fn=1>\xf233</fn> mem: <usedratio>%"] 20
                     , Run Date "<fn=1>\xf133</fn> %m/%d/%y %H:%M" "date" 50
                     , Run UnsafeStdinReader
