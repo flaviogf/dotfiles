@@ -57,7 +57,7 @@ myNormColor :: String
 myNormColor = colorBack
 
 myTerminal :: String
-myTerminal = myEmacs ++ "--eval '(vterm)'"
+myTerminal = "alacritty"
 
 myWindowCount :: X (Maybe String)
 myWindowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
