@@ -75,7 +75,7 @@ myStartupHook = do
     spawnOnce "picom --experimental-backend"
     spawnOnce "nitrogen --restore &"
 
-myWorkspaces = [" dev ", " www ", " chat ", " mus ", " sys "]
+myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
 
 main = do
     h <- spawnPipe "xmobar"
