@@ -14,9 +14,13 @@
 
 ## :computer: Techs
 
+- Alacritty
 - Emacs
 - Neovim
+- Picom
 - Tmux
+- Xmobar
+- XMonad
 - Zsh
 
 ## :memo: License
