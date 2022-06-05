@@ -3,18 +3,18 @@ packadd minpac
 call minpac#init()
 
 call minpac#add('airblade/vim-gitgutter')
-call minpac#add('dense-analysis/ale')
 call minpac#add('dracula/vim')
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('fatih/vim-go')
+call minpac#add('hrsh7th/nvim-cmp')
 call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('mhinz/vim-startify')
+call minpac#add('neovim/nvim-lspconfig')
 call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('preservim/nerdtree')
 call minpac#add('radenling/vim-dispatch-neovim')
-call minpac#add('rhysd/vim-lsp-ale')
 call minpac#add('sebdah/vim-delve')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('tpope/vim-dispatch')
@@ -75,10 +75,8 @@ set expandtab
 set wildmenu
 set wildmode=full
 
-let g:ale_linters_explicit = 1
 
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -94,8 +92,6 @@ let mapleader = ','
 
 nnoremap <leader>e :NERDTreeToggle<CR>
 
-nnoremap <leader>f :ALEFix<CR>
-
 nnoremap <leader>p :CtrlP<CR>
 
 nnoremap <leader>p :Files<CR>
@@ -105,3 +101,7 @@ nnoremap <silent> t<C-f> :TestFile<CR>
 nnoremap <silent> t<C-s> :TestSuite<CR>
 nnoremap <silent> t<C-l> :TestLast<CR>
 nnoremap <silent> t<C-g> :TestVisit<CR>
+
+lua <<EOF
+  require'lspconfig'.solargraph.setup{}
+EOF
