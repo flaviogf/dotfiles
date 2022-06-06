@@ -85,8 +85,6 @@
              (evil-mode))
 
 (use-package go-mode
-             :hook
-             (before-save . gofmt-before-save)
              :init
              (setq gofmt-command "goimports"))
 
