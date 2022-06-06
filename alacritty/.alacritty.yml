@@ -54,7 +54,7 @@ schemes:
 
 colors: *Dracula
 font:
-  size: 13
+  size: 8
   normal:
    family: FiraCode Nerd Font
    style: Regular
