@@ -68,7 +68,6 @@ set expandtab
 set wildmenu
 set wildmode=full
 
-
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -85,8 +84,6 @@ let mapleader = ','
 
 nnoremap <leader>e :NERDTreeToggle<CR>
 
-nnoremap <leader>p :CtrlP<CR>
-
 nnoremap <leader>p :Files<CR>
 
 nnoremap <silent> t<C-n> :TestNearest<CR>
@@ -94,7 +91,3 @@ nnoremap <silent> t<C-f> :TestFile<CR>
 nnoremap <silent> t<C-s> :TestSuite<CR>
 nnoremap <silent> t<C-l> :TestLast<CR>
 nnoremap <silent> t<C-g> :TestVisit<CR>
-
-lua <<EOF
-  require'lspconfig'.solargraph.setup{}
-EOF
