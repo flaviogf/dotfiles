@@ -42,7 +42,7 @@ myBrowser :: String
 myBrowser = "google-chrome-stable"
 
 myEmacs :: String
-myEmacs = "emacsclient --create-frame --socket-name='emacs' "
+myEmacs = "emacsclient --socket-name='emacs' "
 
 myFocusColor :: String
 myFocusColor = color15
@@ -71,7 +71,6 @@ myLayoutHook = avoidStruts
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 myStartupHook = do
-    spawn "/usr/bin/emacs --daemon=emacs"
     spawnOnce "picom --experimental-backend"
     spawnOnce "nitrogen --restore &"
 
@@ -103,7 +102,9 @@ main = do
         }
       `additionalKeysP`
         [ ("M-C-s", unGrab *> spawn "scrot -s")
+        , ("M-e d", spawn (myEmacs ++ "--create-frame --eval '(dired nil)'"))
         , ("M-e e", spawn myEmacs)
-        , ("M-e d", spawn (myEmacs ++ "--eval '(dired nil)'"))
+        , ("M-e k", spawn (myEmacs ++ "--eval '(kill-emacs)'"))
+        , ("M-e s", spawn "emacs --daemon=emacs")
         , ("M-w", spawn myBrowser)
         ]
