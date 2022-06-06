@@ -4,26 +4,19 @@ call minpac#init()
 
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('dracula/vim')
-call minpac#add('editorconfig/editorconfig-vim')
-call minpac#add('fatih/vim-go')
-call minpac#add('hrsh7th/nvim-cmp')
 call minpac#add('junegunn/fzf')
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('mhinz/vim-startify')
-call minpac#add('neovim/nvim-lspconfig')
-call minpac#add('prabirshrestha/vim-lsp')
 call minpac#add('preservim/nerdtree')
 call minpac#add('radenling/vim-dispatch-neovim')
-call minpac#add('sebdah/vim-delve')
+call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-ruby/vim-ruby')
 call minpac#add('vim-test/vim-test')
-
-call minpac#add('ryanoasis/vim-devicons')
 
 colorscheme dracula
 
