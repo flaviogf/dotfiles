@@ -84,6 +84,12 @@
              (setq evil-shift-width 2)
              (evil-mode))
 
+(use-package go-mode
+             :hook
+             (before-save . gofmt-before-save)
+             :init
+             (setq gofmt-command "goimports"))
+
 (use-package haskell-mode)
 
 (use-package hl-line
@@ -100,6 +106,7 @@
              lsp
              :hook
              (ruby-mode . lsp)
+             (go-mode . lsp)
              :init
              (setq lsp-headerline-breadcrumb-icons-enable nil)
              (setq lsp-keymap-prefix "C-c l"))
