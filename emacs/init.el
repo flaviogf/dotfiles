@@ -79,6 +79,12 @@
              :init
              (doom-modeline-mode))
 
+(use-package elfeed
+             :init
+             (setq elfeed-search-filter "@1-week-ago +unread")
+             (setq elfeed-feeds '(("jovemnerd.com.br/feed/" news)
+                                  ("blog.digitalocean.com/rss/" tech))))
+
 (use-package evil
              :init
              (setq evil-shift-width 2)
