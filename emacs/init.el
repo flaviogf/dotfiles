@@ -75,6 +75,10 @@
              :init
              (doom-modeline-mode))
 
+(use-package editorconfig
+             :init
+             (editorconfig-mode))
+
 (use-package elfeed
              :init
              (setq elfeed-search-filter "@1-week-ago +unread")
