@@ -51,10 +51,6 @@
              :hook
              (dired-mode . all-the-icons-dired-mode))
 
-(use-package company
-             :init
-             (company-mode))
-
 (use-package counsel
              :init
              (counsel-mode))
@@ -90,6 +86,10 @@
              (setq evil-shift-width 2)
              (evil-mode))
 
+(use-package git-gutter
+             :hook
+             (prog-mode . git-gutter-mode))
+
 (use-package go-mode
              :init
              (setq gofmt-command "goimports"))
@@ -112,8 +112,12 @@
              (ruby-mode . lsp)
              (go-mode . lsp)
              :init
-             (setq lsp-headerline-breadcrumb-icons-enable nil)
-             (setq lsp-keymap-prefix "C-c l"))
+             (setq lsp-diagnostics-provider :none)
+             (setq lsp-eldoc-enable-hover nil)
+             (setq lsp-headerline-breadcrumb-enable nil)
+             (setq lsp-keymap-prefix "C-c l")
+             (setq lsp-modeline-code-actions-enable nil)
+             (setq lsp-ui-sideline-enable nil))
 
 (use-package magit)
 
