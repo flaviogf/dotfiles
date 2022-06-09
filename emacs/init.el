@@ -88,7 +88,15 @@
 (use-package evil
              :init
              (setq evil-shift-width 2)
+             (setq evil-want-C-u-scroll t)
+             (setq evil-want-integration t)
+             (setq evil-want-keybinding nil)
              (evil-mode))
+
+(use-package evil-collection
+             :after evil
+             :init
+             (evil-collection-init))
 
 (use-package git-gutter
              :hook
