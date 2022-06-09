@@ -146,6 +146,8 @@
              (conf-unix-mode . rainbow-mode)
              (prog-mode . rainbow-mode))
 
+(use-package rg)
+
 (use-package rspec-mode
              :init
              (setq rspec-use-docker-when-possible t)
