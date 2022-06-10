@@ -149,17 +149,17 @@
              (setq persp-mode-prefix-key (kbd "C-c M-p"))
              (persp-mode))
 
+(use-package persp-projectile)
+
 (use-package projectile
              :bind
              (:map projectile-mode-map ("C-c p" . projectile-command-map))
              :init
-             (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
+             (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-switch-project-action 'projectile-dired)
              (projectile-mode))
-
-(use-package persp-projectile)
 
 (use-package rainbow-mode
              :hook
