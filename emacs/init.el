@@ -55,6 +55,14 @@
              :init
              (counsel-mode))
 
+(use-package dashboard
+             :config
+             (dashboard-setup-startup-hook)
+             :init
+             (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+             (setq dashboard-startup-banner 'logo)
+             (setq dashboard-projects-switch-function 'projectile-persp-switch-project))
+
 (use-package display-fill-column-indicator
              :ensure nil
              :hook
@@ -148,6 +156,8 @@
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
              (projectile-mode))
+
+(use-package persp-projectile)
 
 (use-package rainbow-mode
              :hook
