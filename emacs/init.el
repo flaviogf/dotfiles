@@ -61,7 +61,8 @@
              :init
              (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
              (setq dashboard-startup-banner 'logo)
-             (setq dashboard-projects-switch-function 'projectile-persp-switch-project))
+             (setq dashboard-projects-switch-function 'projectile-persp-switch-project)
+             (setq dashboard-items '((recents  . 5) (bookmarks . 5) (projects . 5))))
 
 (use-package display-fill-column-indicator
              :ensure nil
@@ -155,6 +156,7 @@
              (setq projectile-project-search-path '(("~/dev" . 1)))
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
+             (setq projectile-switch-project-action 'projectile-dired)
              (projectile-mode))
 
 (use-package persp-projectile)
