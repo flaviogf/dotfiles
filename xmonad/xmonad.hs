@@ -107,4 +107,5 @@ main = do
         , ("M-e k", spawn (myEmacs ++ "--eval '(kill-emacs)'"))
         , ("M-c", spawn (myTerminal ++ " -e castero"))
         , ("M-w", spawn myBrowser)
+        , ("M-p", spawn "rofi -show drun")
         ]
