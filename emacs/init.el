@@ -166,10 +166,6 @@
              (setq rspec-docker-container "web")
              (setq rspec-docker-cwd "/var/app/"))
 
-(use-package seeing-is-believing
-             :hook
-             (ruby-mode . seeing-is-believing))
-
 (use-package vterm)
 
 (use-package which-key
