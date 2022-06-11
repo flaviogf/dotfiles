@@ -140,8 +140,6 @@
              (setq persp-mode-prefix-key (kbd "C-c M-p"))
              (persp-mode))
 
-(use-package persp-projectile)
-
 (use-package projectile
              :bind
              (:map projectile-mode-map ("C-c p" . projectile-command-map))
