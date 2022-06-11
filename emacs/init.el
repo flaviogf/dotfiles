@@ -145,7 +145,9 @@
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
              (setq projectile-project-search-path '(("~/dev" . 1)))
-             (setq projectile-switch-project-action 'projectile-dired)
+             (setq projectile-switch-project-action (lambda ()
+                                                      (persp-switch (projectile-project-name))
+                                                      (dired nil)))
              (projectile-mode))
 
 (use-package rainbow-mode
