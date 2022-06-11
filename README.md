@@ -18,6 +18,7 @@
 - Emacs
 - Neovim
 - Picom
+- Rofi
 - Tmux
 - Xmobar
 - XMonad
