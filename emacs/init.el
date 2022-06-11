@@ -55,15 +55,6 @@
              :init
              (counsel-mode))
 
-(use-package dashboard
-             :config
-             (dashboard-setup-startup-hook)
-             :init
-             (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
-             (setq dashboard-startup-banner 'logo)
-             (setq dashboard-projects-switch-function 'projectile-persp-switch-project)
-             (setq dashboard-items '((recents  . 5) (bookmarks . 5) (projects . 5))))
-
 (use-package display-fill-column-indicator
              :ensure nil
              :hook
