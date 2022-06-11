@@ -26,7 +26,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
-(setq-default initial-major-mode 'ruby-mode)
+(setq-default initial-major-mode 'org-mode)
 (setq-default initial-scratch-message nil)
 (setq-default make-backup-files nil)
 (setq-default tab-width 2)
