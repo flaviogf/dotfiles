@@ -105,5 +105,6 @@ main = do
         [ ("M-C-s", unGrab *> spawn "scrot -s")
         , ("M-e d", spawn (myEmacs ++ "--create-frame --eval '(dired nil)'"))
         , ("M-e k", spawn (myEmacs ++ "--eval '(kill-emacs)'"))
+        , ("M-c", spawn (myTerminal ++ " -e castero"))
         , ("M-w", spawn myBrowser)
         ]
