@@ -22,7 +22,7 @@
 (setq-default cperl-indent-level 2)
 (setq-default default-frame-alist '((font . "Fira Code Nerd Font")))
 (setq-default dired-listing-switches "-agho --group-directories-first")
-(setq-default fill-column 80)
+(setq-default fill-column 120)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-message t)
 (setq-default inhibit-splash-screen t)
@@ -32,7 +32,7 @@
 (setq-default tab-width 2)
 (setq-default truncate-lines t)
 (setq-default use-package-always-ensure t)
-(setq-default whitespace-line-column 80)
+(setq-default whitespace-line-column 120)
 (setq-default whitespace-style '(face lines-tail))
 
 (column-number-mode)
