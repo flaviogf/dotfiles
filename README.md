@@ -16,6 +16,7 @@
 
 - Alacritty
 - Emacs
+- Dunst
 - Neovim
 - Picom
 - Rofi
