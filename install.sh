@@ -14,6 +14,9 @@ mkdir -p "${HOME}/.config/nvim" && ln -sf "${DOTFILES}/nvim/init.vim" "${HOME}/.
 # Picom
 mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOME}/.config/picom/picom.conf"
 
+# Rofi
+mkdir -p "${HOME}/.config/rofi" && ln -sf "${DOTFILES}/rofi/config.rasi" "${HOME}/.config/rofi/config.rasi"
+
 # Xmonad
 mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
 
