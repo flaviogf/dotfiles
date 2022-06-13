@@ -17,8 +17,14 @@ mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOM
 # Rofi
 mkdir -p "${HOME}/.config/rofi" && ln -sf "${DOTFILES}/rofi/config.rasi" "${HOME}/.config/rofi/config.rasi"
 
+# Tmux
+ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+
 # Xmonad
 mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
 
 # Xmobar
 ln -sf "${DOTFILES}/xmobar/.xmobarrc" "${HOME}/.xmobarrc"
+
+# ZSH
+ln -sf "${DOTFILES}/zsh/.zshrc" "${HOME}/.zshrc"
