@@ -71,6 +71,7 @@ myLayoutHook = avoidStruts
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 myStartupHook = do
+    spawnOnce "dunst"
     spawnOnce "emacs --daemon=emacs"
     spawnOnce "picom --experimental-backend"
     spawnOnce "nitrogen --restore &"
