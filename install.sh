@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
+DOTFILES="/home/flaviogf/dev/dotfiles"
+
+# Alacritty
+ln -sf "${DOTFILES}/alacritty/.alacritty.yml" "${HOME}/.alacritty.yml"
+
+# Emacs
+mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emacs.d/init.el"
+
 # Xmonad
-rm -rf /home/flaviogf/.xmonad &&
-    mkdir -p /home/flaviogf/.xmonad &&
-    ln -s /home/flaviogf/dev/dotfiles/xmonad/xmonad.hs /home/flaviogf/.xmonad/xmonad.hs
+mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
 
 # Xmobar
-rm -rf /home/flaviogf/.xmobarrc &&
-    ln -s /home/flaviogf/dev/dotfiles/xmobar/.xmobarrc /home/flaviogf/.xmobarrc
+ln -sf "${DOTFILES}/xmobar/.xmobarrc" "${HOME}/.xmobarrc"
