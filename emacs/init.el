@@ -17,9 +17,10 @@
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
-(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 (set-face-attribute 'default nil :font "Fira Code Nerd Font" :height 150)
+
 (set-frame-parameter (selected-frame) 'alpha '(90 . 90))
+(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 
 (setq-default c-basic-offset 2)
 (setq-default cperl-indent-level 2)
