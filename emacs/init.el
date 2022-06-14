@@ -164,6 +164,10 @@
              (setq rspec-docker-container "web")
              (setq rspec-docker-cwd "/var/app/"))
 
+(use-package slime
+             :init
+             (setq inferior-lisp-program "sbcl"))
+
 (use-package which-key
              :init
              (setq which-key-idle-delay 2)
