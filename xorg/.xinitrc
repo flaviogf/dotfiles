@@ -5,7 +5,7 @@ emacs --daemon=emacs &
 nitrogen --restore &
 picom --experimental-backend &
 
-volumeicon &
+pasystray &
 nm-applet &
 
 trayer --edge top \
