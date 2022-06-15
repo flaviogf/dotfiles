@@ -29,5 +29,8 @@ mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xm
 # Xmobar
 ln -sf "${DOTFILES}/xmobar/.xmobarrc" "${HOME}/.xmobarrc"
 
+# Xorg
+ln -sf "${DOTFILES}/xorg/.xinitrc" "${HOME}/.xinitrc"
+
 # Zsh
 ln -sf "${DOTFILES}/zsh/.zshrc" "${HOME}/.zshrc"
