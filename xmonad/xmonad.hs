@@ -96,6 +96,7 @@ main = do
               , ppExtras = [myWindowCount]
               , ppOrder = \(ws:_:t:ex) -> [ws]++ex++[t]
               }
+        , manageHook = manageDocks
         , modMask = myModMask
         , normalBorderColor = myNormColor
         , startupHook = myStartupHook
