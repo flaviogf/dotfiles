@@ -70,12 +70,6 @@ myLayoutHook = avoidStruts
              where
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
-myStartupHook = do
-    spawnOnce "dunst &"
-    spawnOnce "emacs --daemon=emacs &"
-    spawnOnce "picom --experimental-backend &"
-    spawnOnce "nitrogen --restore &"
-
 myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
 
 main = do
@@ -99,7 +93,6 @@ main = do
         , manageHook = manageDocks
         , modMask = myModMask
         , normalBorderColor = myNormColor
-        , startupHook = myStartupHook
         , terminal = myTerminal
         , workspaces = myWorkspaces
         }
