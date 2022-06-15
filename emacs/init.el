@@ -15,33 +15,28 @@
 (require 'use-package)
 
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+(add-to-list 'default-frame-alist '(font . "Fira Code Nerd Font-16"))
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
-(setq-default c-basic-offset 2)
-(setq-default cperl-indent-level 2)
-(setq-default default-frame-alist '((font . "Fira Code Nerd Font")))
-(setq-default dired-listing-switches "-agho --group-directories-first")
-(setq-default fill-column 120)
-(setq-default indent-tabs-mode nil)
-(setq-default inhibit-startup-message t)
-(setq-default inhibit-splash-screen t)
-(setq-default initial-major-mode 'org-mode)
-(setq-default initial-scratch-message nil)
-(setq-default make-backup-files nil)
-(setq-default tab-width 2)
-(setq-default truncate-lines t)
-(setq-default use-package-always-ensure t)
-(setq-default whitespace-line-column 120)
-(setq-default whitespace-style '(face lines-tail))
-
-(column-number-mode)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(set-face-attribute 'default nil :font "Fira Code Nerd Font" :height 150)
-(set-frame-parameter (selected-frame) 'alpha '(90 . 90))
-(tool-bar-mode -1)
-(tooltip-mode -1)
+(customize-set-variable 'c-basic-offset 2)
+(customize-set-variable 'column-number-mode t)
+(customize-set-variable 'cperl-indent-level 2)
+(customize-set-variable 'dired-listing-switches "-agho --group-directories-first")
+(customize-set-variable 'fill-column 120)
+(customize-set-variable 'indent-tabs-mode nil)
+(customize-set-variable 'inhibit-startup-message t)
+(customize-set-variable 'inhibit-splash-screen t)
+(customize-set-variable 'initial-scratch-message nil)
+(customize-set-variable 'make-backup-files nil)
+(customize-set-variable 'menu-bar-mode nil)
+(customize-set-variable 'scroll-bar-mode nil)
+(customize-set-variable 'tab-width 2)
+(customize-set-variable 'tool-bar-mode nil)
+(customize-set-variable 'truncate-lines t)
+(customize-set-variable 'use-package-always-ensure t)
+(customize-set-variable 'whitespace-line-column 120)
+(customize-set-variable 'whitespace-style '(face lines-tail))
 
 (use-package all-the-icons)
 
@@ -163,6 +158,10 @@
              (setq rspec-docker-command "docker-compose exec")
              (setq rspec-docker-container "web")
              (setq rspec-docker-cwd "/var/app/"))
+
+(use-package slime
+             :init
+             (setq inferior-lisp-program "sbcl"))
 
 (use-package which-key
              :init
