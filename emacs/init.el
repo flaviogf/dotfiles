@@ -23,6 +23,7 @@
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 
 (setq-default c-basic-offset 2)
+(setq-default column-number-mode 1)
 (setq-default cperl-indent-level 2)
 (setq-default default-frame-alist '((font . "Fira Code Nerd Font")))
 (setq-default dired-listing-switches "-agho --group-directories-first")
@@ -39,7 +40,6 @@
 (setq-default whitespace-line-column 120)
 (setq-default whitespace-style '(face lines-tail))
 
-(column-number-mode)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
