@@ -26,11 +26,11 @@ ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 # Vim
 ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
 
-# Xmonad
-mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
-
 # Xmobar
 ln -sf "${DOTFILES}/xmobar/.xmobarrc" "${HOME}/.xmobarrc"
+
+# Xmonad
+mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
 
 # Xorg
 ln -sf "${DOTFILES}/xorg/.xinitrc" "${HOME}/.xinitrc"

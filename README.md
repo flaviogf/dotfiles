@@ -20,9 +20,10 @@
 - Neovim
 - Picom
 - Rofi
+- Starship
 - Tmux
 - Xmobar
-- XMonad
+- Xmonad
 - Zsh
 
 ## :memo: License
