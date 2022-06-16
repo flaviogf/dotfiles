@@ -15,17 +15,18 @@ emacs --daemon=emacs &
 nitrogen --restore &
 picom --experimental-backend &
 
+blueman-applet &
 pasystray &
 nm-applet &
 
 trayer --edge top \
        --align right \
-       --width 3 \
+       --width 5 \
        --height 24 \
        --transparent true \
        --alpha 0 \
        --tint 0x282a36 \
-       --padding 2 \
-       --iconspacing 2 &
+       --padding 5 \
+       --iconspacing 5 &
 
 exec xmonad
