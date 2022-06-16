@@ -20,6 +20,9 @@ mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOM
 # Rofi
 mkdir -p "${HOME}/.config/rofi" && ln -sf "${DOTFILES}/rofi/config.rasi" "${HOME}/.config/rofi/config.rasi"
 
+# Starship
+ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
+
 # Tmux
 ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
