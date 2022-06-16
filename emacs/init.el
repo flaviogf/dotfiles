@@ -163,6 +163,8 @@
              :init
              (setq inferior-lisp-program "sbcl"))
 
+(use-package vterm)
+
 (use-package which-key
              :init
              (setq which-key-idle-delay 2)
