@@ -65,7 +65,7 @@ myWindowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspa
 myLayoutHook = avoidStruts
                $ withBorder myBorderWidth
                $ renamed [Replace "Tall"]
-               $ mySpacing 8
+               $ mySpacing 6
                $ ResizableTall 1 (3/100) (1/2) []
              where
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
