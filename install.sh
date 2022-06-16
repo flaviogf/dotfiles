@@ -11,8 +11,8 @@ mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emac
 # Dunst
 mkdir -p "${HOME}/.config/dunst" && ln -sf "${DOTFILES}/dunst/dunstrc" "${HOME}/.config/dunst/dunstrc"
 
-# Neovim
-mkdir -p "${HOME}/.config/nvim" && ln -sf "${DOTFILES}/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+# Vim
+ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
 
 # Picom
 mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOME}/.config/picom/picom.conf"
