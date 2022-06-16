@@ -11,9 +11,6 @@ mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emac
 # Dunst
 mkdir -p "${HOME}/.config/dunst" && ln -sf "${DOTFILES}/dunst/dunstrc" "${HOME}/.config/dunst/dunstrc"
 
-# Vim
-ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
-
 # Picom
 mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOME}/.config/picom/picom.conf"
 
@@ -25,6 +22,9 @@ ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 
 # Tmux
 ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
+
+# Vim
+ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
 
 # Xmonad
 mkdir -p "${HOME}/.xmonad" && ln -sf "${DOTFILES}/xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
