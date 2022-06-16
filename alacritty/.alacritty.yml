@@ -56,17 +56,17 @@ colors: *Dracula
 font:
   size: 13
   normal:
-   family: FiraCode Nerd Font
+   family: Mononoki Nerd Font
    style: Regular
   bold:
-   family: FiraCode Nerd Font
+   family: Mononoki Nerd Font
    style: Bold
   italic:
-   family: FiraCode Nerd Font
+   family: Mononoki Nerd Font
    style: Italic
   bold_italic:
-   family: FiraCode Nerd Font
-   style: Bold Italic
+   family: Mononoki Nerd Font
+   style: BoldItalic
   offset:
     x: 0
     y: 1
