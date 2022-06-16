@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+lxsession &
+
 dunst &
 emacs --daemon=emacs &
 nitrogen --restore &
