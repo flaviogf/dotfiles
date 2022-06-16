@@ -17,3 +17,5 @@ plugins=(
 [ -f $FZF/fzf.zsh ] && source $FZF/fzf.zsh
 
 eval "$(starship init zsh)"
+
+neofetch
