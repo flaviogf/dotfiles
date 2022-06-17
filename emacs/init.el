@@ -15,7 +15,7 @@
 (require 'use-package)
 
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
-(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-16"))
+(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-13"))
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
@@ -174,3 +174,16 @@
              :ensure nil
              :hook
              (prog-mode . whitespace-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(which-key vterm slime rspec-mode rg rainbow-mode projectile perspective magit lsp-mode haskell-mode go-mode git-gutter evil-collection evil elfeed editorconfig doom-modeline doom-themes counsel all-the-icons-dired all-the-icons use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
