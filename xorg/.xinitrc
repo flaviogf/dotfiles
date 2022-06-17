@@ -21,12 +21,12 @@ nm-applet &
 
 trayer --edge top \
        --align right \
-       --width 3 \
+       --width 5 \
        --height 24 \
        --transparent true \
        --alpha 0 \
        --tint 0x282a36 \
        --padding 0 \
-       --iconspacing 1 &
+       --iconspacing 2 &
 
 exec xmonad
