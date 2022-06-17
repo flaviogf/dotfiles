@@ -2,21 +2,8 @@
 
 add_newline = false
 
-[character]
-error_symbol = "[λ](bold #ff5555)"
-success_symbol = "[λ](bold #50fa7b)"
-
-[directory]
-format = "[$path ]($style)"
-style = "bold #50fa7b"
-
 [gcloud]
 disabled = true
 
 [line_break]
 disabled = true
-
-[username]
-format = "[$user ]($style)"
-show_always = true
-style_user = "bold #8be9fd"
