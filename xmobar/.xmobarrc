@@ -2,7 +2,7 @@ Config { font = "xft:Mononoki Nerd Font:regular:pixelsize=11"
        , additionalFonts = ["xft:Font Awesome 6 Free Solid:pixelsize=12"]
        , bgColor = "#282a36"
        , fgColor = "#f8f8f2"
-       , position = TopSize L 95 24
+       , position = TopSize L 97 24
        , commands = [ Run Cpu ["-t", "<fn=1>\xf2db</fn> cpu: <total>%", "-H", "50", "--high", "red"] 50
                     , Run Memory ["-t", "<fn=1>\xf233</fn> mem: <usedratio>%"] 50
                     , Run Date "<fn=1>\xf133</fn> %m/%d/%y %H:%M" "date" 50
