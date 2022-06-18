@@ -14,9 +14,6 @@ mkdir -p "${HOME}/.config/dunst" && ln -sf "${DOTFILES}/dunst/dunstrc" "${HOME}/
 # Picom
 mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOME}/.config/picom/picom.conf"
 
-# Rofi
-mkdir -p "${HOME}/.config/rofi" && ln -sf "${DOTFILES}/rofi/config.rasi" "${HOME}/.config/rofi/config.rasi"
-
 # Starship
 ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 

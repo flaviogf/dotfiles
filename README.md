@@ -19,7 +19,6 @@
 - Dunst
 - Neovim
 - Picom
-- Rofi
 - Starship
 - Tmux
 - Xmobar

@@ -1,5 +1,0 @@
-@import "/home/flaviogf/dev/dotfiles/rofi/themes/dracula.rasi"
-
-configuration {
-    font: "Mononoki Nerd Font";
-}
