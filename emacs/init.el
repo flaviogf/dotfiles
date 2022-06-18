@@ -126,13 +126,6 @@
 
 (use-package magit)
 
-(use-package perspective
-             :bind
-             ("C-x b" . persp-counsel-switch-buffer)
-             :init
-             (setq persp-mode-prefix-key (kbd "C-c M-p"))
-             (persp-mode))
-
 (use-package projectile
              :bind
              (:map projectile-mode-map ("C-c p" . projectile-command-map))
@@ -140,9 +133,7 @@
              (setq projectile-completion-system 'ivy)
              (setq projectile-git-submodule-command nil)
              (setq projectile-project-search-path '(("~/dev" . 1)))
-             (setq projectile-switch-project-action (lambda ()
-                                                      (persp-switch (projectile-project-name))
-                                                      (dired nil)))
+             (setq projectile-switch-project-action 'projectile-dired)
              (projectile-mode))
 
 (use-package rainbow-mode
