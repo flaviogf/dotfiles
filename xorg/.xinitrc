@@ -28,7 +28,7 @@ trayer --edge top \
        --tint 0x282a36 \
        --distance 335 \
        --distancefrom right \
-       --padding 0 \
+       --padding 2 \
        --iconspacing 2 &
 
 exec xmonad
