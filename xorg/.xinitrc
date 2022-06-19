@@ -26,7 +26,7 @@ trayer --edge top \
        --transparent true \
        --alpha 0 \
        --tint 0x282a36 \
-       --distance 330 \
+       --distance 335 \
        --distancefrom right \
        --padding 0 \
        --iconspacing 2 &
