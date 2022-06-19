@@ -20,15 +20,11 @@ pasystray &
 nm-applet &
 
 trayer --edge top \
-       --align right \
-       --width 5 \
+       --widthtype request \
        --height 24 \
        --transparent true \
-       --alpha 0 \
        --tint 0x282a36 \
-       --distance 340 \
-       --distancefrom right \
-       --padding 2 \
+       --alpha 0 \
        --iconspacing 2 &
 
 exec xmonad
