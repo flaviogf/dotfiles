@@ -44,6 +44,10 @@
              :hook
              (dired-mode . all-the-icons-dired-mode))
 
+(use-package company
+             :init
+             (company-mode))
+
 (use-package counsel
              :init
              (counsel-mode))
