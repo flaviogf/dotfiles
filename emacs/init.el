@@ -15,7 +15,7 @@
 (require 'use-package)
 
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
-(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-13"))
+(add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-16"))
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
