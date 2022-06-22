@@ -16,8 +16,9 @@ nitrogen --restore &
 picom --experimental-backend &
 
 blueman-applet &
-pasystray &
+flameshot &
 nm-applet &
+pasystray &
 
 trayer --edge top \
        --widthtype request \
