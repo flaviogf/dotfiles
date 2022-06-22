@@ -169,3 +169,5 @@
              :ensure nil
              :hook
              (prog-mode . whitespace-mode))
+
+(use-package yaml-mode)
