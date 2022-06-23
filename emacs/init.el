@@ -130,6 +130,11 @@
 
 (use-package magit)
 
+(use-package org
+             :ensure nil
+             :init
+             (setq org-hide-emphasis-markers t))
+
 (use-package org-superstar
              :hook
              (org-mode . org-superstar-mode)
