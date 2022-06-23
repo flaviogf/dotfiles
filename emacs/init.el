@@ -130,6 +130,13 @@
 
 (use-package magit)
 
+(use-package org-superstar
+             :hook
+             (org-mode . org-superstar-mode)
+             :init
+             (setq org-superstar-remove-leading-stars t)
+             (setq org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
+
 (use-package projectile
              :bind
              (:map projectile-mode-map ("C-c p" . projectile-command-map))
