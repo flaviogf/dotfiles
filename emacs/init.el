@@ -164,7 +164,7 @@
 
 (use-package slime
   :init
-  (setf inferior-lisp-program "sbcl"))
+  (setq inferior-lisp-program "sbcl"))
 
 (use-package vterm)
 
