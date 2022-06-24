@@ -120,13 +120,13 @@
   :hook
   (go-mode . lsp)
   (ruby-mode . lsp)
-  :init
-  (setq lsp-diagnostics-provider :none)
-  (setq lsp-eldoc-enable-hover nil)
-  (setq lsp-headerline-breadcrumb-enable nil)
-  (setq lsp-keymap-prefix "C-c l")
-  (setq lsp-modeline-code-actions-enable nil)
-  (setq lsp-ui-sideline-enable nil))
+  :custom
+  (lsp-diagnostics-provider :none)
+  (lsp-eldoc-enable-hover nil)
+  (lsp-headerline-breadcrumb-enable nil)
+  (lsp-keymap-prefix "C-c l")
+  (lsp-modeline-code-actions-enable nil)
+  (lsp-ui-sideline-enable nil))
 
 (use-package magit)
 
