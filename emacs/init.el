@@ -93,7 +93,8 @@
 
 (use-package evil-collection
   :after evil
-  :init (evil-collection-init))
+  :init
+  (evil-collection-init))
 
 (use-package git-gutter
   :hook
@@ -116,16 +117,16 @@
 
 (use-package lsp-mode
   :commands lsp
-  :custom
-  (lsp-diagnostics-provider :none)
-  (lsp-eldoc-enable-hover nil)
-  (lsp-headerline-breadcrumb-enable nil)
-  (lsp-keymap-prefix "C-c l")
-  (lsp-modeline-code-actions-enable nil)
-  (lsp-ui-sideline-enable nil)
   :hook
   (go-mode . lsp)
-  (ruby-mode . lsp))
+  (ruby-mode . lsp)
+  :init
+  (setq lsp-diagnostics-provider :none)
+  (setq lsp-eldoc-enable-hover nil)
+  (setq lsp-headerline-breadcrumb-enable nil)
+  (setq lsp-keymap-prefix "C-c l")
+  (setq lsp-modeline-code-actions-enable nil)
+  (setq lsp-ui-sideline-enable nil))
 
 (use-package magit)
 
@@ -135,11 +136,11 @@
   (org-hide-emphasis-markers t))
 
 (use-package org-superstar
-  :custom
-  (org-superstar-remove-leading-stars t)
-  (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●"))
   :hook
-  (org-mode . org-superstar-mode))
+  (org-mode . org-superstar-mode)
+  :init
+  (setq org-superstar-remove-leading-stars t)
+  (setq org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 (use-package projectile
   :bind
@@ -162,8 +163,8 @@
 (use-package rspec-mode)
 
 (use-package slime
-  :custom
-  (inferior-lisp-program "sbcl"))
+  :init
+  (setf inferior-lisp-program "sbcl"))
 
 (use-package vterm)
 
