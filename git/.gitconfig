@@ -1,5 +1,7 @@
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
 [user]
 	name = flaviogf
 	email = flavio.fernandes6@gmail.com
-[init]
-	defaultBranch = main
