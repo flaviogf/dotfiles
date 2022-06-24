@@ -138,9 +138,9 @@
 (use-package org-superstar
   :hook
   (org-mode . org-superstar-mode)
-  :init
-  (setq org-superstar-remove-leading-stars t)
-  (setq org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
+  :custom
+  (org-superstar-remove-leading-stars t)
+  (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 (use-package projectile
   :bind
