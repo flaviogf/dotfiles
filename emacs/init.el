@@ -137,10 +137,7 @@
 
 (use-package org-superstar
   :hook
-  (org-mode . org-superstar-mode)
-  :custom
-  (org-superstar-remove-leading-stars t)
-  (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●")))
+  (org-mode . org-superstar-mode))
 
 (use-package projectile
   :bind
