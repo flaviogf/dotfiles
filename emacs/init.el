@@ -41,21 +41,17 @@
 (use-package all-the-icons)
 
 (use-package all-the-icons-dired
-  :hook
-  (dired-mode . all-the-icons-dired-mode))
+  :hook (dired-mode . all-the-icons-dired-mode))
 
 (use-package company
-  :init
-  (company-mode))
+  :init (company-mode))
 
 (use-package counsel
-  :init
-  (counsel-mode))
+  :init (counsel-mode))
 
 (use-package display-fill-column-indicator
   :ensure nil
-  :hook
-  (prog-mode . display-fill-column-indicator-mode))
+  :hook (prog-mode . display-fill-column-indicator-mode))
 
 (use-package display-line-numbers
   :ensure nil
@@ -65,16 +61,13 @@
   :custom
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t)
-  :init
-  (load-theme 'doom-dracula t))
+  :init (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
-  :init
-  (doom-modeline-mode))
+  :init (doom-modeline-mode))
 
 (use-package editorconfig
-  :init
-  (editorconfig-mode))
+  :init (editorconfig-mode))
 
 (use-package elfeed
   :custom
@@ -88,32 +81,26 @@
   (evil-want-C-u-scroll t)
   (evil-want-integration t)
   (evil-want-keybinding nil)
-  :init
-  (evil-mode))
+  :init (evil-mode))
 
 (use-package evil-collection
   :after evil
-  :init
-  (evil-collection-init))
+  :init (evil-collection-init))
 
 (use-package git-gutter
-  :hook
-  (prog-mode . git-gutter-mode))
+  :hook (prog-mode . git-gutter-mode))
 
 (use-package go-mode
-  :custom
-  (gofmt-command "goimports"))
+  :custom (gofmt-command "goimports"))
 
 (use-package haskell-mode)
 
 (use-package hl-line
   :ensure nil
-  :hook
-  (prog-mode . hl-line-mode))
+  :hook (prog-mode . hl-line-mode))
 
 (use-package ivy
-  :init
-  (ivy-mode))
+  :init (ivy-mode))
 
 (use-package lsp-mode
   :commands lsp
@@ -138,21 +125,24 @@
   :ensure nil
   :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
+(use-package org-indent
+  :ensure nil
+  :hook (org-mode . org-indent-mode))
 
 (use-package org-superstar
-  :hook
-  (org-mode . org-superstar-mode))
+  :hook (org-mode . org-superstar-mode))
+
+(use-package org-tempo
+  :ensure nil)
 
 (use-package projectile
-  :bind
-  (:map projectile-mode-map ("C-c p" . projectile-command-map))
+  :bind (:map projectile-mode-map ("C-c p" . projectile-command-map))
   :custom
   (projectile-completion-system 'ivy)
   (projectile-git-submodule-command nil)
   (projectile-project-search-path '(("~/dev" . 1)))
   (projectile-switch-project-action 'projectile-dired)
-  :init
-  (projectile-mode))
+  :init (projectile-mode))
 
 (use-package rainbow-mode
   :hook
@@ -164,20 +154,16 @@
 (use-package rspec-mode)
 
 (use-package slime
-  :init
-  (setq inferior-lisp-program "sbcl"))
+  :init (setq inferior-lisp-program "sbcl"))
 
 (use-package vterm)
 
 (use-package which-key
-  :custom
-  (which-key-idle-delay 2)
-  :init
-  (which-key-mode))
+  :custom (which-key-idle-delay 2)
+  :init (which-key-mode))
 
 (use-package whitespace
   :ensure nil
-  :hook
-  (prog-mode . whitespace-mode))
+  :hook (prog-mode . whitespace-mode))
 
 (use-package yaml-mode)
