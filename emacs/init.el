@@ -131,9 +131,13 @@
 (use-package magit)
 
 (use-package org
-  :ensure nil
   :custom
-  (org-hide-emphasis-markers t))
+  (org-hide-emphasis-markers t)
+  (org-src-tab-acts-natively t)
+  (org-startup-folded "fold")
+  :ensure nil
+  :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+
 
 (use-package org-superstar
   :hook
