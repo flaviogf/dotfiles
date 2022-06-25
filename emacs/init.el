@@ -72,8 +72,7 @@
 (use-package elfeed
   :custom
   (elfeed-search-filter "@1-week-ago +unread")
-  (elfeed-feeds '(("jovemnerd.com.br/feed/" news)
-                  ("blog.digitalocean.com/rss/" tech))))
+  (elfeed-feeds '(("jovemnerd.com.br/feed/" news) ("blog.digitalocean.com/rss/" tech))))
 
 (use-package evil
   :custom
