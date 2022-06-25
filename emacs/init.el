@@ -121,7 +121,7 @@
   :custom
   (org-hide-emphasis-markers t)
   (org-src-tab-acts-natively t)
-  (org-startup-folded "fold")
+  (org-startup-folded 'content)
   :ensure nil
   :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
