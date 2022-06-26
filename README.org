@@ -11,7 +11,7 @@ This repository is destined to save all my dotfiles.
 
 * :computer: Techs
 - Alacritty
-- Emacs
+- [[file:emacs/README.org][Emacs]]
 - Dunst
 - Picom
 - Starship
