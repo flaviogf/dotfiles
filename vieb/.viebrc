@@ -16,6 +16,8 @@ set permissionpersistentstorage=ask
 
 set restoretabs=false
 
-set startuppages=google.com
+set search=https://google.com/search?q=%s
 
 set splitright=true
+
+set startuppages=https://google.com
