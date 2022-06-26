@@ -11,8 +11,9 @@ This repository is destined to save all my dotfiles.
 
 * :computer: Techs
 - Alacritty
-- [[file:emacs/README.org][Emacs]]
 - Dunst
+- [[file:emacs/README.org][Emacs]]
+- Git
 - Picom
 - Starship
 - Tmux
@@ -20,6 +21,7 @@ This repository is destined to save all my dotfiles.
 - Vim
 - Xmobar
 - Xmonad
+- Xorg
 - Zsh
 
 * :memo: License
