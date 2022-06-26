@@ -119,9 +119,7 @@
 (use-package org
   :custom
   (org-confirm-babel-evaluate nil)
-  (org-edit-src-content-indentation 0)
   (org-hide-emphasis-markers t)
-  (org-src-preserve-indentation t)
   (org-startup-folded t)
   :ensure nil
   :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
