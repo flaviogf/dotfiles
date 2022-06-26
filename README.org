@@ -1,13 +1,11 @@
 #+Title: Dotfiles
 #+author: flaviogf
 
+:scroll: This repository is destined to save all my dotfiles.
+
 * Table of Contents :toc:
-- [[#rocket-project][:rocket: Project]]
 - [[#computer-techs][:computer: Techs]]
 - [[#memo-license][:memo: License]]
-
-* :rocket: Project
-:scroll: This repository is destined to save all my dotfiles.
 
 * :computer: Techs
 - Alacritty
