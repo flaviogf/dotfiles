@@ -24,7 +24,7 @@ ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
 # Vieb
-ln -sf "${DOTFILES}/dev/dotfiles/vieb/.viebrc" "${HOME}/.viebrc"
+ln -sf "${DOTFILES}/vieb/.viebrc" "${HOME}/.viebrc"
 
 # Vim
 ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
