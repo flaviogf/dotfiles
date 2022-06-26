@@ -134,6 +134,9 @@
 (use-package org-tempo
   :ensure nil)
 
+(use-package toc-org
+  :hook (org-mode . toc-org-mode))
+
 (use-package projectile
   :bind (:map projectile-mode-map ("C-c p" . projectile-command-map))
   :custom
@@ -154,9 +157,6 @@
 
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
-
-(use-package toc-org
-  :hook (org-mode . toc-org-mode))
 
 (use-package vterm)
 
