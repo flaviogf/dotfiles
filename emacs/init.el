@@ -157,6 +157,9 @@
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
 
+(use-package toc-org
+  :hook (org-mode . toc-org-mode))
+
 (use-package vterm)
 
 (use-package which-key
