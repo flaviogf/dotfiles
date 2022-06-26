@@ -17,10 +17,11 @@
 - Alacritty
 - Emacs
 - Dunst
-- Neovim
 - Picom
 - Starship
 - Tmux
+- Vieb
+- Vim
 - Xmobar
 - Xmonad
 - Zsh
