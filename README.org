@@ -1,5 +1,5 @@
-#+title: Dotfiles
-#+author: flaviogf
+#+TITLE: Dotfiles
+#+AUTHOR: flaviogf
 
 * Table of Contents :toc:
 - [[#rocket-project][:rocket: Project]]
