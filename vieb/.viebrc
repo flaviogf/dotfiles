@@ -14,4 +14,6 @@ set permissionmediadevices=allow
 set permissionmicrophone=ask
 set permissionpersistentstorage=ask
 
+set startuppages=google.com
+
 set splitright=true
