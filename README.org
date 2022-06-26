@@ -1,4 +1,7 @@
-* Dotfiles :toc:
+#+title: Dotfiles
+#+author: flaviogf
+
+* Table of Contents :toc:
 - [[#rocket-project][:rocket: Project]]
 - [[#computer-techs][:computer: Techs]]
 - [[#memo-license][:memo: License]]
