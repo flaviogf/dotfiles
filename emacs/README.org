@@ -2,6 +2,39 @@
 #+AUTHOR: flaviogf
 #+PROPERTY: header-args:emacs-lisp :tangle init.el
 
+* Table of Contents :toc:
+- [[#package-management][Package Management]]
+- [[#settings][Settings]]
+- [[#customization][Customization]]
+- [[#packages][Packages]]
+  - [[#all-the-icons][All The Icons]]
+  - [[#company][Company]]
+  - [[#counsel][Counsel]]
+  - [[#display-fill-column-indicator][Display Fill Column Indicator]]
+  - [[#display-line-numbers][Display Line Numbers]]
+  - [[#doom-themes][Doom Themes]]
+  - [[#doom-modeline][Doom Modeline]]
+  - [[#editorconfig][Editorconfig]]
+  - [[#elfeed][Elfeed]]
+  - [[#evil][Evil]]
+  - [[#git-gutter][Git Gutter]]
+  - [[#go-mode][Go Mode]]
+  - [[#haskell-mode][Haskell Mode]]
+  - [[#hl-line][Hl Line]]
+  - [[#ivy][Ivy]]
+  - [[#lsp-mode][Lsp Mode]]
+  - [[#magit][Magit]]
+  - [[#org][Org]]
+  - [[#projectile][Projectile]]
+  - [[#rainbow-mode][Rainbow Mode]]
+  - [[#rg][Rg]]
+  - [[#rspec-mode][Rspec Mode]]
+  - [[#slime][Slime]]
+  - [[#vterm][Vterm]]
+  - [[#which-key][Which Key]]
+  - [[#whitespace][Whitespace]]
+  - [[#yaml-mode][Yaml Mode]]
+
 * Package Management
 #+begin_src emacs-lisp
   (require 'package)
