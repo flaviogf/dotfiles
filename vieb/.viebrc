@@ -10,7 +10,7 @@ set firefoxmode=google
 set permissioncamera=ask
 set permissioncertificateerror=ask
 set permissiondisplaycapture=ask
-set permissionmediadevices=ask
+set permissionmediadevices=allow
 set permissionmicrophone=ask
 set permissionpersistentstorage=ask
 
