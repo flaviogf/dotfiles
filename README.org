@@ -1,4 +1,4 @@
-* Table of Contents :toc:
+* Dotfiles :toc:
 - [[#rocket-project][:rocket: Project]]
 - [[#computer-techs][:computer: Techs]]
 - [[#memo-license][:memo: License]]
