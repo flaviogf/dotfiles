@@ -90,7 +90,8 @@
   :hook (prog-mode . git-gutter-mode))
 
 (use-package go-mode
-  :custom (gofmt-command "goimports"))
+  :custom (gofmt-command "goimports")
+  :hook (before-save . gofmt-before-save))
 
 (use-package haskell-mode)
 

@@ -168,7 +168,8 @@
 ** Go Mode
 #+begin_src emacs-lisp
   (use-package go-mode
-    :custom (gofmt-command "goimports"))
+    :custom (gofmt-command "goimports")
+    :hook (before-save . gofmt-before-save))
 #+end_src
 
 ** Haskell Mode
