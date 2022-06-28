@@ -21,7 +21,7 @@
   - [[#haskell-mode][Haskell Mode]]
   - [[#hl-line][Hl Line]]
   - [[#ivy][Ivy]]
-  - [[#lsp-mode][Lsp Mode]]
+  - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
   - [[#org][Org]]
   - [[#projectile][Projectile]]
@@ -189,7 +189,7 @@
     :init (ivy-mode))
 #+end_src
 
-** Lsp Mode
+** LSP Mode
 #+begin_src emacs-lisp
   (use-package lsp-mode
     :commands lsp
