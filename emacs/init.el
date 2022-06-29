@@ -119,6 +119,12 @@
   :ensure nil
   :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
+(use-package org-roam
+  :custom
+  (org-roam-dailies-directory "daily")
+  (org-roam-directory "/home/flaviogf/dev/org-files")
+  :init (org-roam-db-autosync-mode))
+
 (use-package org-superstar
   :hook (org-mode . org-superstar-mode))
 

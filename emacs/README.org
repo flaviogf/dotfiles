@@ -21,6 +21,7 @@
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
   - [[#org][Org]]
+  - [[#org-roam][Org Roam]]
   - [[#org-superstar][Org Superstar]]
   - [[#org-toc][Org Toc]]
   - [[#projectile][Projectile]]
@@ -203,6 +204,15 @@
     (org-startup-folded t)
     :ensure nil
     :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+#+end_src
+
+** Org Roam
+#+begin_src emacs-lisp
+  (use-package org-roam
+    :custom
+    (org-roam-dailies-directory "daily")
+    (org-roam-directory "/home/flaviogf/dev/org-files")
+    :init (org-roam-db-autosync-mode))
 #+end_src
 
 ** Org Superstar
