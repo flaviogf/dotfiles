@@ -22,12 +22,12 @@
   - [[#magit][Magit]]
   - [[#org][Org]]
   - [[#org-superstar][Org Superstar]]
+  - [[#org-toc][Org Toc]]
   - [[#projectile][Projectile]]
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#rg][Rg]]
   - [[#rspec-mode][Rspec Mode]]
   - [[#slime][Slime]]
-  - [[#toc-org][Toc Org]]
   - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
@@ -211,6 +211,12 @@
     :hook (org-mode . org-superstar-mode))
 #+end_src
 
+** Org Toc
+#+begin_src emacs-lisp
+  (use-package toc-org
+    :hook (org-mode . toc-org-mode))
+#+end_src
+
 ** Projectile
 #+begin_src emacs-lisp
   (use-package projectile
@@ -245,12 +251,6 @@
 #+begin_src emacs-lisp
   (use-package slime
     :init (setq inferior-lisp-program "sbcl"))
-#+end_src
-
-** Toc Org
-#+begin_src emacs-lisp
-  (use-package toc-org
-    :hook (org-mode . toc-org-mode))
 #+end_src
 
 ** Vterm
