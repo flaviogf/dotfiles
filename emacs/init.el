@@ -113,6 +113,7 @@
 
 (use-package org
   :custom
+  (org-agenda-files '("/home/flaviogf/dev/org-files/todo.org"))
   (org-confirm-babel-evaluate nil)
   (org-hide-emphasis-markers t)
   (org-startup-folded t)
@@ -122,7 +123,7 @@
 (use-package org-roam
   :custom
   (org-roam-dailies-directory "daily")
-  (org-roam-directory "/home/flaviogf/dev/org-files")
+  (org-roam-directory "/home/flaviogf/dev/org-files/notes")
   :init (org-roam-db-autosync-mode))
 
 (use-package org-superstar
