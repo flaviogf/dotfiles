@@ -9,8 +9,6 @@
   - [[#all-the-icons][All The Icons]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
-  - [[#display-fill-column-indicator][Display Fill Column Indicator]]
-  - [[#display-line-numbers][Display Line Numbers]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
@@ -19,19 +17,19 @@
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
-  - [[#hl-line][Hl Line]]
   - [[#ivy][Ivy]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
   - [[#org][Org]]
+  - [[#org-superstar][Org Superstar]]
   - [[#projectile][Projectile]]
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#rg][Rg]]
   - [[#rspec-mode][Rspec Mode]]
   - [[#slime][Slime]]
+  - [[#toc-org][Toc Org]]
   - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
-  - [[#whitespace][Whitespace]]
   - [[#yaml-mode][Yaml Mode]]
 
 * Package Management
@@ -78,6 +76,12 @@
   (customize-set-variable 'use-package-always-ensure t)
   (customize-set-variable 'whitespace-line-column 120)
   (customize-set-variable 'whitespace-style '(face lines-tail))
+
+  (add-hook 'org-mode 'org-indent-mode)
+  (add-hook 'prog-mode 'display-fill-column-indicator-mode)
+  (add-hook 'prog-mode 'display-line-numbers-mode)
+  (add-hook 'prog-mode 'hl-line-mode)
+  (add-hook 'prog-mode 'whitespace-mode)
 #+end_src
 
 * Packages
@@ -99,20 +103,6 @@
 #+begin_src emacs-lisp
   (use-package counsel
     :init (counsel-mode))
-#+end_src
-
-** Display Fill Column Indicator
-#+begin_src emacs-lisp
-  (use-package display-fill-column-indicator
-    :ensure nil
-    :hook (prog-mode . display-fill-column-indicator-mode))
-#+end_src
-
-** Display Line Numbers
-#+begin_src emacs-lisp
-  (use-package display-line-numbers
-    :ensure nil
-    :hook (prog-mode . display-line-numbers-mode))
 #+end_src
 
 ** Doom Themes
@@ -177,13 +167,6 @@
   (use-package haskell-mode)
 #+end_src
 
-** Hl Line
-#+begin_src emacs-lisp
-  (use-package hl-line
-    :ensure nil
-    :hook (prog-mode . hl-line-mode))
-#+end_src
-
 ** Ivy
 #+begin_src emacs-lisp
   (use-package ivy
@@ -220,19 +203,12 @@
     (org-startup-folded t)
     :ensure nil
     :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+#+end_src
 
-  (use-package org-indent
-    :ensure nil
-    :hook (org-mode . org-indent-mode))
-
+** Org Superstar
+#+begin_src emacs-lisp
   (use-package org-superstar
     :hook (org-mode . org-superstar-mode))
-
-  (use-package org-tempo
-    :ensure nil)
-
-  (use-package toc-org
-    :hook (org-mode . toc-org-mode))
 #+end_src
 
 ** Projectile
@@ -271,6 +247,12 @@
     :init (setq inferior-lisp-program "sbcl"))
 #+end_src
 
+** Toc Org
+#+begin_src emacs-lisp
+  (use-package toc-org
+    :hook (org-mode . toc-org-mode))
+#+end_src
+
 ** Vterm
 #+begin_src emacs-lisp
   (use-package vterm)
@@ -281,13 +263,6 @@
   (use-package which-key
     :custom (which-key-idle-delay 2)
     :init (which-key-mode))
-#+end_src
-
-** Whitespace
-#+begin_src emacs-lisp
-  (use-package whitespace
-    :ensure nil
-    :hook (prog-mode . whitespace-mode))
 #+end_src
 
 ** Yaml Mode

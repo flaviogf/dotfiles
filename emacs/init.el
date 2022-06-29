@@ -38,6 +38,12 @@
 (customize-set-variable 'whitespace-line-column 120)
 (customize-set-variable 'whitespace-style '(face lines-tail))
 
+(add-hook 'org-mode 'org-indent-mode)
+(add-hook 'prog-mode 'display-fill-column-indicator-mode)
+(add-hook 'prog-mode 'display-line-numbers-mode)
+(add-hook 'prog-mode 'hl-line-mode)
+(add-hook 'prog-mode 'whitespace-mode)
+
 (use-package all-the-icons)
 
 (use-package all-the-icons-dired
@@ -48,14 +54,6 @@
 
 (use-package counsel
   :init (counsel-mode))
-
-(use-package display-fill-column-indicator
-  :ensure nil
-  :hook (prog-mode . display-fill-column-indicator-mode))
-
-(use-package display-line-numbers
-  :ensure nil
-  :hook (prog-mode . display-line-numbers-mode))
 
 (use-package doom-themes
   :custom
@@ -95,10 +93,6 @@
 
 (use-package haskell-mode)
 
-(use-package hl-line
-  :ensure nil
-  :hook (prog-mode . hl-line-mode))
-
 (use-package ivy
   :init (ivy-mode))
 
@@ -125,18 +119,8 @@
   :ensure nil
   :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
-(use-package org-indent
-  :ensure nil
-  :hook (org-mode . org-indent-mode))
-
 (use-package org-superstar
   :hook (org-mode . org-superstar-mode))
-
-(use-package org-tempo
-  :ensure nil)
-
-(use-package toc-org
-  :hook (org-mode . toc-org-mode))
 
 (use-package projectile
   :bind (:map projectile-mode-map ("C-c p" . projectile-command-map))
@@ -159,14 +143,13 @@
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
 
+(use-package toc-org
+  :hook (org-mode . toc-org-mode))
+
 (use-package vterm)
 
 (use-package which-key
   :custom (which-key-idle-delay 2)
   :init (which-key-mode))
-
-(use-package whitespace
-  :ensure nil
-  :hook (prog-mode . whitespace-mode))
 
 (use-package yaml-mode)
