@@ -38,11 +38,11 @@
 (customize-set-variable 'whitespace-line-column 120)
 (customize-set-variable 'whitespace-style '(face lines-tail))
 
-(add-hook 'org-mode 'org-indent-mode)
-(add-hook 'prog-mode 'display-fill-column-indicator-mode)
-(add-hook 'prog-mode 'display-line-numbers-mode)
-(add-hook 'prog-mode 'hl-line-mode)
-(add-hook 'prog-mode 'whitespace-mode)
+(add-hook 'org-mode-hook 'org-indent-mode)
+(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'hl-line-mode)
+(add-hook 'prog-mode-hook 'whitespace-mode)
 
 (use-package all-the-icons)
 

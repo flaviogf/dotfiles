@@ -26,7 +26,7 @@
   - [[#projectile][Projectile]]
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#rg][Rg]]
-  - [[#rspec-mode][Rspec Mode]]
+  - [[#rspec-mode][RSpec Mode]]
   - [[#slime][Slime]]
   - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
@@ -77,11 +77,11 @@
   (customize-set-variable 'whitespace-line-column 120)
   (customize-set-variable 'whitespace-style '(face lines-tail))
 
-  (add-hook 'org-mode 'org-indent-mode)
-  (add-hook 'prog-mode 'display-fill-column-indicator-mode)
-  (add-hook 'prog-mode 'display-line-numbers-mode)
-  (add-hook 'prog-mode 'hl-line-mode)
-  (add-hook 'prog-mode 'whitespace-mode)
+  (add-hook 'org-mode-hook 'org-indent-mode)
+  (add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+  (add-hook 'prog-mode-hook 'hl-line-mode)
+  (add-hook 'prog-mode-hook 'whitespace-mode)
 #+end_src
 
 * Packages
@@ -242,7 +242,7 @@
   (use-package rg)
 #+end_src
 
-** Rspec Mode
+** RSpec Mode
 #+begin_src emacs-lisp
   (use-package rspec-mode)
 #+end_src
