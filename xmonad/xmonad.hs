@@ -86,7 +86,7 @@ main = do
         , focusedBorderColor = myFocusColor
         , handleEventHook = docksEventHook
         , layoutHook = myLayoutHook
-        , logHook = dynamicLogWithPP $ xmobarPP
+        , logHook = dynamicLogWithPP $ namedScratchpadFilterOutWorkspacePP $ xmobarPP
               { ppOutput = hPutStrLn h
               , ppCurrent = xmobarColor color06 "" . wrap ("<box type=Bottom width=2>") "</box>"
               , ppVisible = xmobarColor color06 ""
