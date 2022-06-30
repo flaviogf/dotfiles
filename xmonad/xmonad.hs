@@ -78,8 +78,6 @@ myLayoutHook = avoidStruts
              where
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
-myManageHooks = namedScratchpadManageHook myScratchpads
-
 main = do
     h <- spawnPipe "xmobar"
     xmonad $ ewmh def
@@ -98,7 +96,7 @@ main = do
               , ppExtras = [myWindowCount]
               , ppOrder = \(ws:_:t:ex) -> [ws]++ex++[t]
               }
-        , manageHook = myManageHooks <+> manageDocks
+        , manageHook = (namedScratchpadManageHook myScratchpads) <+> manageDocks
         , modMask = myModMask
         , normalBorderColor = myNormColor
         , terminal = myTerminal
