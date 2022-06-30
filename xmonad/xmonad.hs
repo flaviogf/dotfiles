@@ -59,7 +59,8 @@ myNormColor :: String
 myNormColor = colorBack
 
 myScratchpads :: [NamedScratchpad]
-myScratchpads = [NS "terminal" (myTerminal ++ " -t scratchpad") (title =? "scratchpad") defaultFloating]
+myScratchpads = [NS "terminal" (myTerminal ++ " -t scratchpad") (title =? "scratchpad") centerFloating]
+  where centerFloating = customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)
 
 myTerminal :: String
 myTerminal = "alacritty"
