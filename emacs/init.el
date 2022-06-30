@@ -115,7 +115,7 @@
 
 (use-package org
   :custom
-  (org-agenda-files '("/home/flaviogf/dev/org-files/todo.org"))
+  (org-agenda-files '("/home/flaviogf/dev/org-files/TODO.org"))
   (org-confirm-babel-evaluate nil)
   (org-hide-emphasis-markers t)
   (org-startup-folded t)
