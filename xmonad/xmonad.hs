@@ -67,6 +67,8 @@ myTerminal = "alacritty"
 myWindowCount :: X (Maybe String)
 myWindowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
+myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
+
 myLayoutHook = avoidStruts
                $ withBorder myBorderWidth
                $ renamed [Replace "Tall"]
@@ -75,7 +77,6 @@ myLayoutHook = avoidStruts
              where
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
-myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
 myManageHooks = namedScratchpadManageHook myScratchpads
 
 main = do
