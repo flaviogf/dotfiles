@@ -10,7 +10,9 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Spacing
+import XMonad.ManageHook
 import XMonad.Util.EZConfig
+import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run
 import XMonad.Util.Ungrab
 import XMonad.Util.SpawnOnce
@@ -56,6 +58,9 @@ myModMask = mod4Mask
 myNormColor :: String
 myNormColor = colorBack
 
+myScratchpads :: [NamedScratchpad]
+myScratchpads = [NS "terminal" (myTerminal ++ " -t scratchpad") (title =? "scratchpad") defaultFloating]
+
 myTerminal :: String
 myTerminal = "alacritty"
 
@@ -71,6 +76,7 @@ myLayoutHook = avoidStruts
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
+myManageHooks = namedScratchpadManageHook myScratchpads
 
 main = do
     h <- spawnPipe "xmobar"
@@ -90,7 +96,7 @@ main = do
               , ppExtras = [myWindowCount]
               , ppOrder = \(ws:_:t:ex) -> [ws]++ex++[t]
               }
-        , manageHook = manageDocks
+        , manageHook = myManageHooks <+> manageDocks
         , modMask = myModMask
         , normalBorderColor = myNormColor
         , terminal = myTerminal
@@ -101,4 +107,5 @@ main = do
         , ("M-C-w", spawn myBrowser)
         , ("M-e d", spawn (myEmacs ++ "--create-frame --eval '(dired nil)'"))
         , ("M-e t", spawn (myEmacs ++ "--create-frame --eval '(vterm)'"))
+        , ("M-s t", namedScratchpadAction myScratchpads "terminal")
         ]
