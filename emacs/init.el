@@ -30,6 +30,7 @@
 (customize-set-variable 'initial-scratch-message nil)
 (customize-set-variable 'make-backup-files nil)
 (customize-set-variable 'menu-bar-mode nil)
+(customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'tab-width 2)
 (customize-set-variable 'tool-bar-mode nil)
