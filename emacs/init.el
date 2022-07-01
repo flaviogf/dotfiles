@@ -140,7 +140,9 @@
   :custom
   (projectile-completion-system 'ivy)
   (projectile-git-submodule-command nil)
+  (projectile-indexing-method 'native)
   (projectile-project-search-path '(("~/dev" . 1)))
+  (projectile-sort-order 'recentf)
   (projectile-switch-project-action 'projectile-dired)
   :init (projectile-mode))
 
