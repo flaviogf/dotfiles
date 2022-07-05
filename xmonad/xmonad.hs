@@ -104,6 +104,7 @@ main = do
         }
       `additionalKeysP`
         [ ("M-C-h", spawn (myTerminal ++ " -e htop"))
+        , ("M-C-s", spawn "scrot /home/flaviogf/Pictures/%Y-%m-%d-%T-screenshot.png --select --line mode=edge")
         , ("M-C-w", spawn myBrowser)
         , ("M-e d", spawn (myEmacs ++ "--create-frame --eval '(dired nil)'"))
         , ("M-e t", spawn (myEmacs ++ "--create-frame --eval '(vterm)'"))
