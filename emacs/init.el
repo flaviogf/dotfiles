@@ -139,6 +139,9 @@
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
 
+(use-package swiper
+  :bind (("C-s" . swiper)))
+
 (use-package which-key
   :custom (which-key-idle-delay 2)
   :init (which-key-mode))

@@ -25,6 +25,7 @@
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
+  - [[#swiper][Swiper]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -231,6 +232,12 @@
 #+begin_src emacs-lisp
   (use-package slime
     :init (setq inferior-lisp-program "sbcl"))
+#+end_src
+
+** Swiper
+#+begin_src emacs-lisp
+  (use-package swiper
+    :bind (("C-s" . swiper)))
 #+end_src
 
 ** Which Key
