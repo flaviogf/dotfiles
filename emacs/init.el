@@ -98,7 +98,7 @@
 
 (use-package ivy
   :custom
-  (ivy-count-format "(%d/%d)")
+  (ivy-count-format "(%d/%d) ")
   (ivy-use-virtual-buffers t)
   :init (ivy-mode))
 
