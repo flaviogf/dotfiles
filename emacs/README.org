@@ -175,6 +175,7 @@
 ** Ivy
 #+begin_src emacs-lisp
   (use-package ivy
+    :custom (ivy-use-virtual-buffers t)
     :init (ivy-mode))
 #+end_src
 

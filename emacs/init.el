@@ -97,6 +97,7 @@
 (use-package haskell-mode)
 
 (use-package ivy
+  :custom (ivy-use-virtual-buffers t)
   :init (ivy-mode))
 
 (use-package lsp-mode
