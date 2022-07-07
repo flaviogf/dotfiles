@@ -8,7 +8,6 @@
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
   - [[#company][Company]]
-  - [[#counsel][Counsel]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
@@ -16,10 +15,8 @@
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
-  - [[#ivy][Ivy]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
-  - [[#multi-vterm][Multi Vterm]]
   - [[#org][Org]]
   - [[#org-roam][Org Roam]]
   - [[#org-superstar][Org Superstar]]
@@ -27,7 +24,6 @@
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
-  - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -101,12 +97,6 @@
     :init (company-mode))
 #+end_src
 
-** Counsel
-#+begin_src emacs-lisp
-  (use-package counsel
-    :init (counsel-mode))
-#+end_src
-
 ** Doom Themes
 #+begin_src emacs-lisp
   (use-package doom-themes
@@ -161,12 +151,6 @@
   (use-package haskell-mode)
 #+end_src
 
-** Ivy
-#+begin_src emacs-lisp
-  (use-package ivy
-    :init (ivy-mode))
-#+end_src
-
 ** LSP Mode
 #+begin_src emacs-lisp
   (use-package lsp-mode
@@ -186,11 +170,6 @@
 ** Magit
 #+begin_src emacs-lisp
   (use-package magit)
-#+end_src
-
-** Multi Vterm
-#+begin_src emacs-lisp
-  (use-package multi-vterm)
 #+end_src
 
 ** Org
@@ -243,11 +222,6 @@
 #+begin_src emacs-lisp
   (use-package slime
     :init (setq inferior-lisp-program "sbcl"))
-#+end_src
-
-** Vterm
-#+begin_src emacs-lisp
-  (use-package vterm)
 #+end_src
 
 ** Which Key

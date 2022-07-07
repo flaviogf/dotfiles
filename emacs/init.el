@@ -55,9 +55,6 @@
 (use-package company
   :init (company-mode))
 
-(use-package counsel
-  :init (counsel-mode))
-
 (use-package doom-themes
   :custom
   (doom-themes-enable-bold t)
@@ -91,9 +88,6 @@
 
 (use-package haskell-mode)
 
-(use-package ivy
-  :init (ivy-mode))
-
 (use-package lsp-mode
   :commands lsp
   :hook
@@ -108,8 +102,6 @@
   (lsp-ui-sideline-enable nil))
 
 (use-package magit)
-
-(use-package multi-vterm)
 
 (use-package org
   :custom
@@ -141,8 +133,6 @@
 
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
-
-(use-package vterm)
 
 (use-package which-key
   :custom (which-key-idle-delay 2)
