@@ -12,7 +12,6 @@
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
-  - [[#elfeed][Elfeed]]
   - [[#evil][Evil]]
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
@@ -25,10 +24,8 @@
   - [[#org-roam][Org Roam]]
   - [[#org-superstar][Org Superstar]]
   - [[#org-toc][Org Toc]]
-  - [[#projectile][Projectile]]
   - [[#rainbow-mode][Rainbow Mode]]
-  - [[#rg][Rg]]
-  - [[#rspec-mode][RSpec Mode]]
+  - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
   - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
@@ -131,14 +128,6 @@
     :init (editorconfig-mode))
 #+end_src
 
-** Elfeed
-#+begin_src emacs-lisp
-  (use-package elfeed
-    :custom
-    (elfeed-search-filter "@1-week-ago +unread")
-    (elfeed-feeds '(("jovemnerd.com.br/feed/" news) ("blog.digitalocean.com/rss/" tech))))
-#+end_src
-
 ** Evil
 #+begin_src emacs-lisp
   (use-package evil
@@ -175,9 +164,6 @@
 ** Ivy
 #+begin_src emacs-lisp
   (use-package ivy
-    :custom
-    (ivy-count-format "(%d/%d) ")
-    (ivy-use-virtual-buffers t)
     :init (ivy-mode))
 #+end_src
 
@@ -240,20 +226,6 @@
     :hook (org-mode . toc-org-mode))
 #+end_src
 
-** Projectile
-#+begin_src emacs-lisp
-  (use-package projectile
-    :bind (:map projectile-mode-map ("C-c p" . projectile-command-map))
-    :custom
-    (projectile-completion-system 'ivy)
-    (projectile-git-submodule-command nil)
-    (projectile-indexing-method 'native)
-    (projectile-project-search-path '(("~/dev" . 1)))
-    (projectile-sort-order 'recentf)
-    (projectile-switch-project-action 'projectile-dired)
-    :init (projectile-mode))
-#+end_src
-
 ** Rainbow Mode
 #+begin_src emacs-lisp
   (use-package rainbow-mode
@@ -262,14 +234,9 @@
     (prog-mode . rainbow-mode))
 #+end_src
 
-** Rg
+** Ripgrep
 #+begin_src emacs-lisp
   (use-package rg)
-#+end_src
-
-** RSpec Mode
-#+begin_src emacs-lisp
-  (use-package rspec-mode)
 #+end_src
 
 ** Slime

@@ -70,11 +70,6 @@
 (use-package editorconfig
   :init (editorconfig-mode))
 
-(use-package elfeed
-  :custom
-  (elfeed-search-filter "@1-week-ago +unread")
-  (elfeed-feeds '(("jovemnerd.com.br/feed/" news) ("blog.digitalocean.com/rss/" tech))))
-
 (use-package evil
   :custom
   (evil-shift-width 2)
@@ -97,9 +92,6 @@
 (use-package haskell-mode)
 
 (use-package ivy
-  :custom
-  (ivy-count-format "(%d/%d) ")
-  (ivy-use-virtual-buffers t)
   :init (ivy-mode))
 
 (use-package lsp-mode
@@ -140,25 +132,12 @@
 (use-package toc-org
   :hook (org-mode . toc-org-mode))
 
-(use-package projectile
-  :bind (:map projectile-mode-map ("C-c p" . projectile-command-map))
-  :custom
-  (projectile-completion-system 'ivy)
-  (projectile-git-submodule-command nil)
-  (projectile-indexing-method 'native)
-  (projectile-project-search-path '(("~/dev" . 1)))
-  (projectile-sort-order 'recentf)
-  (projectile-switch-project-action 'projectile-dired)
-  :init (projectile-mode))
-
 (use-package rainbow-mode
   :hook
   (conf-unix-mode . rainbow-mode)
   (prog-mode . rainbow-mode))
 
 (use-package rg)
-
-(use-package rspec-mode)
 
 (use-package slime
   :init (setq inferior-lisp-program "sbcl"))
