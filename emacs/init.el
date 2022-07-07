@@ -88,6 +88,11 @@
 
 (use-package haskell-mode)
 
+(use-package helm
+  :bind
+  (("M-x" . helm-M-x))
+  :init (helm-mode))
+
 (use-package lsp-mode
   :commands lsp
   :hook

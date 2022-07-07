@@ -15,6 +15,7 @@
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
+  - [[#helm][Helm]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
   - [[#org][Org]]
@@ -149,6 +150,14 @@
 ** Haskell Mode
 #+begin_src emacs-lisp
   (use-package haskell-mode)
+#+end_src
+
+** Helm
+#+begin_src emacs-lisp
+  (use-package helm
+    :bind
+    (("M-x" . helm-M-x))
+    :init (helm-mode))
 #+end_src
 
 ** LSP Mode
