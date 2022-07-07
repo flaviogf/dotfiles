@@ -114,6 +114,8 @@
 
 (use-package magit)
 
+(use-package multi-vterm)
+
 (use-package org
   :custom
   (org-agenda-files '("/home/flaviogf/dev/org-files/TODO.org"))

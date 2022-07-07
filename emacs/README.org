@@ -20,6 +20,7 @@
   - [[#ivy][Ivy]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
+  - [[#multi-vterm][Multi Vterm]]
   - [[#org][Org]]
   - [[#org-roam][Org Roam]]
   - [[#org-superstar][Org Superstar]]
@@ -196,6 +197,11 @@
 ** Magit
 #+begin_src emacs-lisp
   (use-package magit)
+#+end_src
+
+** Multi Vterm
+#+begin_src emacs-lisp
+  (use-package multi-vterm)
 #+end_src
 
 ** Org
