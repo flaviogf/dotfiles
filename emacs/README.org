@@ -175,7 +175,9 @@
 ** Ivy
 #+begin_src emacs-lisp
   (use-package ivy
-    :custom (ivy-use-virtual-buffers t)
+    :custom
+    (ivy-count-format "(%d/%d)")
+    (ivy-use-virtual-buffers t)
     :init (ivy-mode))
 #+end_src
 

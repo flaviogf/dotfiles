@@ -97,7 +97,9 @@
 (use-package haskell-mode)
 
 (use-package ivy
-  :custom (ivy-use-virtual-buffers t)
+  :custom
+  (ivy-count-format "(%d/%d)")
+  (ivy-use-virtual-buffers t)
   :init (ivy-mode))
 
 (use-package lsp-mode
