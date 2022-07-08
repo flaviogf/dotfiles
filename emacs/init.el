@@ -30,9 +30,7 @@
 (customize-set-variable 'initial-scratch-message nil)
 (customize-set-variable 'make-backup-files nil)
 (customize-set-variable 'menu-bar-mode nil)
-(customize-set-variable 'project-switch-commands '((project-dired "Dired")
-                                                   (project-find-file "Find file")
-                                                   (project-find-dir "Find directory")))
+(customize-set-variable 'project-switch-commands '((project-dired "dired") (project-find-file "find file")))
 (customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'tab-width 2)
@@ -95,6 +93,10 @@
   :bind
   (("M-x" . helm-M-x))
   :init (helm-mode))
+
+(use-package helm-ag
+  :bind
+  ("C-x p a" . helm-do-ag-project-root))
 
 (use-package lsp-mode
   :commands lsp
