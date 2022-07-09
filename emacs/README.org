@@ -8,6 +8,7 @@
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
   - [[#company][Company]]
+  - [[#docker][Docker]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
@@ -101,6 +102,12 @@
 #+begin_src emacs-lisp
   (use-package company
     :init (company-mode))
+#+end_src
+
+** Docker
+#+begin_src emacs-lisp
+  (use-package docker
+    :bind ("C-c d" . docker))
 #+end_src
 
 ** Doom Themes

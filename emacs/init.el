@@ -58,6 +58,9 @@
 (use-package company
   :init (company-mode))
 
+(use-package docker
+  :bind ("C-c d" . docker))
+
 (use-package doom-themes
   :custom
   (doom-themes-enable-bold t)
