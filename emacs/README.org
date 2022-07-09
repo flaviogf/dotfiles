@@ -28,6 +28,7 @@
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
   - [[#swiper][Swiper]]
+  - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -256,6 +257,11 @@
 #+begin_src emacs-lisp
   (use-package swiper
     :bind (("C-s" . swiper)))
+#+end_src
+
+** Vterm
+#+begin_src emacs-lisp
+  (use-package vterm)
 #+end_src
 
 ** Which Key
