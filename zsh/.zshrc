@@ -24,7 +24,3 @@ alias ls="exa"
 alias ll="exa -aghl --group-directories-first --icons"
 
 eval "$(starship init zsh)"
-
-if [ $TERM = "alacritty" ]; then
-    neofetch
-fi
