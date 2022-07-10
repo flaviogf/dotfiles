@@ -1,5 +1,7 @@
 autoload -Uz compinit && compinit
 
+setopt PROMPT_SUBST
+
 export EDITOR="emacsclient --socket-name=emacs --tty"
 export FZF="/etc/profile.d"
 export VISUAL="emacsclient --socket-name=emacs --create-frame"
