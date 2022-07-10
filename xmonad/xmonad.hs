@@ -74,12 +74,11 @@ myLayoutHook = avoidStruts
 
 main = do
     h <- spawnPipe "xmobar"
-    xmonad $ ewmh def
+    xmonad $ ewmh $ docks def
         { borderWidth = myBorderWidth
         , focusedBorderColor = myFocusColor
-        , handleEventHook = docksEventHook
         , layoutHook = myLayoutHook
-        , logHook = dynamicLogWithPP $ namedScratchpadFilterOutWorkspacePP $ xmobarPP
+        , logHook = dynamicLogWithPP . filterOutWsPP [scratchpadWorkspaceTag] $ xmobarPP
               { ppOutput = hPutStrLn h
               , ppCurrent = xmobarColor color06 "" . wrap ("<box type=Bottom width=2>") "</box>"
               , ppVisible = xmobarColor color06 ""
