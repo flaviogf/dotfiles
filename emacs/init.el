@@ -143,8 +143,10 @@
   (prog-mode . rainbow-mode))
 
 (use-package tab-bar
-  :custom (tab-bar-show nil)
-  :init (tab-bar-mode))
+  :custom-face
+  (tab-bar-tab ((t (:inherit 'doom-modeline-panel :foreground nil :background nil))))
+  :init
+  (tab-bar-mode))
 
 (use-package rg)
 
