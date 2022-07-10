@@ -1,21 +1,15 @@
-import qualified Data.Map as M
-
 import XMonad
 import qualified XMonad.StackSet as W
-import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Layout.LayoutModifier
+import XMonad.Hooks.StatusBar.PP
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Spacing
-import XMonad.ManageHook
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run
-import XMonad.Util.Ungrab
-import XMonad.Util.SpawnOnce
 
 colorScheme = "dracula"
 colorBack = "#282a36"
