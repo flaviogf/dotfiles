@@ -8,6 +8,7 @@
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
   - [[#company][Company]]
+  - [[#docker][Docker]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
@@ -27,6 +28,7 @@
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
   - [[#swiper][Swiper]]
+  - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -71,6 +73,8 @@
   (customize-set-variable 'recentf-mode t)
   (customize-set-variable 'scroll-bar-mode nil)
   (customize-set-variable 'tab-width 2)
+  (customize-set-variable 'tab-bar-mode t)
+  (customize-set-variable 'tab-bar-show nil)
   (customize-set-variable 'tool-bar-mode nil)
   (customize-set-variable 'truncate-lines t)
   (customize-set-variable 'use-package-always-ensure t)
@@ -99,6 +103,12 @@
 #+begin_src emacs-lisp
   (use-package company
     :init (company-mode))
+#+end_src
+
+** Docker
+#+begin_src emacs-lisp
+  (use-package docker
+    :bind ("C-c d" . docker))
 #+end_src
 
 ** Doom Themes
@@ -247,6 +257,11 @@
 #+begin_src emacs-lisp
   (use-package swiper
     :bind (("C-s" . swiper)))
+#+end_src
+
+** Vterm
+#+begin_src emacs-lisp
+  (use-package vterm)
 #+end_src
 
 ** Which Key

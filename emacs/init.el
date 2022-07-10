@@ -34,6 +34,8 @@
 (customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'tab-width 2)
+(customize-set-variable 'tab-bar-mode t)
+(customize-set-variable 'tab-bar-show nil)
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'truncate-lines t)
 (customize-set-variable 'use-package-always-ensure t)
@@ -55,6 +57,9 @@
 
 (use-package company
   :init (company-mode))
+
+(use-package docker
+  :bind ("C-c d" . docker))
 
 (use-package doom-themes
   :custom
@@ -146,6 +151,8 @@
 
 (use-package swiper
   :bind (("C-s" . swiper)))
+
+(use-package vterm)
 
 (use-package which-key
   :custom (which-key-idle-delay 2)
