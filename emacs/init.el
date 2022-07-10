@@ -34,8 +34,6 @@
 (customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'tab-width 2)
-(customize-set-variable 'tab-bar-mode t)
-(customize-set-variable 'tab-bar-show nil)
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'truncate-lines t)
 (customize-set-variable 'use-package-always-ensure t)
@@ -143,6 +141,10 @@
   :hook
   (conf-unix-mode . rainbow-mode)
   (prog-mode . rainbow-mode))
+
+(use-package tab-bar
+  :custom (tab-bar-show nil)
+  :init (tab-bar-mode))
 
 (use-package rg)
 
