@@ -138,7 +138,7 @@
 
 (use-package project
   :custom
-  (project-switch-commands project-dired))
+  (project-switch-commands #'project-dired))
 
 (use-package rainbow-mode
   :hook

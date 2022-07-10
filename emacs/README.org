@@ -237,7 +237,7 @@
 #+begin_src emacs-lisp
   (use-package project
     :custom
-    (project-switch-commands project-dired))
+    (project-switch-commands #'project-dired))
 #+end_src
 
 ** Rainbow Mode
