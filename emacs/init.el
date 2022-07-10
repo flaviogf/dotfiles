@@ -30,7 +30,6 @@
 (customize-set-variable 'initial-scratch-message nil)
 (customize-set-variable 'make-backup-files nil)
 (customize-set-variable 'menu-bar-mode nil)
-(customize-set-variable 'project-switch-commands '((project-dired "dired") (project-find-file "find file")))
 (customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (customize-set-variable 'tab-width 2)
@@ -137,14 +136,18 @@
 (use-package toc-org
   :hook (org-mode . toc-org-mode))
 
+(use-package project
+  :custom
+  (project-switch-commands project-dired))
+
 (use-package rainbow-mode
   :hook
   (conf-unix-mode . rainbow-mode)
   (prog-mode . rainbow-mode))
 
 (use-package tab-bar
-  :custom-face
-  (tab-bar-tab ((t (:inherit 'doom-modeline-panel :foreground nil :background nil))))
+  :custom
+  (tab-bar-show nil)
   :init
   (tab-bar-mode))
 
