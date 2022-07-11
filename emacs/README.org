@@ -19,6 +19,7 @@
   - [[#haskell-mode][Haskell Mode]]
   - [[#helm][Helm]]
   - [[#helm-ag][Helm Ag]]
+  - [[#helm-bufler][Helm Bufler]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
   - [[#org][Org]]
@@ -101,7 +102,11 @@
 
 ** Bufler
 #+begin_src emacs-lisp
-  (use-package bufler)
+  (use-package bufler
+    :bind
+    ("C-c b C-x C-b" . bufler-switch-buffer)
+    :init
+    (bufler-mode))
 #+end_src
 
 ** Company
@@ -183,6 +188,11 @@
   (use-package helm-ag
     :bind
     ("C-x p a" . helm-do-ag-project-root))
+#+end_src
+
+** Helm Bufler
+#+begin_src emacs-lisp
+  (use-package helm-bufler)
 #+end_src
 
 ** LSP Mode

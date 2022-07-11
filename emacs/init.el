@@ -52,7 +52,11 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
-(use-package bufler)
+(use-package bufler
+  :bind
+  ("C-c b C-x C-b" . bufler-switch-buffer)
+  :init
+  (bufler-mode))
 
 (use-package company
   :init (company-mode))
@@ -101,6 +105,8 @@
 (use-package helm-ag
   :bind
   ("C-x p a" . helm-do-ag-project-root))
+
+(use-package helm-bufler)
 
 (use-package lsp-mode
   :commands lsp
