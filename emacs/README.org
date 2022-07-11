@@ -7,6 +7,7 @@
 - [[#customizations][Customizations]]
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
+  - [[#bufler][Bufler]]
   - [[#company][Company]]
   - [[#docker][Docker]]
   - [[#doom-themes][Doom Themes]]
@@ -96,6 +97,11 @@
 
   (use-package all-the-icons-dired
     :hook (dired-mode . all-the-icons-dired-mode))
+#+end_src
+
+** Bufler
+#+begin_src emacs-lisp
+  (use-package bufler)
 #+end_src
 
 ** Company

@@ -52,6 +52,8 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
+(use-package bufler)
+
 (use-package company
   :init (company-mode))
 
