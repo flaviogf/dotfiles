@@ -7,8 +7,8 @@
 - [[#customizations][Customizations]]
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
-  - [[#bufler][Bufler]]
   - [[#company][Company]]
+  - [[#counsel][Counsel]]
   - [[#docker][Docker]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
@@ -17,11 +17,10 @@
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
-  - [[#helm][Helm]]
-  - [[#helm-ag][Helm Ag]]
-  - [[#helm-bufler][Helm Bufler]]
+  - [[#ivy][Ivy]]
   - [[#lsp-mode][LSP Mode]]
   - [[#magit][Magit]]
+  - [[#marginalia][Marginalia]]
   - [[#org][Org]]
   - [[#org-roam][Org Roam]]
   - [[#org-superstar][Org Superstar]]
@@ -100,16 +99,16 @@
     :hook (dired-mode . all-the-icons-dired-mode))
 #+end_src
 
-** Bufler
-#+begin_src emacs-lisp
-  (use-package bufler
-    :init (bufler-mode))
-#+end_src
-
 ** Company
 #+begin_src emacs-lisp
   (use-package company
     :init (company-mode))
+#+end_src
+
+** Counsel
+#+begin_src emacs-lisp
+  (use-package counsel
+    :init (counsel-mode))
 #+end_src
 
 ** Docker
@@ -172,24 +171,13 @@
   (use-package haskell-mode)
 #+end_src
 
-** Helm
+** Ivy
 #+begin_src emacs-lisp
-  (use-package helm
-    :bind
-    (("M-x" . helm-M-x))
-    :init (helm-mode))
-#+end_src
-
-** Helm Ag
-#+begin_src emacs-lisp
-  (use-package helm-ag
-    :bind
-    ("C-x p a" . helm-do-ag-project-root))
-#+end_src
-
-** Helm Bufler
-#+begin_src emacs-lisp
-  (use-package helm-bufler)
+  (use-package ivy
+    :custom
+    (enable-recursive-minibuffers t)
+    (ivy-use-virtual-buffers t)
+    :init (ivy-mode))
 #+end_src
 
 ** LSP Mode
@@ -211,6 +199,12 @@
 ** Magit
 #+begin_src emacs-lisp
   (use-package magit)
+#+end_src
+
+** Marginalia
+#+begin_src emacs-lisp
+  (use-package marginalia
+    :init (marginalia-mode))
 #+end_src
 
 ** Org

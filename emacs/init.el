@@ -52,11 +52,11 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
-(use-package bufler
-  :init (bufler-mode))
-
 (use-package company
   :init (company-mode))
+
+(use-package counsel
+  :init (counsel-mode))
 
 (use-package docker
   :bind ("C-c d" . docker))
@@ -94,16 +94,11 @@
 
 (use-package haskell-mode)
 
-(use-package helm
-  :bind
-  (("M-x" . helm-M-x))
-  :init (helm-mode))
-
-(use-package helm-ag
-  :bind
-  ("C-x p a" . helm-do-ag-project-root))
-
-(use-package helm-bufler)
+(use-package ivy
+  :custom
+  (enable-recursive-minibuffers t)
+  (ivy-use-virtual-buffers t)
+  :init (ivy-mode))
 
 (use-package lsp-mode
   :commands lsp
@@ -119,6 +114,9 @@
   (lsp-ui-sideline-enable nil))
 
 (use-package magit)
+
+(use-package marginalia
+  :init (marginalia-mode))
 
 (use-package org
   :custom
