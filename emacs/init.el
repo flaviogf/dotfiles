@@ -53,10 +53,7 @@
   :hook (dired-mode . all-the-icons-dired-mode))
 
 (use-package bufler
-  :bind
-  ("C-c b C-x C-b" . bufler-switch-buffer)
-  :init
-  (bufler-mode))
+  :init (bufler-mode))
 
 (use-package company
   :init (company-mode))
