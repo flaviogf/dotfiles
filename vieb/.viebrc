@@ -5,6 +5,8 @@ set dialogalert=show
 set dialogconfirm=show
 set dialogprompt=show
 
+set favoritepages=https://archlinux.org/,https://www.gnu.org/software/emacs/
+
 set firefoxmode=google
 
 set permissioncamera=ask
@@ -20,4 +22,4 @@ set search=https://google.com/search?q=%s
 
 set splitright=true
 
-set startuppages=https://google.com
+set suggesttopsites=0
