@@ -5,7 +5,7 @@ set dialogalert=show
 set dialogconfirm=show
 set dialogprompt=show
 
-set favoritepages=https://archlinux.org/,https://www.gnu.org/software/emacs/
+set favoritepages=https://archlinux.org/,https://www.gnu.org/software/emacs/,https://neovim.io/,https://www.ruby-lang.org/en/,https://rubyonrails.org/,https://go.dev/,https://www.postgresql.org/,https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html,https://cloud.google.com/bigtable/docs,https://docs.docker.com/,https://kubernetes.io/docs/home/,https://github.com/CollabCodeTech/backend-challenges
 
 set firefoxmode=google
 
