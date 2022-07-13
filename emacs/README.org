@@ -216,6 +216,10 @@
     (org-hide-emphasis-markers t)
     (org-startup-folded t)
     :ensure nil
+    :hook
+    (org-mode . (lambda () (org-indent-mode)
+                           (auto-fill-mode 0)
+                           (setq evil-auto-indent nil)))
     :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 #+end_src
 
