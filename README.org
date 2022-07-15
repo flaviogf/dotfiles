@@ -17,7 +17,6 @@ This repository is destined to save all my dotfiles.
 - Picom
 - Starship
 - Tmux
-- Vieb
 - Vim
 - Xmobar
 - Xmonad
