@@ -15,6 +15,7 @@ This repository is destined to save all my dotfiles.
 - [[file:emacs/README.org][Emacs]]
 - Git
 - Picom
+- Qutebrowser
 - Starship
 - Tmux
 - Vim
