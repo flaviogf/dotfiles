@@ -18,3 +18,5 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
+
+config.bind('M', 'hint links spawn mpv {hint-url}')
