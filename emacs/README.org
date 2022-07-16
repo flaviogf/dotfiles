@@ -48,10 +48,12 @@
   (unless package-archive-contents
     (package-refresh-contents))
 
-  (unless (package-installed-p 'use-package)
-    (package-install 'use-package))
+  (dolist (package '(use-package diminish))
+    (unless (package-installed-p package)
+      (package-install package)))
 
   (require 'use-package)
+  (require 'diminish)
 #+end_src
 
 * Customizations
@@ -129,6 +131,8 @@
 ** Doom Modeline
 #+begin_src emacs-lisp
   (use-package doom-modeline
+    :custom
+    (doom-modeline-buffer-file-name-style 'relative-to-project)
     :init (doom-modeline-mode))
 #+end_src
 

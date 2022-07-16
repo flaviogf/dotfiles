@@ -9,10 +9,12 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+(dolist (package '(use-package diminish))
+  (unless (package-installed-p package)
+    (package-install package)))
 
 (require 'use-package)
+(require 'diminish)
 
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 (add-to-list 'default-frame-alist '(font . "Mononoki Nerd Font-16"))
@@ -68,6 +70,8 @@
   :init (load-theme 'doom-dracula t))
 
 (use-package doom-modeline
+  :custom
+  (doom-modeline-buffer-file-name-style 'relative-to-project)
   :init (doom-modeline-mode))
 
 (use-package editorconfig
