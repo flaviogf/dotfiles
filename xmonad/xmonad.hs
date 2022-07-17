@@ -62,7 +62,7 @@ myTerminal = "alacritty"
 myWindowCount :: X (Maybe String)
 myWindowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
-myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " sys "]
+myWorkspaces = [" dev ", " www ", " chat ", " mus ", " vid ", " gam ", " sys "]
 
 myLayoutHook = avoidStruts
                $ withBorder myBorderWidth
