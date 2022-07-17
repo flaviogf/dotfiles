@@ -7,6 +7,7 @@
 - [[#customizations][Customizations]]
 - [[#packages][Packages]]
   - [[#all-the-icons][All The Icons]]
+  - [[#bufler][Bufler]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
   - [[#docker][Docker]]
@@ -101,6 +102,14 @@
     :hook (dired-mode . all-the-icons-dired-mode))
 #+end_src
 
+** Bufler
+#+begin_src emacs-lisp
+  (use-package bufler
+    :bind
+    (("C-c b s" . bufler-switch-buffer))
+    (("C-c b w" . bufler-workspace-frame-set)))
+#+end_src
+
 ** Company
 #+begin_src emacs-lisp
   (use-package company
@@ -130,9 +139,12 @@
 
 ** Doom Modeline
 #+begin_src emacs-lisp
+  (use-package minions
+    :hook (doom-modeline-mode . minions-mode))
+
   (use-package doom-modeline
     :custom
-    (doom-modeline-buffer-file-name-style 'relative-to-project)
+    (doom-modeline-minor-modes t)
     :init (doom-modeline-mode))
 #+end_src
 

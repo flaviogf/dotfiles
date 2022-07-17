@@ -54,6 +54,11 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
+(use-package bufler
+  :bind
+  (("C-c b s" . bufler-switch-buffer))
+  (("C-c b w" . bufler-workspace-frame-set)))
+
 (use-package company
   :init (company-mode))
 
@@ -69,9 +74,12 @@
   (doom-themes-enable-italic t)
   :init (load-theme 'doom-dracula t))
 
+(use-package minions
+  :hook (doom-modeline-mode . minions-mode))
+
 (use-package doom-modeline
   :custom
-  (doom-modeline-buffer-file-name-style 'relative-to-project)
+  (doom-modeline-minor-modes t)
   :init (doom-modeline-mode))
 
 (use-package editorconfig
