@@ -38,6 +38,7 @@
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'truncate-lines t)
 (customize-set-variable 'use-package-always-ensure t)
+(customize-set-variable 'visible-bell t)
 (customize-set-variable 'whitespace-line-column 120)
 (customize-set-variable 'whitespace-style '(face lines-tail))
 
@@ -67,6 +68,9 @@
 
 (use-package docker
   :bind ("C-c d" . docker))
+
+(use-package dockerfile-mode
+  :mode "Dockerfile\\'")
 
 (use-package doom-themes
   :custom
@@ -184,4 +188,5 @@
   :custom (which-key-idle-delay 2)
   :init (which-key-mode))
 
-(use-package yaml-mode)
+(use-package yaml-mode
+  :mode "\\.ya?ml\\'")

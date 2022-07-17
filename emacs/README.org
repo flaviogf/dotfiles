@@ -11,6 +11,7 @@
   - [[#company][Company]]
   - [[#counsel][Counsel]]
   - [[#docker][Docker]]
+  - [[#dockerfile][Dockerfile]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
@@ -127,6 +128,12 @@
 #+begin_src emacs-lisp
   (use-package docker
     :bind ("C-c d" . docker))
+#+end_src
+
+** Dockerfile
+#+begin_src emacs-lisp
+  (use-package dockerfile-mode
+    :mode "Dockerfile\\'")
 #+end_src
 
 ** Doom Themes
@@ -316,5 +323,6 @@
 
 ** Yaml Mode
 #+begin_src emacs-lisp
-  (use-package yaml-mode)
+  (use-package yaml-mode
+    :mode "\\.ya?ml\\'")
 #+end_src
