@@ -140,6 +140,7 @@
   (org-confirm-babel-evaluate nil)
   (org-hide-emphasis-markers t)
   (org-startup-folded t)
+  (org-todo-keywords '("TODO" "DONE" "CANCELED"))
   :ensure nil
   :hook
   (org-mode . (lambda () (org-indent-mode)
