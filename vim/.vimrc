@@ -15,7 +15,6 @@ call minpac#add('vim-airline/vim-airline')
 colorscheme dracula
 
 filetype plugin indent on
-
 syntax on
 
 set clipboard=unnamedplus
