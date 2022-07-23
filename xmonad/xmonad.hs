@@ -44,7 +44,7 @@ myFocusColor :: String
 myFocusColor = color15
 
 myFont :: String
-myFont = "xft:Mononoki Nerd Font:regular:size=9:antialias=true:hinting=true"
+myFont = "xft:JetBrains Nerd Font:regular:size=9:antialias=true:hinting=true"
 
 myModMask :: KeyMask
 myModMask = mod4Mask
