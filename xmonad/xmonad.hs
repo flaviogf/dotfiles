@@ -38,7 +38,7 @@ myBrowser :: String
 myBrowser = "qutebrowser"
 
 myEmacs :: String
-myEmacs = "emacsclient --socket-name='emacs' "
+myEmacs = "emacsclient --socket-name='emacs' --create-frame"
 
 myFocusColor :: String
 myFocusColor = color15
@@ -96,10 +96,11 @@ main = do
         , workspaces = myWorkspaces
         }
       `additionalKeysP`
-        [ ("M-C-h", spawn (myTerminal ++ " -e htop"))
-        , ("M-C-s", spawn "scrot /home/flaviogf/Pictures/%Y-%m-%d-%T-screenshot.png --select --line mode=edge")
-        , ("M-C-w", spawn myBrowser)
-        , ("M-e d", spawn (myEmacs ++ "--create-frame --eval '(dired nil)'"))
-        , ("M-e t", spawn (myEmacs ++ "--create-frame --eval '(vterm)'"))
-        , ("M-s t", namedScratchpadAction myScratchpads "terminal")
+        [ ("M d", spawn "dmenu_run")
+        , ("M e", spawn (myEmacs ++ " --eval '(dired nil)'"))
+        , ("M t", namedScratchpadAction myScratchpads "terminal")
+        , ("M w", spawn myBrowser)
+        , ("M-S-c", kill)
+        , ("M-S-r", restart "xmonad" True)
+        , ("M-S-<Return>", spawn myTerminal)
         ]
