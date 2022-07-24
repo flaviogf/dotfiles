@@ -67,7 +67,7 @@ myWorkspaces = [" www ", " dev ", " com ", " chat ", " gam ", " sys "]
 myLayoutHook = avoidStruts
                $ withBorder myBorderWidth
                $ renamed [Replace "Tall"]
-               $ mySpacing 6
+               $ mySpacing 8
                $ ResizableTall 1 (3/100) (1/2) []
              where
                mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
