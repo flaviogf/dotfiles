@@ -16,8 +16,24 @@ config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
-c.statusbar.show = 'never'
-c.tabs.show = 'never'
+config.set('statusbar.show', 'never')
+
+config.set('tabs.show', 'never')
+
+config.set('url.default_page', 'https://app.daily.dev')
+
+config.set(
+    'url.searchengines',
+    {
+        'DEFAULT': 'https://www.google.com/search?q={}',
+        'arch': 'https://wiki.archlinux.org/?search={}',
+        'duckduckgo': 'https://duckduckgo.com/?q={}',
+        'google': 'https://www.google.com/search?q={}',
+        'youtube': 'https://www.youtube.com/results?search_query={}'
+    }
+)
+
+config.set('url.start_pages', 'https://app.daily.dev')
 
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
