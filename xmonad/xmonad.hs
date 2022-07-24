@@ -95,6 +95,10 @@ main = do
         , terminal = myTerminal
         , workspaces = myWorkspaces
         }
+      `removeKeysP`
+        [ ("M-p")
+        , ("M-q")
+        ]
       `additionalKeysP`
         [ ("M-d", spawn "dmenu_run")
         , ("M-e", spawn (myEmacs ++ " --eval '(dired nil)'"))
