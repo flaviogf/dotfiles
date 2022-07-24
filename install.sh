@@ -13,7 +13,9 @@ ln -sf "${DOTFILES}/git/.gitconfig" "${HOME}/.gitconfig"
 
 # I3
 mkdir -p "${HOME}/.config/i3" && \
-    ln -sf "${DOTFILES}/i3/config" "${HOME}/.config/i3/config"
+    mkdir -p "${HOME}/.config/bumblebee-status/themes" && \
+    ln -sf "${DOTFILES}/i3/config" "${HOME}/.config/i3/config" && \
+    ln -sf "${DOTFILES}/i3/dracula-rainbow.json" "${HOME}/.config/bumblebee-status/themes/dracula-rainbow.json"
 
 # Emacs
 mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emacs.d/init.el"

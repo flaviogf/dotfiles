@@ -1,0 +1,20 @@
+{
+    "icons": [ "awesome-fonts" ],
+    "defaults": {
+        "separator-block-width": 0,
+        "warning": {
+            "fg": "#020202",
+            "bg": "#ffb86c"
+        },
+        "critical": {
+            "fg": "#f8f8f2",
+            "bg": "#ff5555"
+        }
+    },
+    "cycle": [
+        { "fg": "#020202", "bg": "#50fa7b" },
+        { "fg": "#020202", "bg": "#f1fa8c" },
+        { "fg": "#020202", "bg": "#ff79c6" },
+        { "fg": "#020202", "bg": "#bd93f9" }
+    ]
+}

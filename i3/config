@@ -66,12 +66,20 @@ mode "resize" {
 }
 
 bar {
+        colors {
+            background #282a36
+            statusline #f8f8f2
+            focused_workspace #282a46 #6272a4 #f8f8f2
+            inactive_workspace #282a46 #44475a #f8f8f2
+            binding_mode #282a46 #50fa7b #000000
+        }
+
         position top
 
         status_command /usr/bin/bumblebee-status \
             -m cpu memory battery date time \
-            -p date.format="%m/%d/%y" time.format="%H:%M" \
-            -t dracula-powerline
+            -p cpu.format="{:.01f}%" memory.format="{percent:.01f}%" date.format=" %m/%d/%y" time.format=" %H:%M" \
+            -t dracula-rainbow
 
         strip_workspace_numbers yes
         tray_padding 0
