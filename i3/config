@@ -39,7 +39,7 @@ bindsym $mod+f fullscreen toggle
 
 set $ws1 "1: www"
 set $ws2 "2: dev"
-set $ws3 "3: com"
+set $ws3 "3: job"
 set $ws4 "4: chat"
 set $ws5 "5: gam"
 set $ws6 "6: sys"
