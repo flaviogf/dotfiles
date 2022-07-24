@@ -39,7 +39,7 @@ bindsym $mod+f fullscreen toggle
 
 set $ws1 "1: www"
 set $ws2 "2: dev"
-set $ws3 "3: comm"
+set $ws3 "3: com"
 set $ws4 "4: chat"
 set $ws5 "5: gam"
 set $ws6 "6: sys"
@@ -67,5 +67,13 @@ mode "resize" {
 
 bar {
         position top
-        status_command i3status
+
+        status_command /usr/bin/bumblebee-status \
+            -m cpu memory battery date time \
+            -p date.format="%m/%d/%y" time.format="%H:%M" \
+            -t dracula-powerline
+
+        strip_workspace_numbers yes
+        tray_padding 0
+        workspace_min_width 40
 }
