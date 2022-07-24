@@ -28,4 +28,10 @@ trayer --edge top \
        --alpha 0 \
        --iconspacing 2 &
 
-exec xmonad
+session=${1:-xmonad}
+
+case $session in
+    i3     ) exec i3;;
+    xmonad ) exec xmonad;;
+    *      ) exec $1;;
+esac
