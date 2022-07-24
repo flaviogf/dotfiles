@@ -1,6 +1,8 @@
 set $mod Mod4
 
-font xft:JetBrains Mono 8
+font pango:JetBrains Mono 8
+
+gaps inner 16
 
 new_window pixel 1
 new_float normal
