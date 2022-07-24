@@ -12,7 +12,8 @@ mkdir -p "${HOME}/.config/dunst" && ln -sf "${DOTFILES}/dunst/dunstrc" "${HOME}/
 ln -sf "${DOTFILES}/git/.gitconfig" "${HOME}/.gitconfig"
 
 # I3
-ln -sf "${DOTFILES}/i3/config" "${HOME}/.config/i3/config"
+mkdir -p "${HOME}/.config/i3" && \
+    ln -sf "${DOTFILES}/i3/config" "${HOME}/.config/i3/config"
 
 # Emacs
 mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emacs.d/init.el"
