@@ -6,6 +6,7 @@
 - [[#package-management][Package Management]]
 - [[#customizations][Customizations]]
 - [[#packages][Packages]]
+  - [[#general][General]]
   - [[#all-the-icons][All The Icons]]
   - [[#bufler][Bufler]]
   - [[#company][Company]]
@@ -96,6 +97,13 @@
 #+end_src
 
 * Packages
+** General
+#+begin_src emacs-lisp
+  (use-package general
+    :config
+    (general-create-definer my-leader-key :prefix "C-c SPC"))
+#+end_src
+
 ** All The Icons
 #+begin_src emacs-lisp
   (use-package all-the-icons)
@@ -107,9 +115,10 @@
 ** Bufler
 #+begin_src emacs-lisp
   (use-package bufler
-    :bind
-    (("C-c b s" . bufler-switch-buffer))
-    (("C-c b w" . bufler-workspace-frame-set)))
+    :config
+    (my-leader-key
+      "b s" 'bufler-switch-buffer
+      "b w" 'bufler-workspace-frame-set))
 #+end_src
 
 ** Company
@@ -121,13 +130,18 @@
 ** Counsel
 #+begin_src emacs-lisp
   (use-package counsel
+    :config
+    (my-leader-key
+      "c r" 'counsel-rg)
     :init (counsel-mode))
 #+end_src
 
 ** Docker
 #+begin_src emacs-lisp
   (use-package docker
-    :bind ("C-c d" . docker))
+    :config
+    (my-leader-key
+      "d" 'docker))
 #+end_src
 
 ** Dockerfile
@@ -173,7 +187,6 @@
     :init (evil-mode))
 
   (use-package evil-collection
-    :after evil
     :init (evil-collection-init))
 #+end_src
 
@@ -234,6 +247,9 @@
 ** Org
 #+begin_src emacs-lisp
   (use-package org
+    :config
+    (my-leader-key
+      "o t" 'org-todo-list)
     :custom
     (org-agenda-files '("/home/flaviogf/dev/org-files/TODO.org"))
     (org-confirm-babel-evaluate nil)
@@ -307,7 +323,9 @@
 ** Swiper
 #+begin_src emacs-lisp
   (use-package swiper
-    :bind (("C-s" . swiper)))
+    :config
+    (my-leader-key
+      "s" 'swiper))
 #+end_src
 
 ** Vterm

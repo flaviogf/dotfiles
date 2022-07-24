@@ -50,24 +50,34 @@
 (add-hook 'prog-mode-hook 'hl-line-mode)
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+(use-package general
+  :config
+  (general-create-definer my-leader-key :prefix "C-c SPC"))
+
 (use-package all-the-icons)
 
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
 (use-package bufler
-  :bind
-  (("C-c b s" . bufler-switch-buffer))
-  (("C-c b w" . bufler-workspace-frame-set)))
+  :config
+  (my-leader-key
+    "b s" 'bufler-switch-buffer
+    "b w" 'bufler-workspace-frame-set))
 
 (use-package company
   :init (company-mode))
 
 (use-package counsel
+  :config
+  (my-leader-key
+    "c r" 'counsel-rg)
   :init (counsel-mode))
 
 (use-package docker
-  :bind ("C-c d" . docker))
+  :config
+  (my-leader-key
+    "d" 'docker))
 
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
@@ -98,7 +108,6 @@
   :init (evil-mode))
 
 (use-package evil-collection
-  :after evil
   :init (evil-collection-init))
 
 (use-package git-gutter
@@ -135,6 +144,9 @@
   :init (marginalia-mode))
 
 (use-package org
+  :config
+  (my-leader-key
+    "o t" 'org-todo-list)
   :custom
   (org-agenda-files '("/home/flaviogf/dev/org-files/TODO.org"))
   (org-confirm-babel-evaluate nil)
@@ -181,7 +193,9 @@
   :init (setq inferior-lisp-program "sbcl"))
 
 (use-package swiper
-  :bind (("C-s" . swiper)))
+  :config
+  (my-leader-key
+    "s" 'swiper))
 
 (use-package vterm)
 
