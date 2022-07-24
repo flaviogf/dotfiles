@@ -20,18 +20,17 @@ flameshot &
 nm-applet &
 pasystray &
 
-trayer --edge top \
-       --widthtype request \
-       --height 24 \
-       --transparent true \
-       --tint 0x282a36 \
-       --alpha 0 \
-       --iconspacing 2 &
-
 session=${1:-xmonad}
 
 case $session in
-    i3     ) exec i3;;
-    xmonad ) exec xmonad;;
-    *      ) exec $1;;
+    i3)
+        exec i3
+        ;;
+    xmonad)
+        trayer --edge top --widthtype request --height 24 --transparent true --tint 0x282a36 --alpha 0 --iconspacing 2 &
+        exec xmonad
+        ;;
+    *)
+        exec $1
+        ;;
 esac
