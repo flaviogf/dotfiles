@@ -69,7 +69,7 @@ bar {
         colors {
             background #282a36
             statusline #f8f8f2
-            focused_workspace #282a46 #6272a4 #f8f8f2
+            focused_workspace #282a46 #bd93f9 #f8f8f2
             inactive_workspace #282a46 #44475a #f8f8f2
             binding_mode #282a46 #50fa7b #000000
         }
