@@ -1,4 +1,8 @@
+import themes
+
 config.load_autoconfig(False)
+
+themes.dracula(c, { 'spacing': { 'vertical': 6, 'horizontal': 8 } })
 
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.cookies.accept', 'all', 'devtools://*')
@@ -16,9 +20,9 @@ config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
-config.set('statusbar.show', 'never')
+config.set('statusbar.show', 'always')
 
-config.set('tabs.show', 'never')
+config.set('tabs.show', 'always')
 
 config.set('url.default_page', 'https://app.daily.dev')
 

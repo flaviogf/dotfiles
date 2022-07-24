@@ -23,6 +23,7 @@ mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOM
 # Qutebrowser
 mkdir -p "${HOME}/.config/qutebrowser/bookmarks" && \
     ln -sf "${DOTFILES}/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py" && \
+    ln -sf "${DOTFILES}/qutebrowser/themes.py" "${HOME}/.config/qutebrowser/themes.py" && \
     ln -sf "${DOTFILES}/qutebrowser/quickmarks" "${HOME}/.config/qutebrowser/quickmarks" && \
     ln -sf "${DOTFILES}/qutebrowser/bookmarks/urls" "${HOME}/.config/qutebrowser/bookmarks/urls"
 
