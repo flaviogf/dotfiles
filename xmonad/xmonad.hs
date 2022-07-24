@@ -96,10 +96,10 @@ main = do
         , workspaces = myWorkspaces
         }
       `additionalKeysP`
-        [ ("M d", spawn "dmenu_run")
-        , ("M e", spawn (myEmacs ++ " --eval '(dired nil)'"))
-        , ("M t", namedScratchpadAction myScratchpads "terminal")
-        , ("M w", spawn myBrowser)
+        [ ("M-d", spawn "dmenu_run")
+        , ("M-e", spawn (myEmacs ++ " --eval '(dired nil)'"))
+        , ("M-t", namedScratchpadAction myScratchpads "terminal")
+        , ("M-w", spawn myBrowser)
         , ("M-S-c", kill)
         , ("M-S-r", restart "xmonad" True)
         , ("M-S-<Return>", spawn myTerminal)
