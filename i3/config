@@ -1,5 +1,11 @@
 set $mod Mod4
 
+set $myBrowser qutebrowser
+
+set $myEmacs emacsclient --socket-name='emacs' --create-frame
+
+set $myTerm alacritty
+
 floating_modifier $mod
 
 font pango:JetBrains Mono 8
@@ -7,11 +13,13 @@ gaps inner 16
 new_window pixel 1
 new_float normal
 
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec dmenu_run
+bindsym $mod+e exec $myEmacs --eval '(dired nil)'
 bindsym $mod+r mode "resize"
+bindsym $mod+w exec $myBrowser
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Shift+Return exec $myTerm
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
