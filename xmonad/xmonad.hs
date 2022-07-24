@@ -35,7 +35,7 @@ myBorderWidth :: Dimension
 myBorderWidth = 2
 
 myBrowser :: String
-myBrowser = "google-chrome-stable"
+myBrowser = "qutebrowser"
 
 myEmacs :: String
 myEmacs = "emacsclient --socket-name='emacs' "
