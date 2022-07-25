@@ -181,6 +181,8 @@
   (conf-unix-mode . rainbow-mode)
   (prog-mode . rainbow-mode))
 
+(use-package rspec-mode)
+
 (use-package tab-bar
   :custom
   (tab-bar-show nil)
