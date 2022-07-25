@@ -7,17 +7,8 @@ export FZF="/etc/profile.d"
 export VISUAL="emacsclient --socket-name=emacs --create-frame"
 export ZSH="/home/flaviogf/.oh-my-zsh"
 
-if [[ -f "${ZSH}/oh-my-zsh.sh" ]]; then
-    source $ZSH/oh-my-zsh.sh
-fi
-
-if [[ -f "${FZF}/fzf.zsh" ]]; then
-    source $FZF/fzf.zsh
-fi
-
-if [[ -z "$TMUX" ]]; then
-    tmux new-session -A -s console
-fi
+[[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
+[[ -f $FZF/fzf.zsh ]] && source $FZF/fzf.zsh
 
 plugins=(
     asdf
@@ -35,3 +26,5 @@ alias ls="exa"
 alias ll="exa -aghl --group-directories-first --icons"
 
 eval "$(starship init zsh)"
+
+[[ -z $TMUX ]] && tmux new -A -s console
