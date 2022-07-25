@@ -7,6 +7,18 @@ export FZF="/etc/profile.d"
 export VISUAL="emacsclient --socket-name=emacs --create-frame"
 export ZSH="/home/flaviogf/.oh-my-zsh"
 
+if [[ -f "${ZSH}/oh-my-zsh.sh" ]]; then
+    source $ZSH/oh-my-zsh.sh
+fi
+
+if [[ -f "${FZF}/fzf.zsh" ]]; then
+    source $FZF/fzf.zsh
+fi
+
+if [[ -z "$TMUX" ]]; then
+    tmux new-session -A -s console
+fi
+
 plugins=(
     asdf
     docker
@@ -16,9 +28,6 @@ plugins=(
     zsh-completions
     zsh-syntax-highlighting
 )
-
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -f $FZF/fzf.zsh ] && source $FZF/fzf.zsh
 
 alias find="fd"
 alias grep="rg"
