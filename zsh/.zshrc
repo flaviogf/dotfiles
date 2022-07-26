@@ -1,5 +1,7 @@
 autoload -Uz compinit && compinit
 
+set -o vi
+
 setopt PROMPT_SUBST
 
 export ZSH="/home/flaviogf/.oh-my-zsh"
