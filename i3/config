@@ -15,13 +15,13 @@ new_float normal
 
 bindsym $mod+d exec dmenu_run
 bindsym $mod+e exec $myEmacs --eval '(dired nil)'
-bindsym $mod+p scratchpad show; fullscreen enable
+bindsym $mod+p scratchpad show; resize set 90 ppt 75 ppt; move position center
 bindsym $mod+r mode "resize"
 bindsym $mod+w exec $myBrowser
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+Return exec $myTerm
+bindsym $mod+Shift+Return exec $myTerm -e tmux new-session -A -s console
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
