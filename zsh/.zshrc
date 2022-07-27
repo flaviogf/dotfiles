@@ -6,9 +6,6 @@ setopt PROMPT_SUBST
 
 export ZSH="/home/flaviogf/.oh-my-zsh"
 
-export ZSH_TMUX_AUTOSTART="true"
-export ZSH_TMUX_DEFAULT_SESSION_NAME="console"
-
 export EDITOR="emacsclient --socket-name=emacs --tty"
 export FZF="/etc/profile.d"
 export VISUAL="emacsclient --socket-name=emacs --create-frame"
@@ -18,7 +15,6 @@ plugins=(
     docker
     docker-compose
     git
-    tmux
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
