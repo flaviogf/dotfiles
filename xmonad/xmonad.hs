@@ -59,9 +59,6 @@ myScratchpads = [NS "terminal" (myTerminal ++ " -t scratchpad") (title =? "scrat
 myTerminal :: String
 myTerminal = "alacritty"
 
-myWindowCount :: X (Maybe String)
-myWindowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
-
 myWorkspaces = [" www ", " dev ", " job ", " chat ", " gam ", " mus ", " sys "]
 
 myLayoutHook = avoidStruts
@@ -86,7 +83,6 @@ main = do
               , ppHiddenNoWindows = xmobarColor color05 "" . wrap "" ""
               , ppTitle = xmobarColor color16 "" . shorten 60
               , ppSep = "<fc=" ++ color09 ++ "> <fn=2>\x7c</fn> </fc>"
-              , ppExtras = [myWindowCount]
               , ppOrder = \(ws:_:t:ex) -> [ws]++ex++[t]
               }
         , manageHook = (namedScratchpadManageHook myScratchpads) <+> manageDocks
