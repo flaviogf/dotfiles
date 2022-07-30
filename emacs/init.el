@@ -53,7 +53,12 @@
 
 (use-package general
   :config
-  (general-create-definer my-leader-key :prefix "C-c SPC"))
+  (general-evil-setup t)
+  (general-create-definer
+    my-leader-key
+    :global-prefix "C-SPC"
+    :prefix "SPC"
+    :states '(normal visual)))
 
 (use-package all-the-icons)
 
