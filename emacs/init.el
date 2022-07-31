@@ -154,10 +154,12 @@
   (my-leader-key
     "o t" 'org-todo-list)
   :custom
-  (org-agenda-files '("/home/flaviogf/dev/org-files/TODO.org"))
+  (org-agenda-files '("/home/flaviogf/dev/org-files/Archive.org" "/home/flaviogf/dev/org-files/TODO.org"))
+  (org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (org-confirm-babel-evaluate nil)
   (org-hide-emphasis-markers t)
   (org-startup-folded t)
+  (org-tag-alist '(("chore" . ?c) ("study" . ?s) ("work" . ?w) ("pc" . ?p)))
   (org-todo-keywords '("TODO" "DOING" "DONE" "CANCELED"))
   :ensure nil
   :hook
