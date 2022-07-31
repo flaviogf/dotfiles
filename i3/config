@@ -21,7 +21,7 @@ bindsym $mod+w exec $myBrowser
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+Return exec $myTerm -e tmux new-session -A -s console
+bindsym $mod+Shift+Return exec $myTerm
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
