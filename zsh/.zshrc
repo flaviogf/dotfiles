@@ -1,7 +1,5 @@
 autoload -Uz compinit && compinit
 
-setopt PROMPT_SUBST
-
 export ZSH="/home/flaviogf/.oh-my-zsh"
 
 export EDITOR="emacsclient --socket-name=emacs --tty"
