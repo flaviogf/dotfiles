@@ -35,7 +35,6 @@
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
   - [[#swiper][Swiper]]
-  - [[#vterm][Vterm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -349,11 +348,6 @@ Sometimes you want to configure rspec-mode base on a project.
     :config
     (my-leader-key
       "s" 'swiper))
-#+end_src
-
-** Vterm
-#+begin_src emacs-lisp
-  (use-package vterm)
 #+end_src
 
 ** Which Key
