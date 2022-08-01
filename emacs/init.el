@@ -16,6 +16,13 @@
 (require 'use-package)
 (require 'diminish)
 
+(add-hook 'org-mode-hook 'hl-line-mode)
+(add-hook 'org-mode-hook 'org-indent-mode)
+(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'hl-line-mode)
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono Nerd Font-16"))
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
@@ -43,22 +50,12 @@
 (customize-set-variable 'whitespace-line-column 120)
 (customize-set-variable 'whitespace-style '(face lines-tail))
 
-(add-hook 'org-mode-hook 'hl-line-mode)
-(add-hook 'org-mode-hook 'org-indent-mode)
-
-(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(add-hook 'prog-mode-hook 'hl-line-mode)
-(add-hook 'prog-mode-hook 'whitespace-mode)
+(global-unset-key (kbd "C-SPC"))
 
 (use-package general
   :config
   (general-evil-setup t)
-  (general-create-definer
-    my-leader-key
-    :global-prefix "C-SPC"
-    :prefix "SPC"
-    :states '(normal visual)))
+  (general-create-definer my-leader-key :prefix "C-SPC"))
 
 (use-package all-the-icons)
 
