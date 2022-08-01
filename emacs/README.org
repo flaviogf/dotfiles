@@ -8,6 +8,7 @@
 - [[#packages][Packages]]
   - [[#general][General]]
   - [[#all-the-icons][All The Icons]]
+  - [[#avy][Avy]]
   - [[#bufler][Bufler]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
@@ -113,6 +114,14 @@
 
   (use-package all-the-icons-dired
     :hook (dired-mode . all-the-icons-dired-mode))
+#+end_src
+
+** Avy
+#+begin_src emacs-lisp
+  (use-package avy
+    :config
+    (my-leader-key
+      "a t" 'avy-goto-char-timer))
 #+end_src
 
 ** Bufler

@@ -62,6 +62,11 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
+(use-package avy
+  :config
+  (my-leader-key
+    "a t" 'avy-goto-char-timer))
+
 (use-package bufler
   :config
   (my-leader-key
