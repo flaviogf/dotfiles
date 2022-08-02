@@ -1,3 +1,7 @@
+require('packer').startup(function(use)
+  use { 'dracula/vim' }
+end)
+
 vim.g.mapleader = ','
 
 vim.opt.clipboard = 'unnamedplus'
@@ -22,3 +26,5 @@ vim.opt.tabstop = 2
 vim.opt.wildmenu = true
 vim.opt.wildmode = full
 vim.opt.wrap = false
+
+vim.cmd "colorscheme dracula"
