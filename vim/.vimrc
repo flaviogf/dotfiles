@@ -33,8 +33,6 @@ set ignorecase
 
 set incsearch
 
-set listchars=tab:▸\ ,eol:¬
-
 set mouse=a
 
 set nocompatible
