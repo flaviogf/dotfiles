@@ -39,8 +39,6 @@ set nocompatible
 
 set nowrap
 
-set omnifunc=syntaxcomplete#Complete
-
 set relativenumber
 set number
 
