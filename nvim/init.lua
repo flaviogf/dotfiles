@@ -1,6 +1,16 @@
 require('packer').startup(function(use)
   use { 'dracula/vim' }
+  use { 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-lualine/lualine.nvim' }
 end)
+
+require('lualine').setup({
+  options = {
+    component_separators = '',
+    section_separators = '',
+    theme = 'dracula',
+  },
+})
 
 vim.g.mapleader = ','
 
