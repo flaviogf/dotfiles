@@ -319,15 +319,6 @@
   (use-package rspec-mode)
 #+end_src
 
-Sometimes you want to configure rspec-mode base on a project.
-
-#+begin_src emacs-lisp :tangle no
-((nil . ((rspec-use-docker-when-possible . t)
-         (rspec-docker-command . "docker-compose exec")
-         (rspec-docker-cwd . "/var/app/")
-         (rspec-docker-container . "web"))))
-#+end_src
-
 ** Tab Bar
 #+begin_src emacs-lisp
   (use-package tab-bar
