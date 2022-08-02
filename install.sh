@@ -39,9 +39,6 @@ ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 # Tmux
 ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
-# Vim
-ln -sf "${DOTFILES}/vim/.vimrc" "${HOME}/.vimrc"
-
 # Xmobar
 ln -sf "${DOTFILES}/xmobar/.xmobarrc" "${HOME}/.xmobarrc"
 

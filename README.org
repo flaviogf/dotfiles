@@ -14,11 +14,11 @@ This repository is destined to save all my dotfiles.
 - Dunst
 - [[file:emacs/README.org][Emacs]]
 - Git
+- Neovim
 - Picom
 - Qutebrowser
 - Starship
 - Tmux
-- Vim
 - Xmobar
 - Xmonad
 - Xorg
