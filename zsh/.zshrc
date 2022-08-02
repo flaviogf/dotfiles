@@ -23,5 +23,7 @@ alias find="fd"
 alias grep="rg"
 alias ls="exa"
 alias ll="exa -aghl --group-directories-first --icons"
+alias vi="nvim"
+alias vim="nvim"
 
 eval "$(starship init zsh)"
