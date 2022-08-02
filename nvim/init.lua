@@ -2,6 +2,7 @@ require('packer').startup(function(use)
   use { 'dracula/vim' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'nvim-lualine/lualine.nvim' }
+  use { 'tpope/vim-dispatch' }
 end)
 
 require('lualine').setup({
