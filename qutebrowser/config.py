@@ -1,8 +1,4 @@
-import themes
-
 config.load_autoconfig(False)
-
-themes.dracula(c, { 'spacing': { 'vertical': 6, 'horizontal': 8 } })
 
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.cookies.accept', 'all', 'devtools://*')
