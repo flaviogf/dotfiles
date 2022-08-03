@@ -75,27 +75,3 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
         bindsym $mod+r mode "default"
 }
-
-bar {
-        colors {
-            background #282a36
-            statusline #f8f8f2
-            focused_workspace #282a46 #bd93f9 #f8f8f2
-            inactive_workspace #282a46 #44475a #f8f8f2
-            binding_mode #282a46 #50fa7b #000000
-        }
-
-        position top
-
-        status_command /usr/bin/bumblebee-status \
-            -m cpu memory date time \
-            -p cpu.format="{:05.2f}%" cpu.theme.align="center" cpu.theme.minwidth=15 \
-               memory.format="{percent:05.2f}%" memory.theme.align="center" memory.theme.minwidth=15 \
-               date.format="%m/%d/%y" date.theme.align="center" date.theme.minwidth=15 \
-               time.format="%H:%M:%S" time.theme.align="center" time.theme.minwidth=15 \
-            -t custom-theme
-
-        strip_workspace_numbers yes
-        tray_padding 0
-        workspace_min_width 40
-}
