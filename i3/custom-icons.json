@@ -1,31 +1,14 @@
 {
   "date": {
-      "prefix": "  "
+      "prefix": "\uf133 date: "
   },
   "time": {
-      "prefix": "  "
+      "prefix": "\uf017 time: "
   },
   "memory": {
-      "prefix": "  "
-  },
-  "battery": {
-      "charged": { "prefix": "", "suffix": "" },
-      "AC": { "suffix": "" },
-      "charging": { "prefix": ["", "", "", "", ""], "suffix": "" },
-      "discharging-10": { "prefix": "", "suffix": "" },
-      "discharging-25": { "prefix": "", "suffix": "" },
-      "discharging-50": { "prefix": "", "suffix": "" },
-      "discharging-80": { "prefix": "", "suffix": "" },
-      "discharging-100": { "prefix": "", "suffix": "" },
-      "unlimited": { "prefix": "", "suffix": "" },
-      "estimate": { "prefix": "" },
-      "unknown-10": { "prefix": "", "suffix": "" },
-      "unknown-25": { "prefix": "", "suffix": "" },
-      "unknown-50": { "prefix": "", "suffix": "" },
-      "unknown-80": { "prefix": "", "suffix": "" },
-      "unknown-100": { "prefix": "", "suffix": "" }
+      "prefix": "\uf233 mem: "
   },
   "cpu": {
-      "prefix": "  "
+      "prefix": "\uf108 cpu: "
   }
 }
