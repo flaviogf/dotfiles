@@ -1,14 +1,14 @@
 {
   "date": {
-      "prefix": "date: "
+    "prefix": "date: "
   },
   "time": {
-      "prefix": "time: "
+    "prefix": "time: "
   },
   "memory": {
-      "prefix": "mem: "
+    "prefix": "mem: "
   },
   "cpu": {
-      "prefix": "cpu: "
+    "prefix": "cpu: "
   }
 }
