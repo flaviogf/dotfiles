@@ -1,5 +1,5 @@
 {
-    "icons": [ "awesome-fonts" ],
+    "icons": [ "custom-icons" ],
     "defaults": {
         "separator-block-width": 0,
         "warning": {

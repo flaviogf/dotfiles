@@ -14,8 +14,10 @@ ln -sf "${DOTFILES}/git/.gitconfig" "${HOME}/.gitconfig"
 # I3
 mkdir -p "${HOME}/.config/i3" && \
     mkdir -p "${HOME}/.config/bumblebee-status/themes" && \
+    mkdir -p "${HOME}/.config/bumblebee-status/themes/icons" && \
     ln -sf "${DOTFILES}/i3/config" "${HOME}/.config/i3/config" && \
-    ln -sf "${DOTFILES}/i3/dracula-rainbow.json" "${HOME}/.config/bumblebee-status/themes/dracula-rainbow.json"
+    ln -sf "${DOTFILES}/i3/custom-theme.json" "${HOME}/.config/bumblebee-status/themes/custom-theme.json" && \
+    ln -sf "${DOTFILES}/i3/custom-icons.json" "${HOME}/.config/bumblebee-status/themes/icons/custom-icons.json"
 
 # Emacs
 mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emacs.d/init.el"
