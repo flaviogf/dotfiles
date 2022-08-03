@@ -20,6 +20,9 @@ mkdir -p "${HOME}/.config/nvim" && ln -sf "${DOTFILES}/nvim/init.lua" "${HOME}/.
 # Picom
 mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOME}/.config/picom/picom.conf"
 
+# Polybar
+mkdir -p "${HOME}/.config/polybar" && ln -sf "${DOTFILES}/polybar/config.ini" "${HOME}/.config/polybar/config.ini"
+
 # Qutebrowser
 mkdir -p "${HOME}/.config/qutebrowser/bookmarks" && \
     ln -sf "${DOTFILES}/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py" && \
