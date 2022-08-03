@@ -10,10 +10,11 @@ fi
 setxkbmap -layout us -variant intl -option ctrl:nocaps
 xsetroot -cursor_name left_ptr
 
-dunst &
 emacs --daemon=emacs &
 nitrogen --restore &
 picom --experimental-backend &
+
+killall -q polybar && polybar mybar &
 
 blueman-applet &
 flameshot &
