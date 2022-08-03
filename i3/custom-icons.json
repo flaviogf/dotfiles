@@ -12,8 +12,8 @@
   "datetz": { "prefix": "" },
   "timetz": { "prefix": "" },
   "datetimetz": { "prefix": "" },
-  "memory": { "prefix": "" },
-  "cpu": { "prefix": "" },
+  "memory": { "prefix": "" },
+  "cpu": { "prefix": " " },
   "cpu2": {
     "freq": { "prefix": "" },
     "load": { "prefix": "" },
