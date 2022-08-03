@@ -2,7 +2,9 @@ require('packer').startup(function(use)
   use { 'dracula/vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
+  use { 'nvim-telescope/telescope.nvim' }
   use { 'tpope/vim-dispatch' }
 end)
 
