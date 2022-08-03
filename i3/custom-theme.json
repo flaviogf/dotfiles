@@ -1,6 +1,8 @@
 {
     "icons": [ "custom-icons" ],
     "defaults": {
+        "padding": " ",
+        "separator": " ",
         "separator-block-width": 0,
         "warning": {
             "fg": "#f8f8f2",
