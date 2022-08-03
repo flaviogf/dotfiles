@@ -89,7 +89,7 @@ bar {
 
         status_command /usr/bin/bumblebee-status \
             -m cpu memory battery date time \
-            -p cpu.format="{:.01f}%" memory.format="{percent:.01f}%" date.format=" %m/%d/%y" time.format=" %H:%M" \
+            -p cpu.format="{:.01f}%" memory.format="{percent:.01f}%" date.format="%m/%d/%y" time.format="%H:%M" \
             -t custom-theme
 
         strip_workspace_numbers yes
