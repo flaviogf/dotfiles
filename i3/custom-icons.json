@@ -1,14 +1,14 @@
 {
   "date": {
-      "prefix": "\uf133 date: "
+      "prefix": "date: "
   },
   "time": {
-      "prefix": "\uf017 time: "
+      "prefix": "time: "
   },
   "memory": {
-      "prefix": "\uf233 mem: "
+      "prefix": "mem: "
   },
   "cpu": {
-      "prefix": "\uf108 cpu: "
+      "prefix": "cpu: "
   }
 }
