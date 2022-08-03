@@ -5,9 +5,6 @@ DOTFILES="/home/flaviogf/dev/dotfiles"
 # Alacritty
 ln -sf "${DOTFILES}/alacritty/.alacritty.yml" "${HOME}/.alacritty.yml"
 
-# Dunst
-mkdir -p "${HOME}/.config/dunst" && ln -sf "${DOTFILES}/dunst/dunstrc" "${HOME}/.config/dunst/dunstrc"
-
 # Git
 ln -sf "${DOTFILES}/git/.gitconfig" "${HOME}/.gitconfig"
 

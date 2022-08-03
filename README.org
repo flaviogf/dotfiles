@@ -11,7 +11,6 @@ This repository is destined to save all my dotfiles.
 
 * :computer: Techs
 - Alacritty
-- Dunst
 - [[file:emacs/README.org][Emacs]]
 - Git
 - Neovim
