@@ -42,6 +42,7 @@
 (customize-set-variable 'menu-bar-mode nil)
 (customize-set-variable 'recentf-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
+(customize-set-variable 'scroll-margin 8)
 (customize-set-variable 'tab-width 2)
 (customize-set-variable 'tool-bar-mode nil)
 (customize-set-variable 'truncate-lines t)
