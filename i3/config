@@ -75,3 +75,5 @@ mode "resize" {
         bindsym l resize grow width 10 px or 10 ppt
         bindsym $mod+r mode "default"
 }
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
