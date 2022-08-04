@@ -13,6 +13,7 @@ This repository is destined to save all my dotfiles.
 - Alacritty
 - [[file:emacs/README.org][Emacs]]
 - Git
+- I3
 - Neovim
 - Picom
 - Qutebrowser
