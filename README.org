@@ -16,6 +16,7 @@ This repository is destined to save all my dotfiles.
 - I3
 - Neovim
 - Picom
+- Polybar
 - Qutebrowser
 - Starship
 - Tmux
