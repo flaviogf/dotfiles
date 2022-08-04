@@ -109,6 +109,7 @@
 
 (use-package evil
   :custom
+  (evil-kill-on-visual-paste)
   (evil-shift-width 2)
   (evil-want-C-u-scroll t)
   (evil-want-integration t)
