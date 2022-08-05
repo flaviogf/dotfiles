@@ -120,6 +120,8 @@
 (use-package evil-collection
   :init (evil-collection-init))
 
+(use-package flycheck)
+
 (use-package git-gutter
   :hook (prog-mode . git-gutter-mode))
 
@@ -141,12 +143,13 @@
   (go-mode . lsp)
   (ruby-mode . lsp)
   :custom
-  (lsp-diagnostics-provider :none)
-  (lsp-eldoc-enable-hover nil)
   (lsp-headerline-breadcrumb-enable nil)
-  (lsp-keymap-prefix "C-c l")
-  (lsp-modeline-code-actions-enable nil)
-  (lsp-ui-sideline-enable nil))
+  (lsp-keymap-prefix "C-c l"))
+
+(use-package lsp-ui
+  :custom
+  (lsp-ui-sideline-show-diagnostics nil)
+  (lsp-ui-sideline-show-hover t))
 
 (use-package magit)
 

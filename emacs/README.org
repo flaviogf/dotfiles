@@ -18,11 +18,13 @@
   - [[#doom-modeline][Doom Modeline]]
   - [[#editorconfig][Editorconfig]]
   - [[#evil][Evil]]
+  - [[#flychek][Flychek]]
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
   - [[#ivy][Ivy]]
   - [[#lsp-mode][LSP Mode]]
+  - [[#lsp-ui][LSP UI]]
   - [[#magit][Magit]]
   - [[#marginalia][Marginalia]]
   - [[#org][Org]]
@@ -204,6 +206,11 @@
     :init (evil-collection-init))
 #+end_src
 
+** Flychek
+#+begin_src emacs-lisp
+  (use-package flycheck)
+#+end_src
+
 ** Git Gutter
 #+begin_src emacs-lisp
   (use-package git-gutter
@@ -239,12 +246,16 @@
     (go-mode . lsp)
     (ruby-mode . lsp)
     :custom
-    (lsp-diagnostics-provider :none)
-    (lsp-eldoc-enable-hover nil)
     (lsp-headerline-breadcrumb-enable nil)
-    (lsp-keymap-prefix "C-c l")
-    (lsp-modeline-code-actions-enable nil)
-    (lsp-ui-sideline-enable nil))
+    (lsp-keymap-prefix "C-c l"))
+#+end_src
+
+** LSP UI
+#+begin_src emacs-lisp
+  (use-package lsp-ui
+    :custom
+    (lsp-ui-sideline-show-diagnostics nil)
+    (lsp-ui-sideline-show-hover t))
 #+end_src
 
 ** Magit
