@@ -17,7 +17,13 @@ require('lualine').setup({
   },
 })
 
-require('lspconfig')['solargraph'].setup({})
+local on_attach = function(client, bufnr)
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+end
+
+require('lspconfig')['solargraph'].setup({
+  on_attach = on_attach,
+})
 
 local cmd = vim.cmd
 local g = vim.g
