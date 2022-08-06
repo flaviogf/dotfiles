@@ -17,6 +17,8 @@ require('lualine').setup({
   },
 })
 
+require('lspconfig')['solargraph'].setup({})
+
 local keymap = vim.api.nvim_set_keymap
 
 local set = vim.opt
