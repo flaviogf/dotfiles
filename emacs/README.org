@@ -246,7 +246,6 @@
     (go-mode . lsp)
     (ruby-mode . lsp)
     :custom
-    (lsp-headerline-breadcrumb-enable nil)
     (lsp-keymap-prefix "C-c l"))
 #+end_src
 
@@ -254,7 +253,7 @@
 #+begin_src emacs-lisp
   (use-package lsp-ui
     :custom
-    (lsp-ui-sideline-show-diagnostics nil)
+    (lsp-ui-sideline-show-diagnostics t)
     (lsp-ui-sideline-show-hover t))
 #+end_src
 

@@ -143,12 +143,11 @@
   (go-mode . lsp)
   (ruby-mode . lsp)
   :custom
-  (lsp-headerline-breadcrumb-enable nil)
   (lsp-keymap-prefix "C-c l"))
 
 (use-package lsp-ui
   :custom
-  (lsp-ui-sideline-show-diagnostics nil)
+  (lsp-ui-sideline-show-diagnostics t)
   (lsp-ui-sideline-show-hover t))
 
 (use-package magit)
