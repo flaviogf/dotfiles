@@ -22,6 +22,7 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 (add-hook 'prog-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook (lambda() (modify-syntax-entry ?_ "w")))
 
 (add-to-list 'default-frame-alist '(alpha . (90 . 90)))
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono Nerd Font-16"))
