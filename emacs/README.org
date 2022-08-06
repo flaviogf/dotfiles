@@ -23,6 +23,7 @@
   - [[#go-mode][Go Mode]]
   - [[#haskell-mode][Haskell Mode]]
   - [[#ivy][Ivy]]
+  - [[#lua-mode][Lua Mode]]
   - [[#lsp-mode][LSP Mode]]
   - [[#lsp-ui][LSP UI]]
   - [[#magit][Magit]]
@@ -33,7 +34,7 @@
   - [[#org-toc][Org Toc]]
   - [[#project][Project]]
   - [[#rainbow-mode][Rainbow Mode]]
-  - [[#ruby-mode][Ruby Mode]]
+  - [[#rspec-mode][RSpec Mode]]
   - [[#tab-bar][Tab Bar]]
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
@@ -225,12 +226,14 @@
 #+begin_src emacs-lisp
   (use-package go-mode
     :custom (gofmt-command "goimports")
-    :hook (before-save . gofmt-before-save))
+    :hook (before-save . gofmt-before-save)
+    :mode "\\.go\\'")
 #+end_src
 
 ** Haskell Mode
 #+begin_src emacs-lisp
-  (use-package haskell-mode)
+  (use-package haskell-mode
+    :mode "\\.hs\\'")
 #+end_src
 
 ** Ivy
@@ -240,6 +243,12 @@
     (enable-recursive-minibuffers t)
     (ivy-use-virtual-buffers t)
     :init (ivy-mode))
+#+end_src
+
+** Lua Mode
+#+begin_src emacs-lisp
+  (use-package lua-mode
+    :mode "\\.lua\\'")
 #+end_src
 
 ** LSP Mode
@@ -331,7 +340,7 @@
     (prog-mode . rainbow-mode))
 #+end_src
 
-** Ruby Mode
+** RSpec Mode
 #+begin_src emacs-lisp
   (use-package rspec-mode)
 #+end_src

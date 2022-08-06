@@ -131,15 +131,20 @@
 
 (use-package go-mode
   :custom (gofmt-command "goimports")
-  :hook (before-save . gofmt-before-save))
+  :hook (before-save . gofmt-before-save)
+  :mode "\\.go\\'")
 
-(use-package haskell-mode)
+(use-package haskell-mode
+  :mode "\\.hs\\'")
 
 (use-package ivy
   :custom
   (enable-recursive-minibuffers t)
   (ivy-use-virtual-buffers t)
   :init (ivy-mode))
+
+(use-package lua-mode
+  :mode "\\.lua\\'")
 
 (use-package lsp-mode
   :commands lsp
