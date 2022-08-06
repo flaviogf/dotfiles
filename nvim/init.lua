@@ -19,13 +19,14 @@ require('lualine').setup({
 
 require('lspconfig')['solargraph'].setup({})
 
+local cmd = vim.cmd
+local g = vim.g
 local keymap = vim.api.nvim_set_keymap
-
 local set = vim.opt
 
-vim.cmd "colorscheme dracula"
+cmd("colorscheme dracula")
 
-vim.g.mapleader = ','
+g.mapleader = ','
 
 keymap('v', 'p', '"_dP', { noremap = true, silent = true })
 
