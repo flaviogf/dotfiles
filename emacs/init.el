@@ -121,7 +121,10 @@
 (use-package evil-collection
   :init (evil-collection-init))
 
-(use-package flycheck)
+(use-package flycheck
+  :config
+  (my-leader-key
+    "f t" 'flycheck-mode))
 
 (use-package git-gutter
   :hook (prog-mode . git-gutter-mode))
@@ -144,6 +147,7 @@
   (go-mode . lsp)
   (ruby-mode . lsp)
   :custom
+  (lsp-headerline-breadcrumb-enable nil)
   (lsp-keymap-prefix "C-c l"))
 
 (use-package lsp-ui
