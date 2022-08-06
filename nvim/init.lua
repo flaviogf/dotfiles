@@ -6,7 +6,7 @@ local lualine = require 'lualine'
 
 local cmd = vim.cmd
 local g = vim.g
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 local set = vim.opt
 
 packer.startup(function(use)
@@ -24,10 +24,10 @@ end)
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
-    ['C-n'] = cmp.mapping(function(fallback)
+    ['<C-n>'] = cmp.mapping(function(fallback)
       if cmp.visible() then cmp.select_next_item() else fallback() end
     end),
-    ['C-p'] = cmp.mapping(function(fallback)
+    ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then cmp.select_prev_item() else fallback() end
     end),
   }),
@@ -39,7 +39,9 @@ cmp.setup({
 lspconfig['solargraph'].setup({
   capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities()),
   on_attach = function(client, bufnr)
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    local opts = { noremap = true, silent = true, buffer = bufnr }
+    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   end,
 })
 
@@ -55,7 +57,8 @@ cmd("colorscheme dracula")
 
 g.mapleader = ','
 
-keymap('v', 'p', '"_dP', { noremap = true, silent = true })
+local opts = { noremap = true, silent = true }
+keymap('v', 'p', '"_dP', opts)
 
 set.clipboard = 'unnamedplus'
 set.colorcolumn = '80,120'
