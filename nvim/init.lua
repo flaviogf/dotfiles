@@ -1,6 +1,19 @@
-require('packer').startup(function(use)
+local cmp = require 'cmp'
+local cmp_nvim_lsp = require 'cmp_nvim_lsp'
+local lspconfig = require 'lspconfig'
+local packer = require 'packer'
+local lualine = require 'lualine'
+
+local cmd = vim.cmd
+local g = vim.g
+local keymap = vim.api.nvim_set_keymap
+local set = vim.opt
+
+packer.startup(function(use)
   use { 'dracula/vim' }
   use { 'editorconfig/editorconfig-vim' }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'neovim/nvim-lspconfig' }
   use { 'nvim-lua/plenary.nvim' }
@@ -9,26 +22,34 @@ require('packer').startup(function(use)
   use { 'tpope/vim-dispatch' }
 end)
 
-require('lualine').setup({
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['C-n'] = cmp.mapping(function(fallback)
+      if cmp.visible() then cmp.select_next_item() else fallback() end
+    end),
+    ['C-p'] = cmp.mapping(function(fallback)
+      if cmp.visible() then cmp.select_prev_item() else fallback() end
+    end),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+  }),
+})
+
+lspconfig['solargraph'].setup({
+  capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  on_attach = function(client, bufnr)
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  end,
+})
+
+lualine.setup({
   options = {
     component_separators = '',
     section_separators = '',
     theme = 'dracula',
   },
 })
-
-local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-end
-
-require('lspconfig')['solargraph'].setup({
-  on_attach = on_attach,
-})
-
-local cmd = vim.cmd
-local g = vim.g
-local keymap = vim.api.nvim_set_keymap
-local set = vim.opt
 
 cmd("colorscheme dracula")
 
