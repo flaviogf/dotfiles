@@ -2,6 +2,7 @@ require('packer').startup(function(use)
   use { 'dracula/vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'kyazdani42/nvim-web-devicons' }
+  use { 'neovim/nvim-lspconfig' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
@@ -49,5 +50,5 @@ set.splitright = true
 set.tabstop = 2
 set.termguicolors = true
 set.wildmenu = true
-set.wildmode = full
+set.wildmode = "full"
 set.wrap = false
