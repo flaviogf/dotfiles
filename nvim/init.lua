@@ -1,5 +1,6 @@
 local cmp = require 'cmp'
 local cmp_nvim_lsp = require 'cmp_nvim_lsp'
+local hop = require 'hop'
 local lspconfig = require 'lspconfig'
 local packer = require 'packer'
 local lualine = require 'lualine'
@@ -19,6 +20,7 @@ packer.startup(function(use)
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
+  use { 'phaazon/hop.nvim' }
   use { 'tpope/vim-dispatch' }
 end)
 
@@ -36,12 +38,15 @@ cmp.setup({
   }),
 })
 
+hop.setup()
+
 lspconfig['solargraph'].setup({
   capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities()),
   on_attach = function(client, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
     keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
     keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   end,
 })
 
@@ -58,6 +63,7 @@ cmd("colorscheme dracula")
 g.mapleader = ','
 
 local opts = { noremap = true, silent = true }
+keymap('n', '<leader>at', '<cmd>HopPattern <CR>', opts)
 keymap('n', '<leader>f', '<cmd>Telescope fd <CR>', opts)
 keymap('v', 'p', '"_dP', opts)
 
