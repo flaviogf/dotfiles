@@ -84,6 +84,13 @@
     "c r" 'counsel-rg)
   :init (counsel-mode))
 
+(use-package dashboard
+  :custom
+  (initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+  (dashboard-startup-banner 'logo)
+  :init
+  (dashboard-setup-startup-hook))
+
 (use-package docker
   :config
   (my-leader-key

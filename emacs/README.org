@@ -12,6 +12,7 @@
   - [[#bufler][Bufler]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
+  - [[#dashboard][Dashboard]]
   - [[#docker][Docker]]
   - [[#dockerfile][Dockerfile]]
   - [[#doom-themes][Doom Themes]]
@@ -151,6 +152,16 @@
     (my-leader-key
       "c r" 'counsel-rg)
     :init (counsel-mode))
+#+end_src
+
+** Dashboard
+#+begin_src emacs-lisp
+  (use-package dashboard
+    :custom
+    (initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+    (dashboard-startup-banner 'logo)
+    :init
+    (dashboard-setup-startup-hook))
 #+end_src
 
 ** Docker
