@@ -20,7 +20,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 client.background       #ffffff
 
 bindsym $mod+d exec dmenu_run
-bindsym $mod+e exec $myEmacs --eval '(dired nil)'
+bindsym $mod+e exec $myEmacs
 bindsym $mod+p scratchpad show; resize set 90 ppt 75 ppt; move position center
 bindsym $mod+r mode "resize"
 bindsym $mod+w exec $myBrowser
