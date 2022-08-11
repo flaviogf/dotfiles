@@ -9,6 +9,7 @@ read_only = " "
 symbol = " "
 
 [gcloud]
+format = '[$symbol$active]($style) '
 symbol = " "
 
 [git_branch]
