@@ -9,7 +9,6 @@
   - [[#general][General]]
   - [[#all-the-icons][All The Icons]]
   - [[#avy][Avy]]
-  - [[#bufler][Bufler]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
   - [[#dashboard][Dashboard]]
@@ -36,7 +35,6 @@
   - [[#project][Project]]
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#rspec-mode][RSpec Mode]]
-  - [[#tab-bar][Tab Bar]]
   - [[#ripgrep][Ripgrep]]
   - [[#slime][Slime]]
   - [[#swiper][Swiper]]
@@ -128,15 +126,6 @@
     :config
     (my-leader-key
       "a t" 'avy-goto-char-timer))
-#+end_src
-
-** Bufler
-#+begin_src emacs-lisp
-  (use-package bufler
-    :config
-    (my-leader-key
-      "b s" 'bufler-switch-buffer
-      "b w" 'bufler-workspace-frame-set))
 #+end_src
 
 ** Company
@@ -354,15 +343,6 @@
 ** RSpec Mode
 #+begin_src emacs-lisp
   (use-package rspec-mode)
-#+end_src
-
-** Tab Bar
-#+begin_src emacs-lisp
-  (use-package tab-bar
-    :custom
-    (tab-bar-show nil)
-    :init
-    (tab-bar-mode))
 #+end_src
 
 ** Ripgrep

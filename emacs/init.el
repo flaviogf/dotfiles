@@ -69,12 +69,6 @@
   (my-leader-key
     "a t" 'avy-goto-char-timer))
 
-(use-package bufler
-  :config
-  (my-leader-key
-    "b s" 'bufler-switch-buffer
-    "b w" 'bufler-workspace-frame-set))
-
 (use-package company
   :init (company-mode))
 
@@ -213,12 +207,6 @@
   (prog-mode . rainbow-mode))
 
 (use-package rspec-mode)
-
-(use-package tab-bar
-  :custom
-  (tab-bar-show nil)
-  :init
-  (tab-bar-mode))
 
 (use-package rg)
 
