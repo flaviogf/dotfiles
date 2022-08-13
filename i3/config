@@ -4,6 +4,8 @@ set $myBrowser qutebrowser
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
+set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#282a36" -sb "#bd93f9" -sf "#000000"
+
 set $myTerm alacritty
 
 floating_modifier $mod
@@ -19,7 +21,7 @@ client.urgent           #2f343a #900000 #ffffff #900000 #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 client.background       #ffffff
 
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec $myLauncher
 bindsym $mod+e exec $myEmacs
 bindsym $mod+p scratchpad show; resize set 90 ppt 75 ppt; move position center
 bindsym $mod+r mode "resize"
