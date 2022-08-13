@@ -21,4 +21,6 @@ flameshot &
 nm-applet &
 pasystray &
 
+x11vnc -display :0 -forever &
+
 exec i3
