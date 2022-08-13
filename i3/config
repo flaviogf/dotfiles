@@ -4,7 +4,7 @@ set $myBrowser qutebrowser
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
-set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#282a36" -sb "#bd93f9" -sf "#000000"
+set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#282a36" -sb "#8be9fd" -sf "#000000"
 
 set $myTerm alacritty
 
