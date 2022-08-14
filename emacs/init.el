@@ -174,7 +174,7 @@
     "o ;" 'org-timer-set-timer)
   :custom
   (org-agenda-files '("/home/flaviogf/dev/org-files/Archive.org" "/home/flaviogf/dev/org-files/TODO.org"))
-  (org-clock-sound "/home/flaviogf/Downloads/bell.mp3")
+  (org-clock-sound t)
   (org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (org-confirm-babel-evaluate nil)
   (org-hide-emphasis-markers t)
