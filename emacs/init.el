@@ -169,7 +169,9 @@
 (use-package org
   :config
   (my-leader-key
-    "o t" 'org-todo-list)
+    "o t" 'org-todo-list
+    "o _" 'org-timer-stop
+    "o ;" 'org-timer-set-timer)
   :custom
   (org-agenda-files '("/home/flaviogf/dev/org-files/Archive.org" "/home/flaviogf/dev/org-files/TODO.org"))
   (org-refile-targets '((org-agenda-files :maxlevel . 1)))
