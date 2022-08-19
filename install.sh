@@ -42,6 +42,3 @@ ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
 
 # Xorg
 ln -sf "${DOTFILES}/xorg/.xinitrc" "${HOME}/.xinitrc"
-
-# Zsh
-ln -sf "${DOTFILES}/zsh/.zshrc" "${HOME}/.zshrc"
