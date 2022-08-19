@@ -186,7 +186,12 @@
   (org-mode . (lambda () (org-indent-mode)
                          (auto-fill-mode 0)
                          (setq evil-auto-indent nil)))
-  :init (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+  :init
+  (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+
+(dolist (face '((org-level-1 . 1.3)
+                (org-level-2 . 1.1)))
+  (set-face-attribute (car face) nil :font "DejaVu Sans Mono Nerd Font" :weight 'medium :height (cdr face)))
 
 (use-package org-roam
   :custom
@@ -195,6 +200,8 @@
   :init (org-roam-db-autosync-mode))
 
 (use-package org-superstar
+  :custom
+  (org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
   :hook (org-mode . org-superstar-mode))
 
 (use-package toc-org
