@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES="/home/flaviogf/dev/dotfiles"
+DOTFILES="${HOME}/dev/dotfiles"
 
 # Alacritty
 ln -sf "${DOTFILES}/alacritty/.alacritty.yml" "${HOME}/.alacritty.yml"
