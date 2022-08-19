@@ -1,4 +1,4 @@
-set -U fish_greeting
+set fish_greeting
 
 set EDITOR "emacsclient --socket-name=emacs --tty"
 set VISUAL "emacsclient --socket-name=emacs --create-frame"
