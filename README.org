@@ -12,6 +12,7 @@ This repository is destined to save all my dotfiles.
 * :computer: Techs
 - Alacritty
 - [[file:emacs/README.org][Emacs]]
+- Fish
 - Git
 - I3
 - Neovim
