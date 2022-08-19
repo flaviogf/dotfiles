@@ -203,6 +203,7 @@
 (use-package org-superstar
   :custom
   (org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
+  (org-superstar-itembullet-alist '((?+ . ?➤) (?- . ?✦)))
   :hook (org-mode . org-superstar-mode))
 
 (use-package toc-org

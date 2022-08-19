@@ -327,6 +327,7 @@
   (use-package org-superstar
     :custom
     (org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆"))
+    (org-superstar-item-bullet-alist '((?+ . ?➤) (?- . ?✦)))
     :hook (org-mode . org-superstar-mode))
 #+end_src
 
