@@ -191,7 +191,7 @@
 
 (dolist (face '((org-level-1 . 1.7)
                 (org-level-2 . 1.6)
-                (org-level-3 . 1.5))
+                (org-level-3 . 1.5)))
   (set-face-attribute (car face) nil :font "DejaVu Sans Mono Nerd Font" :weight 'medium :height (cdr face)))
 
 (use-package org-roam
