@@ -8,6 +8,9 @@ ln -sf "${DOTFILES}/alacritty/.alacritty.yml" "${HOME}/.alacritty.yml"
 # Emacs
 mkdir -p "${HOME}/.emacs.d" && ln -sf "${DOTFILES}/emacs/init.el" "${HOME}/.emacs.d/init.el"
 
+# Fish
+mkdir -p "${HOME}/.config/fish" && ln -sf "${DOTFILES}/fish/config.fish" "${HOME}/.config/fish/config.fish"
+
 # Git
 ln -sf "${DOTFILES}/git/.gitconfig" "${HOME}/.gitconfig"
 
