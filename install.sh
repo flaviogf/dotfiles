@@ -28,12 +28,6 @@ mkdir -p "${HOME}/.config/polybar" && \
     ln -sf "${DOTFILES}/polybar/config.ini" "${HOME}/.config/polybar/config.ini" && \
     ln -sf "${DOTFILES}/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh"
 
-# Qutebrowser
-mkdir -p "${HOME}/.config/qutebrowser/bookmarks" && \
-    ln -sf "${DOTFILES}/qutebrowser/config.py" "${HOME}/.config/qutebrowser/config.py" && \
-    ln -sf "${DOTFILES}/qutebrowser/quickmarks" "${HOME}/.config/qutebrowser/quickmarks" && \
-    ln -sf "${DOTFILES}/qutebrowser/bookmarks/urls" "${HOME}/.config/qutebrowser/bookmarks/urls"
-
 # Starship
 ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 
