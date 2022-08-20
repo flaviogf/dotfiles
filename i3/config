@@ -1,6 +1,6 @@
 set $mod Mod4
 
-set $myBrowser qutebrowser
+set $myBrowser google-chrome-stable
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
