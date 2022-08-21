@@ -293,6 +293,7 @@
     :custom
     (org-agenda-files '("/home/flaviogf/dev/org-files/Archive.org" "/home/flaviogf/dev/org-files/TODO.org"))
     (org-confirm-babel-evaluate nil)
+    (org-timer-display nil)
     (org-ellipsis " ▼ ")
     (org-hide-emphasis-markers t)
     (org-refile-targets '((org-agenda-files :maxlevel . 1)))
