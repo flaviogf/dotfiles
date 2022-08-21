@@ -179,6 +179,7 @@
   (org-hide-emphasis-markers t)
   (org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (org-startup-folded t)
+  (org-timer-format "%s")
   (org-tag-alist '(("chore" . ?c) ("study" . ?s) ("work" . ?w) ("pc" . ?p)))
   (org-todo-keywords '("TODO" "DOING" "DONE" "CANCELED"))
   :ensure nil
