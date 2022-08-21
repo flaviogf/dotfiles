@@ -13,6 +13,7 @@ floating_modifier $mod
 focus_follows_mouse no
 
 default_border pixel 4
+default_floating_border pixel 4
 font xft:JetBrains Mono Nerd Font-11
 gaps inner 16
 
