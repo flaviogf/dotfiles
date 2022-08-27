@@ -28,7 +28,7 @@ mkdir -p "${HOME}/.config/polybar" && \
     mkdir -p "${HOME}/.config/polybar/scripts" && \
     ln -sf "${DOTFILES}/polybar/config.ini" "${HOME}/.config/polybar/config.ini" && \
     ln -sf "${DOTFILES}/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh" && \
-    ln -sf "${DOTFILES}/polybar/scripts/timer" "${HOME}/.config/polybar/scripts/timer"
+    ln -sf "${DOTFILES}/polybar/scripts/pomodoro" "${HOME}/.config/polybar/scripts/pomodoro"
 
 # Starship
 ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
