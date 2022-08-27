@@ -19,19 +19,21 @@ class Pomodoro
     @io = io
   end
 
-  def output(hour = '00', minutes = '00', seconds = '00')
+  def output(value)
+    match_data = value.match(/(\d{1,2}):(\d{1,2}):(\d{1,2})/)
+
+    return @io.print("00:00:00\n") if match_data.nil?
+
+    hour, minutes, seconds = match_data.captures
+
+    return @io.print("00:00:00\n") if hour == '0' && minutes == '00' && seconds == '01'
+
     @io.printf("%02d:%02d:%02d\n", hour, minutes, seconds)
   end
 end
 
 emacsclient = Emacs::Client.new
 value = emacsclient.eval(emacsclient.org_timer_value_string)
-match_data = value.match(/(\d{1,2}):(\d{1,2}):(\d{1,2})/)
 
 pomodoro = Pomodoro.new($stdout)
-
-if match_data
-  pomodoro.output(*match_data.captures)
-else
-  pomodoro.output
-end
+pomodoro.output(value)
