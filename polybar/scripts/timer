@@ -1,0 +1,33 @@
+#!/bin/env ruby
+
+# frozen_string_literal: true
+
+module Emacs
+  class Client
+    def eval(expression)
+      `emacsclient --socket=emacs --eval '#{expression}' 2> /dev/null`
+    end
+
+    def org_timer_value_string
+      '(org-timer-value-string)'
+    end
+  end
+end
+
+module Timer
+  class << self
+    def output(hour = '00', minutes = '00', seconds = '00')
+      $stdout.printf("%02d:%02d:%02d\n", hour, minutes, seconds)
+    end
+  end
+end
+
+emacsclient = Emacs::Client.new
+value = emacsclient.eval(emacsclient.org_timer_value_string)
+match_data = value.match(/(\d{1,2}):(\d{1,2}):(\d{1,2})/)
+
+if match_data
+  Timer.output(*match_data.captures)
+else
+  Timer.output
+end

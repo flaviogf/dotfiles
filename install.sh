@@ -25,8 +25,10 @@ mkdir -p "${HOME}/.config/picom" && ln -sf "${DOTFILES}/picom/picom.conf" "${HOM
 
 # Polybar
 mkdir -p "${HOME}/.config/polybar" && \
+    mkdir -p "${HOME}/.config/polybar/scripts" && \
     ln -sf "${DOTFILES}/polybar/config.ini" "${HOME}/.config/polybar/config.ini" && \
-    ln -sf "${DOTFILES}/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh"
+    ln -sf "${DOTFILES}/polybar/launch.sh" "${HOME}/.config/polybar/launch.sh" && \
+    ln -sf "${DOTFILES}/polybar/scripts/timer" "${HOME}/.config/polybar/scripts/timer"
 
 # Starship
 ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
