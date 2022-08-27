@@ -28,7 +28,7 @@ class Pomodoro
 
     return @io.print("00:00:00\n") if hour == '0' && minutes == '00' && seconds == '01'
 
-    @io.printf("%02d:%02d:%02d\n", hour, minutes, seconds)
+    @io.printf("%02d:%02d:%02d\n", hour.to_i, minutes.to_i, seconds.to_i)
   end
 end
 
