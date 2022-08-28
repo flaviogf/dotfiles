@@ -307,7 +307,7 @@
                            (auto-fill-mode 0)
                            (setq evil-auto-indent nil)))
     :init
-    (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
+    (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (ruby . t))))
 
   (dolist (face '((org-level-1 . 1.7)
                   (org-level-2 . 1.6)
