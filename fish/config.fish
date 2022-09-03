@@ -18,6 +18,7 @@ alias ll="exa --long --group-directories-first --icons"
 alias ls="exa --all --group --header --long --group-directories-first --icons"
 alias lt="exa --all --tree --group-directories-first --icons"
 
+alias emacs="emacsclient --socket=emacs --tty"
 alias vi="nvim"
 alias vim="nvim"
 
