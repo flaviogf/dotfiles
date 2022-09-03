@@ -17,12 +17,10 @@ default_floating_border pixel 4
 font xft:JetBrains Mono Nerd Font-11
 gaps inner 16
 
-client.focused          #4c7899 #285577 #ffffff #bd93f9 #bd93f9
-client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
-client.unfocused        #333333 #222222 #888888 #6272a4 #6272a4
+client.focused          #74c7ec #74c7ec #ffffff #74c7ec #74c7ec
+client.focused_inactive #333333 #5f676a #ffffff #484e50 #484e50
+client.unfocused        #7f849c #7f849c #ffffff #7f849c #7f849c
 client.urgent           #2f343a #900000 #ffffff #900000 #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
-client.background       #ffffff
 
 bindsym $mod+c move position center
 bindsym $mod+d exec $myLauncher
