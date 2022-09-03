@@ -19,7 +19,7 @@ gaps inner 16
 
 client.focused          #89b4fa #89b4fa #ffffff #89b4fa #89b4fa
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #484e50
-client.unfocused        #7f849c #7f849c #ffffff #7f849c #7f849c
+client.unfocused        #6c7086 #6c7086 #ffffff #6c7086 #6c7086
 client.urgent           #2f343a #900000 #ffffff #900000 #900000
 
 bindsym $mod+c move position center
