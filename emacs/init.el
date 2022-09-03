@@ -69,6 +69,8 @@
   (my-leader-key
     "a t" 'avy-goto-char-timer))
 
+(use-package catppuccin-theme)
+
 (use-package company
   :init (company-mode))
 
@@ -97,7 +99,7 @@
   :custom
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t)
-  :init (load-theme 'doom-dracula t))
+  :init (load-theme 'catppuccin t))
 
 (use-package minions
   :hook (doom-modeline-mode . minions-mode))
