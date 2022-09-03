@@ -4,7 +4,7 @@ set $myBrowser google-chrome-stable
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
-set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#282a36" -sb "#bd93f9" -sf "#000000"
+set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#1e1e2e" -sb "#89b4fa" -sf "#000000"
 
 set $myTerm alacritty
 
