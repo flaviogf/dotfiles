@@ -52,6 +52,8 @@
 (customize-set-variable 'whitespace-line-column 120)
 (customize-set-variable 'whitespace-style '(face lines-tail))
 
+(put 'dired-find-alternate-file 'disabled nil)
+
 (global-unset-key (kbd "C-SPC"))
 
 (use-package general
@@ -122,6 +124,10 @@
   :init (evil-mode))
 
 (use-package evil-collection
+  :config
+  (evil-collection-define-key 'normal 'dired-mode-map
+    (kbd "RET") 'dired-find-alternate-file
+    "-" (lambda () (interactive) (find-alternate-file "..")))
   :init (evil-collection-init))
 
 (use-package flycheck
