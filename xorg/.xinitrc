@@ -9,6 +9,7 @@ fi
 
 setxkbmap -layout us -variant intl -option ctrl:nocaps
 xsetroot -cursor_name left_ptr
+xset s off; xset -dpms
 
 emacs --daemon=emacs &
 nitrogen --restore &
