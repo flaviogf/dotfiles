@@ -1,3 +1,4 @@
+local catppuccin = require 'catppuccin'
 local cmp = require 'cmp'
 local cmp_nvim_lsp = require 'cmp_nvim_lsp'
 local hop = require 'hop'
@@ -11,7 +12,7 @@ local keymap = vim.keymap.set
 local set = vim.opt
 
 packer.startup(function(use)
-  use { 'dracula/vim' }
+  use { 'catppuccin/nvim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
@@ -55,11 +56,13 @@ lualine.setup({
   options = {
     component_separators = '',
     section_separators = '',
-    theme = 'dracula',
+    theme = 'catppuccin',
   },
 })
 
-cmd("colorscheme dracula")
+g.catppuccin_flavour = 'mocha'
+catppuccin.setup()
+cmd("colorscheme catppuccin")
 
 g.mapleader = ','
 
