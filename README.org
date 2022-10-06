@@ -19,7 +19,6 @@ This repository is destined to save all my dotfiles.
 - Picom
 - Polybar
 - Starship
-- Tmux
 - Xorg
 
 * :memo: License
