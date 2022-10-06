@@ -17,8 +17,6 @@ default_floating_border pixel 4
 font xft:JetBrains Mono Nerd Font-11
 gaps inner 16
 
-for_window [all] border pixel 4
-
 client.focused          #89b4fa #89b4fa #ffffff #89b4fa #89b4fa
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #484e50
 client.unfocused        #6c7086 #6c7086 #ffffff #6c7086 #6c7086
