@@ -86,7 +86,7 @@ exec_always --no-startup-id setxkbmap -layout us -variant intl -option ctrl:noca
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
 exec_always --no-startup-id xset s off; xset -dpms
 
-exec --no-startup-id emacsclient --socket-name emacs --eval '(kill-emacs)' 2&>/dev/null && /bin/emacs --daemon=emacs
+exec --no-startup-id emacs --daemon=emacs
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id blueman-applet
