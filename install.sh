@@ -33,8 +33,5 @@ mkdir -p "${HOME}/.config/polybar" && \
 # Starship
 ln -sf "${DOTFILES}/starship/starship.toml" "${HOME}/.config/starship.toml"
 
-# Tmux
-ln -sf "${DOTFILES}/tmux/.tmux.conf" "${HOME}/.tmux.conf"
-
 # Xorg
 ln -sf "${DOTFILES}/xorg/.xinitrc" "${HOME}/.xinitrc"
