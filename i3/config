@@ -94,5 +94,5 @@ exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 
-# FIXME: i3 version 4.21 broken the default_border/default_floating_border
+# FIXME: i3 version 4.21 broken the default_border/default_floating_border properties
 for_window [all] border pixel 4
