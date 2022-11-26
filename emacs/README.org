@@ -77,7 +77,6 @@
   (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
 
   (customize-set-variable 'c-basic-offset 2)
-  (customize-set-variable 'column-number-mode t)
   (customize-set-variable 'cperl-indent-level 2)
   (customize-set-variable 'dired-listing-switches "-agho --group-directories-first")
   (customize-set-variable 'display-line-numbers-type 'relative)
