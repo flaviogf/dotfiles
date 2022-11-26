@@ -4,6 +4,11 @@
   become: true
 
   tasks:
+  - name: install alacritty
+    community.general.pacman:
+      name: alacritty
+      state: latest
+
   - name: install emacs
     community.general.pacman:
       name: emacs
