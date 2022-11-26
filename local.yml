@@ -91,3 +91,11 @@
       dest: /home/flaviogf/.config/nvim/init.lua
       owner: flaviogf
       group: flaviogf
+
+  - name: configure picom
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: picom/picom.conf
+      dest: /home/flaviogf/.config/picom/picom.conf
+      owner: flaviogf
+      group: flaviogf
