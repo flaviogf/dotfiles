@@ -33,7 +33,6 @@
 (customize-set-variable 'cperl-indent-level 2)
 (customize-set-variable 'dired-listing-switches "-agho --group-directories-first")
 (customize-set-variable 'display-line-numbers-type 'relative)
-(customize-set-variable 'fill-column 80)
 (customize-set-variable 'indent-tabs-mode nil)
 (customize-set-variable 'inhibit-startup-message t)
 (customize-set-variable 'inhibit-splash-screen t)
