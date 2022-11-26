@@ -12,8 +12,11 @@ floating_modifier $mod
 
 focus_follows_mouse no
 
-default_border pixel 1
+for_window [all] border pixel 1 # FIXME: i3 version 4.21 broken the default_border/default_floating_border properties
 default_floating_border pixel 1
+hide_edge_borders vertical
+default_border pixel 1
+
 font xft:JetBrains Mono Nerd Font-11
 
 client.focused          #191C25 #191C25 #ffffff #191C25 #191C25
@@ -93,5 +96,3 @@ exec --no-startup-id flameshot
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 
-# FIXME: i3 version 4.21 broken the default_border/default_floating_border properties
-for_window [all] border pixel 1
