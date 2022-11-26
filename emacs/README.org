@@ -9,7 +9,6 @@
   - [[#general][General]]
   - [[#all-the-icons][All The Icons]]
   - [[#avy][Avy]]
-  - [[#catppuccin][Catppuccin]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
   - [[#dashboard][Dashboard]]
@@ -129,11 +128,6 @@
       "a t" 'avy-goto-char-timer))
 #+end_src
 
-** Catppuccin
-#+begin_src emacs-lisp
-  (use-package catppuccin-theme)
-#+end_src
-
 ** Company
 #+begin_src emacs-lisp
   (use-package company
@@ -179,7 +173,7 @@
     :custom
     (doom-themes-enable-bold t)
     (doom-themes-enable-italic t)
-    :init (load-theme 'catppuccin t))
+    :init (load-theme 'doom-gruvbox t))
 #+end_src
 
 ** Doom Modeline
