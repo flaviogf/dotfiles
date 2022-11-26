@@ -13,3 +13,8 @@
     community.general.pacman:
       name: emacs
       state: latest
+
+  - name: install fish
+    community.general.pacman:
+      name: fish
+      state: latest
