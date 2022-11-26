@@ -18,3 +18,9 @@
     community.general.pacman:
       name: fish
       state: latest
+
+  - name: install git
+    community.general.pacman:
+      name: git
+      state: latest
+
