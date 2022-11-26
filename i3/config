@@ -4,7 +4,7 @@ set $myBrowser google-chrome-stable
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
-set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#3b4252" -sb "#81a1c1" -sf "#000000"
+set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#3b4252" -sb "#81a1c1" -sf "#191C25"
 
 set $myTerm alacritty
 
@@ -19,10 +19,10 @@ default_border pixel 1
 
 font xft:JetBrains Mono Nerd Font-11
 
-client.focused          #191C25 #191C25 #ffffff #191C25 #191C25
-client.focused_inactive #191C25 #191C25 #ffffff #191C25 #191C25
-client.unfocused        #191C25 #191C25 #ffffff #191C25 #191C25
-client.urgent           #2f343a00 #90000000 #ffffff #90000000 #90000000
+client.focused          #2e3440 #2e3440 #ffffff #2e3440 #2e3440
+client.focused_inactive #2e3440 #2e3440 #ffffff #2e3440 #2e3440
+client.unfocused        #2e3440 #2e3440 #ffffff #2e3440 #2e3440
+client.urgent           #2f343a #900000 #ffffff #900000 #900000
 
 bindsym $mod+c move position center
 bindsym $mod+d exec $myLauncher
