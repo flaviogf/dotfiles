@@ -33,7 +33,6 @@
 (customize-set-variable 'cperl-indent-level 2)
 (customize-set-variable 'dired-listing-switches "-agho --group-directories-first")
 (customize-set-variable 'display-line-numbers-type 'relative)
-(customize-set-variable 'fill-column 120)
 (customize-set-variable 'indent-tabs-mode nil)
 (customize-set-variable 'inhibit-startup-message t)
 (customize-set-variable 'inhibit-splash-screen t)
@@ -47,8 +46,6 @@
 (customize-set-variable 'truncate-lines t)
 (customize-set-variable 'use-package-always-ensure t)
 (customize-set-variable 'visible-bell t)
-(customize-set-variable 'whitespace-line-column 120)
-(customize-set-variable 'whitespace-style '(face lines-tail))
 
 (put 'dired-find-alternate-file 'disabled nil)
 
