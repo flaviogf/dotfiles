@@ -68,6 +68,14 @@
       owner: flaviogf
       group: flaviogf
 
+  - name: configure git
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: git/.gitconfig
+      dest: /home/flaviogf/.gitconfig
+      owner: flaviogf
+      group: flaviogf
+
   - name: configure neovim
     become_user: flaviogf
     ansible.builtin.copy:
