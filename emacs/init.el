@@ -18,7 +18,6 @@
 (add-hook 'org-mode-hook 'hl-line-mode)
 (add-hook 'org-mode-hook 'org-indent-mode)
 (add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 (add-hook 'prog-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook (lambda() (modify-syntax-entry ?_ "w")))
