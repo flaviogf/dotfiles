@@ -76,6 +76,14 @@
       owner: flaviogf
       group: flaviogf
 
+  - name: configure i3
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: i3/config
+      dest: /home/flaviogf/.config/i3/config
+      owner: flaviogf
+      group: flaviogf
+
   - name: configure neovim
     become_user: flaviogf
     ansible.builtin.copy:
