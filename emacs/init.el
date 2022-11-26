@@ -97,7 +97,7 @@
   :custom
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t)
-  :init (load-theme 'doom-gruvbox t))
+  :init (load-theme 'doom-nord t))
 
 (use-package minions
   :hook (doom-modeline-mode . minions-mode))
