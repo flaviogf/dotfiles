@@ -19,9 +19,9 @@ default_border pixel 1
 
 font xft:JetBrains Mono Nerd Font-11
 
-client.focused          #2e3440 #2e3440 #ffffff #2e3440 #2e3440
+client.focused          #3b4252 #3b4252 #ffffff #3b4252 #3b4252
 client.focused_inactive #2e3440 #2e3440 #ffffff #2e3440 #2e3440
-client.unfocused        #2e3440 #2e3440 #ffffff #2e3440 #2e3440
+client.unfocused        #3b4252 #3b4252 #ffffff #3b4252 #3b4252
 client.urgent           #2f343a #900000 #ffffff #900000 #900000
 
 bindsym $mod+c move position center
