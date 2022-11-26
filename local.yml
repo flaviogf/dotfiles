@@ -47,7 +47,7 @@
   - name: configure alacritty
     become_user: flaviogf
     ansible.builtin.file:
-      src: alacritty/.alacritty.yml
+      src: /alacritty/.alacritty.yml
       dest: /home/flaviogf/.alacritty.yml
       owner: flaviogf
       group: flaviogf
