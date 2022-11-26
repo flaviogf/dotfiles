@@ -28,3 +28,8 @@
     community.general.pacman:
       name: i3-gaps
       state: latest
+
+  - name: install picom
+    community.general.pacman:
+      name: picom
+      state: latest
