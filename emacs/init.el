@@ -23,7 +23,7 @@
 (add-hook 'prog-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook (lambda() (modify-syntax-entry ?_ "w")))
 
-(add-to-list 'default-frame-alist '(alpha . (90 . 90)))
+(add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono Nerd Font-16"))
 (add-to-list 'exec-path "/home/flaviogf/.asdf/shims")
 (add-to-list 'exec-path "/home/flaviogf/.asdf/bin")
