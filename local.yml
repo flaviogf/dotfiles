@@ -51,3 +51,11 @@
       dest: /home/flaviogf/.alacritty.yml
       owner: flaviogf
       group: flaviogf
+
+  - name: configure emacs
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: emacs/init.el
+      dest: /home/flaviogf/.emacs.d/init.el
+      owner: flaviogf
+      group: flaviogf
