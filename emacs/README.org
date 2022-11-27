@@ -22,8 +22,8 @@
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
   - [[#ivy][Ivy]]
-  - [[#java][Java]]
   - [[#lsp-mode][LSP Mode]]
+  - [[#lsp-java][LSP Java]]
   - [[#lsp-ui][LSP UI]]
   - [[#magit][Magit]]
   - [[#marginalia][Marginalia]]
@@ -239,24 +239,25 @@
     :init (ivy-mode))
 #+end_src
 
-** Java
-#+begin_src emacs-lisp
-  (use-package lsp-java)
-#+end_src
-
 ** LSP Mode
 #+begin_src emacs-lisp
   (use-package lsp-mode
     :commands lsp
     :hook
     (go-mode . lsp)
-    (java-mode . lsp)
     (python-mode . lsp)
     (ruby-mode . lsp)
     (lsp-mode . lsp-enable-wich-key-integration)
     :custom
     (lsp-headerline-breadcrumb-enable nil)
     (lsp-keymap-prefix "C-c l"))
+#+end_src
+
+** LSP Java
+#+begin_src emacs-lisp
+  (use-package lsp-java
+    :hook
+    (java-mode . lsp))
 #+end_src
 
 ** LSP UI
