@@ -150,7 +150,6 @@
   (go-mode . lsp)
   (python-mode . lsp)
   (ruby-mode . lsp)
-  (lsp-mode . lsp-enable-wich-key-integration)
   :custom
   (lsp-headerline-breadcrumb-enable nil)
   (lsp-keymap-prefix "C-c l"))
