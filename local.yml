@@ -134,3 +134,11 @@
       dest: /home/flaviogf/.config/starship.toml
       owner: flaviogf
       group: flaviogf
+
+  - name: configure xorg
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: xorg/.xinitrc
+      dest: /home/flaviogf/.xinitrc
+      owner: flaviogf
+      group: flaviogf
