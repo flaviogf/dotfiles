@@ -122,7 +122,7 @@
   - name: configure polybar scripts
     become_user: flaviogf
     ansible.builtin.copy:
-      src: {{ item }}
+      src: "{{ item }}"
       dest: /home/flaviogf/.config/polybar/scripts/
       owner: flaviogf
       group: flaviogf
