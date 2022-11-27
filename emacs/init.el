@@ -138,17 +138,11 @@
   :hook (before-save . gofmt-before-save)
   :mode "\\.go\\'")
 
-(use-package haskell-mode
-  :mode "\\.hs\\'")
-
 (use-package ivy
   :custom
   (enable-recursive-minibuffers t)
   (ivy-use-virtual-buffers t)
   :init (ivy-mode))
-
-(use-package lua-mode
-  :mode "\\.lua\\'")
 
 (use-package lsp-mode
   :commands lsp
@@ -224,12 +218,7 @@
   (conf-unix-mode . rainbow-mode)
   (prog-mode . rainbow-mode))
 
-(use-package rspec-mode)
-
 (use-package rg)
-
-(use-package slime
-  :init (setq inferior-lisp-program "sbcl"))
 
 (use-package swiper
   :config

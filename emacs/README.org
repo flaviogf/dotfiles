@@ -21,9 +21,7 @@
   - [[#flychek][Flychek]]
   - [[#git-gutter][Git Gutter]]
   - [[#go-mode][Go Mode]]
-  - [[#haskell-mode][Haskell Mode]]
   - [[#ivy][Ivy]]
-  - [[#lua-mode][Lua Mode]]
   - [[#lsp-mode][LSP Mode]]
   - [[#lsp-ui][LSP UI]]
   - [[#magit][Magit]]
@@ -34,9 +32,7 @@
   - [[#org-toc][Org Toc]]
   - [[#project][Project]]
   - [[#rainbow-mode][Rainbow Mode]]
-  - [[#rspec-mode][RSpec Mode]]
   - [[#ripgrep][Ripgrep]]
-  - [[#slime][Slime]]
   - [[#swiper][Swiper]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
@@ -233,12 +229,6 @@
     :mode "\\.go\\'")
 #+end_src
 
-** Haskell Mode
-#+begin_src emacs-lisp
-  (use-package haskell-mode
-    :mode "\\.hs\\'")
-#+end_src
-
 ** Ivy
 #+begin_src emacs-lisp
   (use-package ivy
@@ -246,12 +236,6 @@
     (enable-recursive-minibuffers t)
     (ivy-use-virtual-buffers t)
     :init (ivy-mode))
-#+end_src
-
-** Lua Mode
-#+begin_src emacs-lisp
-  (use-package lua-mode
-    :mode "\\.lua\\'")
 #+end_src
 
 ** LSP Mode
@@ -358,20 +342,9 @@
     (prog-mode . rainbow-mode))
 #+end_src
 
-** RSpec Mode
-#+begin_src emacs-lisp
-  (use-package rspec-mode)
-#+end_src
-
 ** Ripgrep
 #+begin_src emacs-lisp
   (use-package rg)
-#+end_src
-
-** Slime
-#+begin_src emacs-lisp
-  (use-package slime
-    :init (setq inferior-lisp-program "sbcl"))
 #+end_src
 
 ** Swiper
