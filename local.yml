@@ -99,3 +99,27 @@
       dest: /home/flaviogf/.config/picom/picom.conf
       owner: flaviogf
       group: flaviogf
+
+  - name: configure polybar
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: polybar/config.ini
+      dest: /home/flaviogf/.config/polybar/config.ini
+      owner: flaviogf
+      group: flaviogf
+
+  - name: configure polybar launcher
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: polybar/launch.sh
+      dest: /home/flaviogf/.config/polybar/launch.sh
+      owner: flaviogf
+      group: flaviogf
+
+  - name: configure polybar scripts
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: polybar/scripts
+      dest: /home/flaviogf/.config/polybar
+      owner: flaviogf
+      group: flaviogf
