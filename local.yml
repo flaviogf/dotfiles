@@ -115,6 +115,7 @@
       dest: /home/flaviogf/.config/polybar/launch.sh
       owner: flaviogf
       group: flaviogf
+      mode: 0744
 
   - name: configure polybar scripts
     become_user: flaviogf
