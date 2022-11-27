@@ -144,12 +144,17 @@
   (ivy-use-virtual-buffers t)
   :init (ivy-mode))
 
+(use-package lsp-java
+  :hook
+  (java . lsp))
+
 (use-package lsp-mode
   :commands lsp
   :hook
   (go-mode . lsp)
   (python-mode . lsp)
   (ruby-mode . lsp)
+  (lsp-mode . lsp-enable-wich-key-integration)
   :custom
   (lsp-headerline-breadcrumb-enable nil)
   (lsp-keymap-prefix "C-c l"))
