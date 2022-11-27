@@ -127,5 +127,5 @@
       owner: flaviogf
       group: flaviogf
       mode: 0744
-      with_fileglob:
-        - polybar/scripts/*
+    with_fileglob:
+      - polybar/scripts/*
