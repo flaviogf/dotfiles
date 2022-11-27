@@ -126,3 +126,11 @@
       mode: 0744
     with_fileglob:
       - polybar/scripts/*
+
+  - name: configure starship
+    become_user: flaviogf
+    ansible.builtin.copy:
+      src: starship/starship.toml
+      dest: /home/flaviogf/.config/starship.toml
+      owner: flaviogf
+      group: flaviogf
