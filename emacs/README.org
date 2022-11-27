@@ -241,9 +241,7 @@
 
 ** Java
 #+begin_src emacs-lisp
-  (use-package lsp-java
-    :hook
-    (java . lsp))
+  (use-package lsp-java)
 #+end_src
 
 ** LSP Mode
@@ -252,6 +250,7 @@
     :commands lsp
     :hook
     (go-mode . lsp)
+    (java-mode . lsp)
     (python-mode . lsp)
     (ruby-mode . lsp)
     (lsp-mode . lsp-enable-wich-key-integration)
