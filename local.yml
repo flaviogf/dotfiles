@@ -116,13 +116,16 @@
       owner: flaviogf
       group: flaviogf
 
+  - name: Display paths of all .txt files in dir
+    ansible.builtin.debug: msg={{ lookup('ansible.builtin.fileglob', 'polybar/scripts/*') }}
+
   - name: configure polybar scripts
     become_user: flaviogf
     ansible.builtin.copy:
-      src: "{{ item }}"
+      src: {{ item }}
       dest: /home/flaviogf/.config/polybar/scripts/
       owner: flaviogf
       group: flaviogf
       mode: 0744
       with_fileglob:
-        - "polybar/scripts/*"
+        - polybar/scripts/*
