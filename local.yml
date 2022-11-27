@@ -119,7 +119,10 @@
   - name: configure polybar scripts
     become_user: flaviogf
     ansible.builtin.copy:
-      src: polybar/scripts
-      dest: /home/flaviogf/.config/polybar
+      src: "{{ item }}"
+      dest: /home/flaviogf/.config/polybar/scripts
       owner: flaviogf
       group: flaviogf
+      mode: 0744
+      with_fileglob:
+        - "polybar/scripts/*"
