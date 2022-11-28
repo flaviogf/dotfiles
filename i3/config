@@ -29,8 +29,9 @@ bindsym $mod+d exec $myLauncher
 bindsym $mod+e exec $myEmacs
 bindsym $mod+p scratchpad show; resize set 90 ppt 75 ppt; move position center
 bindsym $mod+r mode "resize"
-bindsym $mod+w exec $myBrowser
 bindsym $mod+m exec $myTerm -e spt
+bindsym $mod+m exec $myTerm -e nvim
+bindsym $mod+w exec $myBrowser
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+p move scratchpad
 bindsym $mod+Shift+r restart
