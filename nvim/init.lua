@@ -11,6 +11,11 @@ local keymap = vim.keymap.set
 local set = vim.opt
 
 packer.startup(function(use)
+  use {
+    "ahmedkhalf/project.nvim",
+    config = function() require("project_nvim").setup {} end
+  }
+
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'glepnir/dashboard-nvim' }
