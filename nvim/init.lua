@@ -4,7 +4,6 @@ local hop = require 'hop'
 local lspconfig = require 'lspconfig'
 local lualine = require 'lualine'
 local packer = require 'packer'
-local project = require 'project_nvim'
 local telescope = require 'telescope'
 
 local cmd = vim.cmd
@@ -13,23 +12,6 @@ local keymap = vim.keymap.set
 local set = vim.opt
 
 packer.startup(function(use)
-  use {
-    "ahmedkhalf/project.nvim",
-    config = function()
-      project.setup({
-        manual_mode = false,
-        detection_methods = { "lsp", "pattern" },
-        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
-        ignore_lsp = {},
-        exclude_dirs = {},
-        show_hidden = false,
-        silent_chdir = true,
-        scope_chdir = 'global',
-        datapath = vim.fn.stdpath("data"),
-      })
-    end
-  }
-
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'glepnir/dashboard-nvim' }
@@ -79,8 +61,19 @@ lualine.setup({
   },
 })
 
-telescope.load_extension('projects')
-telescope.extensions.projects.projects({})
+telescope.setup({
+  extensions = {
+    project = {
+      base_dirs = {
+        '~/dev',
+      },
+      hidden_files = true,
+      theme = "dropdown",
+      order_by = "asc",
+      sync_with_nvim_tree = true,
+    },
+  },
+})
 
 cmd("colorscheme nord")
 
