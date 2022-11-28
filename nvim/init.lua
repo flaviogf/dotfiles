@@ -1,17 +1,9 @@
-local cmp = require 'cmp'
-local cmp_nvim_lsp = require 'cmp_nvim_lsp'
-local hop = require 'hop'
-local lspconfig = require 'lspconfig'
-local lualine = require 'lualine'
-local packer = require 'packer'
-local telescope = require 'telescope'
-
 local cmd = vim.cmd
 local g = vim.g
 local keymap = vim.keymap.set
 local set = vim.opt
 
-packer.startup(function(use)
+require('packer').startup(function(use)
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'glepnir/dashboard-nvim' }
@@ -22,10 +14,13 @@ packer.startup(function(use)
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope-project.nvim' }
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'phaazon/hop.nvim' }
   use { 'tpope/vim-dispatch' }
 end)
+
+local cmp = require('cmp')
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
@@ -41,10 +36,10 @@ cmp.setup({
   }),
 })
 
-hop.setup()
+require('hop').setup()
 
-lspconfig['solargraph'].setup({
-  capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+require('lspconfig')['solargraph'].setup({
+  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   on_attach = function(client, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
     keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -53,7 +48,7 @@ lspconfig['solargraph'].setup({
   end,
 })
 
-lualine.setup({
+require('lualine').setup({
   options = {
     component_separators = '',
     section_separators = '',
@@ -61,19 +56,17 @@ lualine.setup({
   },
 })
 
-telescope.setup({
+require('telescope').setup({
   extensions = {
     project = {
       base_dirs = {
         '~/dev',
       },
-      hidden_files = true,
-      theme = "dropdown",
-      order_by = "asc",
-      sync_with_nvim_tree = true,
     },
   },
 })
+
+require('telescope').load_extension('project')
 
 cmd("colorscheme nord")
 
@@ -83,9 +76,9 @@ local opts = { noremap = true, silent = true }
 keymap('n', '<leader>at', '<cmd>HopPattern <CR>', opts)
 keymap('n', '<leader>f', '<cmd>Telescope fd <CR>', opts)
 keymap('v', 'p', '"_dP', opts)
+keymap('n', '<leader>p', ":lua require('telescope').extensions.project.project({ display_type = 'full' })<CR>", opts)
 
 set.clipboard = 'unnamedplus'
-set.colorcolumn = '80,120'
 set.cursorline = true
 set.encoding = 'utf-8'
 set.expandtab = true
@@ -109,3 +102,4 @@ set.termguicolors = true
 set.wildmenu = true
 set.wildmode = 'full'
 set.wrap = false
+
