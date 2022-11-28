@@ -13,6 +13,7 @@ local set = vim.opt
 packer.startup(function(use)
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
+  use { 'glepnir/dashboard-nvim' }
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'kyazdani42/nvim-web-devicons' }
