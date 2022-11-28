@@ -2,8 +2,10 @@ local cmp = require 'cmp'
 local cmp_nvim_lsp = require 'cmp_nvim_lsp'
 local hop = require 'hop'
 local lspconfig = require 'lspconfig'
-local packer = require 'packer'
 local lualine = require 'lualine'
+local packer = require 'packer'
+local project = require 'project_nvim'
+local telescope = require 'telescope'
 
 local cmd = vim.cmd
 local g = vim.g
@@ -13,7 +15,19 @@ local set = vim.opt
 packer.startup(function(use)
   use {
     "ahmedkhalf/project.nvim",
-    config = function() require("project_nvim").setup {} end
+    config = function()
+      project.setup({
+        manual_mode = false,
+        detection_methods = { "lsp", "pattern" },
+        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+        ignore_lsp = {},
+        exclude_dirs = {},
+        show_hidden = false,
+        silent_chdir = true,
+        scope_chdir = 'global',
+        datapath = vim.fn.stdpath("data"),
+      })
+    end
   }
 
   use { 'arcticicestudio/nord-vim' }
@@ -64,6 +78,8 @@ lualine.setup({
     theme = 'nord',
   },
 })
+
+telescope.load_extesion('projects')
 
 cmd("colorscheme nord")
 
