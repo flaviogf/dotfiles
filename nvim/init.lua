@@ -79,7 +79,8 @@ lualine.setup({
   },
 })
 
-telescope.load_extesion('projects')
+telescope.load_extension('projects')
+telescope.extensions.projects.projects({})
 
 cmd("colorscheme nord")
 
