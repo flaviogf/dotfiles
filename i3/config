@@ -4,7 +4,7 @@ set $myBrowser google-chrome-stable
 
 set $myEmacs emacsclient --socket-name='emacs' --create-frame
 
-set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#1e1e2e" -sb "#89b4fa" -sf "#000000"
+set $myLauncher dmenu_run -bw 4 -c -fn "JetBrains Mono Nerd Font-14" -h 24 -l 20 -nb "#3b4252" -sb "#81a1c1" -sf "#191C25"
 
 set $myTerm alacritty
 
@@ -12,14 +12,16 @@ floating_modifier $mod
 
 focus_follows_mouse no
 
-default_border pixel 4
-default_floating_border pixel 4
-font xft:JetBrains Mono Nerd Font-11
-gaps inner 16
+for_window [all] border pixel 2 # FIXME: i3 version 4.21 broken the default_border/default_floating_border properties
+default_floating_border pixel 2
+hide_edge_borders smart
+default_border pixel 2
 
-client.focused          #89b4fa #89b4fa #ffffff #89b4fa #89b4fa
-client.focused_inactive #333333 #5f676a #ffffff #484e50 #484e50
-client.unfocused        #6c7086 #6c7086 #ffffff #6c7086 #6c7086
+font xft:JetBrains Mono Nerd Font-11
+
+client.focused          #4c7899 #285577 #ffffff #3b4252 #3b4252
+client.focused_inactive #333333 #5f676a #ffffff #484e50 #2e3440
+client.unfocused        #333333 #222222 #888888 #292d2e #2e3440
 client.urgent           #2f343a #900000 #ffffff #900000 #900000
 
 bindsym $mod+c move position center
@@ -27,6 +29,8 @@ bindsym $mod+d exec $myLauncher
 bindsym $mod+e exec $myEmacs
 bindsym $mod+p scratchpad show; resize set 90 ppt 75 ppt; move position center
 bindsym $mod+r mode "resize"
+bindsym $mod+m exec $myTerm -e spt
+bindsym $mod+n exec $myTerm -e nvim
 bindsym $mod+w exec $myBrowser
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+p move scratchpad

@@ -1,7 +1,7 @@
 set fish_greeting
 
-set EDITOR "emacsclient --socket-name=emacs --tty"
-set VISUAL "emacsclient --socket-name=emacs --create-frame"
+set -Ux VISUAL "emacsclient --socket-name=emacs --create-frame"
+set -Ux EDITOR "nvim"
 
 . $HOME/.asdf/asdf.fish
 
