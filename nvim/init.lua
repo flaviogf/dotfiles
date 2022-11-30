@@ -106,4 +106,3 @@ set.termguicolors = true
 set.wildmenu = true
 set.wildmode = 'full'
 set.wrap = false
-
