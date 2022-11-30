@@ -3,7 +3,11 @@ local g = vim.g
 local keymap = vim.keymap.set
 local set = vim.opt
 
+cmd('packadd packer.nvim')
+
 require('packer').startup(function(use)
+  use { 'wbthomason/packer.nvim' }
+
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'glepnir/dashboard-nvim' }
