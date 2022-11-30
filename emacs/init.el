@@ -63,11 +63,6 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
 
-(use-package avy
-  :config
-  (my-leader-key
-    "a t" 'avy-goto-char-timer))
-
 (use-package company
   :init (company-mode))
 
@@ -175,7 +170,7 @@
     "o _" 'org-timer-stop
     "o ;" 'org-timer-set-timer)
   :custom
-  (org-agenda-files '("/home/flaviogf/dev/org-files/Archive.org" "/home/flaviogf/dev/org-files/TODO.org"))
+  (org-agenda-files '("/home/flaviogf/Archive.org" "/home/flaviogf/TODO.org"))
   (org-confirm-babel-evaluate nil)
   (org-timer-display nil)
   (org-ellipsis " ▼ ")
@@ -197,12 +192,6 @@
                 (org-level-2 . 1.6)
                 (org-level-3 . 1.5)))
   (set-face-attribute (car face) nil :font "DejaVu Sans Mono Nerd Font" :weight 'medium :height (cdr face)))
-
-(use-package org-roam
-  :custom
-  (org-roam-dailies-directory "daily")
-  (org-roam-directory "/home/flaviogf/dev/org-files/notes")
-  :init (org-roam-db-autosync-mode))
 
 (use-package org-superstar
   :custom
