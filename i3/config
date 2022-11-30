@@ -87,6 +87,7 @@ mode "resize" {
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always --no-startup-id setxkbmap -layout us -variant intl -option ctrl:nocaps
+exec_always --no-startup-id xinput set-prop "DELL09A0:00 0488:1020 Touchpad" 342 1
 exec_always --no-startup-id xsetroot -cursor_name left_ptr
 exec_always --no-startup-id xset s off; xset -dpms
 
