@@ -4,6 +4,11 @@
   become: true
 
   tasks:
+  - name: update cache
+    community.general.pacman:
+      update_cache: true
+      upgrade: true
+
   - name: install alacritty
     community.general.pacman:
       name: alacritty
