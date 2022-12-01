@@ -44,6 +44,11 @@
       name: starship
       state: latest
 
+  - name: install exa
+    community.general.pacman:
+      name: exa
+      state: latest
+
   - name: configure alacritty
     become_user: flaviogf
     ansible.builtin.copy:
