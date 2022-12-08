@@ -165,10 +165,8 @@
       group: flaviogf
 
   - name: configure pacman multilib repository
-    ansible.builtin.lineinfile:
+    ansible.builtin.blockinfile:
       path: /etc/pacman.conf
-      regexp: "{{ item.regexp }}"
-      line: "{{ item.line }}"
-    with_items:
-      - { regexp: '^#\[multilib]$', line: '[multilib]' }
-      - { regexp: '^#Include = /etc/pacman.d/mirrorlist$', line: 'Include = /etc/pacman.d/mirrorlist' }
+      block: |
+        [multilib]
+        Include = /etc/pacman.d/mirrorlist
