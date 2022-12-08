@@ -165,7 +165,7 @@
       group: flaviogf
 
   - name: configure pacman multilib repository
-    ansible.builtin.lineinfile
+    ansible.builtin.lineinfile:
       path: /etc/pacman.conf
       regexp: ^#\[multilib]$
       line: [multilib]
