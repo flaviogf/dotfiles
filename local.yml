@@ -170,5 +170,5 @@
       regexp: "{{ item.regexp }}"
       line: "{{ item.line }}"
     with_items:
-      - { regexp: "^#\[multilib]$", line: "[multilib]" }
-      - { regexp: "^#Include = /etc/pacman.d/mirrorlist$", line: "Include = /etc/pacman.d/mirrorlist" }
+      - { regexp: '^#\[multilib]$', line: '[multilib]' }
+      - { regexp: '^#Include = /etc/pacman.d/mirrorlist$', line: 'Include = /etc/pacman.d/mirrorlist' }
