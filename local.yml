@@ -163,3 +163,9 @@
       dest: /home/flaviogf/.xinitrc
       owner: flaviogf
       group: flaviogf
+
+  - name: configure pacman multilib repository
+    ansible.builtin.lineinfile
+      path: /etc/pacman.conf
+      regexp: ^#\[multilib]$
+      line: [multilib]
