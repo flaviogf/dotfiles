@@ -59,6 +59,11 @@
       name: ripgrep
       state: latest
 
+  - name: install fd
+    community.general.pacman:
+      name: fd
+      state: latest
+
   - name: configure alacritty
     become_user: flaviogf
     ansible.builtin.copy:
