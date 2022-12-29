@@ -33,6 +33,7 @@
   - [[#rainbow-mode][Rainbow Mode]]
   - [[#ripgrep][Ripgrep]]
   - [[#swiper][Swiper]]
+  - [[#terraform-mode][Terraform Mode]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -342,6 +343,11 @@
     :config
     (my-leader-key
       "s" 'swiper))
+#+end_src
+
+** Terraform Mode
+#+begin_src emacs-lisp
+  (use-package terraform-mode)
 #+end_src
 
 ** Which Key
