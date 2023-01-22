@@ -1,4 +1,4 @@
-set $mod Mod4
+set $mod Mod1
 
 set $myBrowser google-chrome-stable
 
@@ -12,7 +12,6 @@ floating_modifier $mod
 
 focus_follows_mouse no
 
-for_window [all] border pixel 2 # FIXME: i3 version 4.21 broken the default_border/default_floating_border properties
 default_floating_border pixel 2
 hide_edge_borders smart
 default_border pixel 2
@@ -84,17 +83,4 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-exec_always --no-startup-id setxkbmap -layout us -variant intl -option ctrl:nocaps
-exec_always --no-startup-id xinput set-prop "DELL09A0:00 0488:1020 Touchpad" 342 1
-exec_always --no-startup-id xsetroot -cursor_name left_ptr
-exec_always --no-startup-id xset s off; xset -dpms
-
 exec --no-startup-id emacs --daemon=emacs
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom
-exec --no-startup-id blueman-applet
-exec --no-startup-id flameshot
-exec --no-startup-id nm-applet
-exec --no-startup-id pasystray
