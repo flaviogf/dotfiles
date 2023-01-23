@@ -219,6 +219,8 @@
 
 (use-package terraform-mode)
 
+(use-package vterm)
+
 (use-package which-key
   :custom (which-key-idle-delay 2)
   :init (which-key-mode))

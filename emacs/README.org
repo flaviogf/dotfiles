@@ -34,6 +34,7 @@
   - [[#ripgrep][Ripgrep]]
   - [[#swiper][Swiper]]
   - [[#terraform-mode][Terraform Mode]]
+  - [[#vterm][VTerm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
 
@@ -347,6 +348,11 @@
 ** Terraform Mode
 #+begin_src emacs-lisp
   (use-package terraform-mode)
+#+end_src
+
+** VTerm
+#+begin_src emacs-lisp
+  (use-package vterm)
 #+end_src
 
 ** Which Key
