@@ -2,30 +2,8 @@
 
 add_newline = false
 
-[directory]
-read_only = " "
-
 [gcloud]
-format = 'on [$symbol$active]($style) '
-symbol = " "
-
-[git_branch]
 disabled = true
-
-[golang]
-symbol = " "
 
 [line_break]
 disabled = false
-
-[nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
