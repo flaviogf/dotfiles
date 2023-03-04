@@ -13,7 +13,6 @@ This repository is destined to save all my dotfiles.
 - [[file:emacs/README.org][Emacs]]
 - Fish
 - Git
-- I3
 - Neovim
 - Starship
 - Xorg
