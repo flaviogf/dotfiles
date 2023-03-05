@@ -8,20 +8,70 @@ cmd('packadd packer.nvim')
 require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
+  use { 'nvim-lua/plenary.nvim' }
+
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
-  use { 'glepnir/dashboard-nvim' }
+
+  use { 'lewis6991/gitsigns.nvim' }
+
+  use { 'nvim-lualine/lualine.nvim' }
+  use { 'nvim-tree/nvim-tree.lua' }
+  use { 'nvim-treesitter/nvim-treesitter' }
+
+  use { 'nvim-telescope/telescope.nvim' }
+
+  use { 'neovim/nvim-lspconfig' }
+  use { 'mfussenegger/nvim-jdtls' }
+
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
-  use { 'kyazdani42/nvim-web-devicons' }
-  use { 'neovim/nvim-lspconfig' }
-  use { 'nvim-lua/plenary.nvim' }
-  use { 'nvim-lualine/lualine.nvim' }
-  use { 'nvim-telescope/telescope.nvim' }
-  use { 'nvim-telescope/telescope-project.nvim' }
-  use { 'nvim-treesitter/nvim-treesitter' }
-  use { 'tpope/vim-dispatch' }
 end)
+
+require('gitsigns').setup({})
+
+require('lualine').setup({
+  options = {
+    component_separators = '',
+    section_separators = '',
+    theme = 'nord',
+  },
+})
+
+require('telescope').setup({})
+
+require('nvim-tree').setup({})
+
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'go', 'java', 'ruby' },
+  highlight = {
+    enable = true,
+  },
+})
+
+require('lspconfig')['solargraph'].setup({
+  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  on_attach = function(client, bufnr)
+    local opts = { noremap = true, silent = true, buffer = bufnr }
+    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  end,
+})
+
+require('lspconfig')['jdtls'].setup({
+  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  on_attach = function(client, bufnr)
+    require('jdtls').start_or_attach({
+      cmd = { 'jdtls' },
+    })
+
+    local opts = { noremap = true, silent = true, buffer = bufnr }
+    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  end,
+})
 
 local cmp = require('cmp')
 
@@ -39,36 +89,6 @@ cmp.setup({
   }),
 })
 
-require('lspconfig')['solargraph'].setup({
-  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  end,
-})
-
-require('lualine').setup({
-  options = {
-    component_separators = '',
-    section_separators = '',
-    theme = 'nord',
-  },
-})
-
-require('telescope').setup({
-  extensions = {
-    project = {
-      base_dirs = {
-        '~/dev',
-      },
-    },
-  },
-})
-
-require('telescope').load_extension('project')
-
 cmd("colorscheme nord")
 
 g.mapleader = ','
@@ -76,7 +96,6 @@ g.mapleader = ','
 local opts = { noremap = true, silent = true }
 keymap('n', '<leader>f', '<cmd>Telescope fd <CR>', opts)
 keymap('v', 'p', '"_dP', opts)
-keymap('n', '<leader>p', ":lua require('telescope').extensions.project.project({ display_type = 'full' })<CR>", opts)
 
 set.clipboard = 'unnamedplus'
 set.cursorline = true
