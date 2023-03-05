@@ -52,11 +52,6 @@
 
 (global-unset-key (kbd "C-SPC"))
 
-(use-package general
-  :config
-  (general-evil-setup t)
-  (general-create-definer my-leader-key :prefix "C-SPC"))
-
 (use-package all-the-icons)
 
 (use-package all-the-icons-dired
@@ -66,9 +61,6 @@
   :init (company-mode))
 
 (use-package counsel
-  :config
-  (my-leader-key
-    "c r" 'counsel-rg)
   :init (counsel-mode))
 
 (use-package dashboard
@@ -77,11 +69,6 @@
   (dashboard-startup-banner 'logo)
   :init
   (dashboard-setup-startup-hook))
-
-(use-package docker
-  :config
-  (my-leader-key
-    "d" 'docker))
 
 (use-package dockerfile-mode
   :mode "Dockerfile\\'")
@@ -119,10 +106,7 @@
     "-" (lambda () (interactive) (find-alternate-file "..")))
   :init (evil-collection-init))
 
-(use-package flycheck
-  :config
-  (my-leader-key
-    "f t" 'flycheck-mode))
+(use-package flycheck)
 
 (use-package git-gutter
   :hook (prog-mode . git-gutter-mode))
@@ -142,15 +126,14 @@
   :commands lsp
   :hook
   (go-mode . lsp)
+  (java-mode . lsp)
   (python-mode . lsp)
   (ruby-mode . lsp)
   :custom
   (lsp-headerline-breadcrumb-enable nil)
   (lsp-keymap-prefix "C-c l"))
 
-(use-package lsp-java
-  :hook
-  (java-mode . lsp))
+(use-package lsp-java)
 
 (use-package lsp-ui
   :custom
@@ -163,11 +146,6 @@
   :init (marginalia-mode))
 
 (use-package org
-  :config
-  (my-leader-key
-    "o t" 'org-todo-list
-    "o _" 'org-timer-stop
-    "o ;" 'org-timer-set-timer)
   :custom
   (org-agenda-files '("/home/flaviogf/Archive.org" "/home/flaviogf/TODO.org"))
   (org-confirm-babel-evaluate nil)
@@ -185,7 +163,7 @@
                          (auto-fill-mode 0)
                          (setq evil-auto-indent nil)))
   :init
-  (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (ruby . t))))
+  (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
 (dolist (face '((org-level-1 . 1.7)
                 (org-level-2 . 1.6)
@@ -205,19 +183,9 @@
   :custom
   (project-switch-commands #'project-dired))
 
-(use-package rainbow-mode
-  :hook
-  (conf-unix-mode . rainbow-mode)
-  (prog-mode . rainbow-mode))
-
 (use-package rg)
 
-(use-package swiper
-  :config
-  (my-leader-key
-    "s" 'swiper))
-
-(use-package terraform-mode)
+(use-package swiper)
 
 (use-package vterm)
 

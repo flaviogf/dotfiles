@@ -6,12 +6,10 @@
 - [[#package-management][Package Management]]
 - [[#customizations][Customizations]]
 - [[#packages][Packages]]
-  - [[#general][General]]
   - [[#all-the-icons][All The Icons]]
   - [[#company][Company]]
   - [[#counsel][Counsel]]
   - [[#dashboard][Dashboard]]
-  - [[#docker][Docker]]
   - [[#dockerfile][Dockerfile]]
   - [[#doom-themes][Doom Themes]]
   - [[#doom-modeline][Doom Modeline]]
@@ -30,10 +28,8 @@
   - [[#org-superstar][Org Superstar]]
   - [[#org-toc][Org Toc]]
   - [[#project][Project]]
-  - [[#rainbow-mode][Rainbow Mode]]
   - [[#ripgrep][Ripgrep]]
   - [[#swiper][Swiper]]
-  - [[#terraform-mode][Terraform Mode]]
   - [[#vterm][VTerm]]
   - [[#which-key][Which Key]]
   - [[#yaml-mode][Yaml Mode]]
@@ -99,14 +95,6 @@
 #+end_src
 
 * Packages
-** General
-#+begin_src emacs-lisp
-  (use-package general
-    :config
-    (general-evil-setup t)
-    (general-create-definer my-leader-key :prefix "C-SPC"))
-#+end_src
-
 ** All The Icons
 #+begin_src emacs-lisp
   (use-package all-the-icons)
@@ -124,9 +112,6 @@
 ** Counsel
 #+begin_src emacs-lisp
   (use-package counsel
-    :config
-    (my-leader-key
-      "c r" 'counsel-rg)
     :init (counsel-mode))
 #+end_src
 
@@ -138,14 +123,6 @@
     (dashboard-startup-banner 'logo)
     :init
     (dashboard-setup-startup-hook))
-#+end_src
-
-** Docker
-#+begin_src emacs-lisp
-  (use-package docker
-    :config
-    (my-leader-key
-      "d" 'docker))
 #+end_src
 
 ** Dockerfile
@@ -201,10 +178,7 @@
 
 ** Flychek
 #+begin_src emacs-lisp
-  (use-package flycheck
-    :config
-    (my-leader-key
-      "f t" 'flycheck-mode))
+  (use-package flycheck)
 #+end_src
 
 ** Git Gutter
@@ -236,6 +210,7 @@
     :commands lsp
     :hook
     (go-mode . lsp)
+    (java-mode . lsp)
     (python-mode . lsp)
     (ruby-mode . lsp)
     :custom
@@ -245,10 +220,10 @@
 
 ** LSP Java
 #+begin_src emacs-lisp
-  (use-package lsp-java
-    :hook
-    (java-mode . lsp))
+  (use-package lsp-java)
 #+end_src
+
+#+RESULTS:
 
 ** LSP UI
 #+begin_src emacs-lisp
@@ -272,11 +247,6 @@
 ** Org
 #+begin_src emacs-lisp
   (use-package org
-    :config
-    (my-leader-key
-      "o t" 'org-todo-list
-      "o _" 'org-timer-stop
-      "o ;" 'org-timer-set-timer)
     :custom
     (org-agenda-files '("/home/flaviogf/Archive.org" "/home/flaviogf/TODO.org"))
     (org-confirm-babel-evaluate nil)
@@ -294,7 +264,7 @@
                            (auto-fill-mode 0)
                            (setq evil-auto-indent nil)))
     :init
-    (org-babel-do-load-languages 'org-babel-load-languages '((python . t) (ruby . t))))
+    (org-babel-do-load-languages 'org-babel-load-languages '((ruby . t))))
 
   (dolist (face '((org-level-1 . 1.7)
                   (org-level-2 . 1.6)
@@ -324,14 +294,6 @@
     (project-switch-commands #'project-dired))
 #+end_src
 
-** Rainbow Mode
-#+begin_src emacs-lisp
-  (use-package rainbow-mode
-    :hook
-    (conf-unix-mode . rainbow-mode)
-    (prog-mode . rainbow-mode))
-#+end_src
-
 ** Ripgrep
 #+begin_src emacs-lisp
   (use-package rg)
@@ -339,15 +301,7 @@
 
 ** Swiper
 #+begin_src emacs-lisp
-  (use-package swiper
-    :config
-    (my-leader-key
-      "s" 'swiper))
-#+end_src
-
-** Terraform Mode
-#+begin_src emacs-lisp
-  (use-package terraform-mode)
+  (use-package swiper)
 #+end_src
 
 ** VTerm
