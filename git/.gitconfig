@@ -6,4 +6,4 @@
 	name = flaviogf
 	email = flavio.fernandes6@gmail.com
 [core]
-	editor = emacsclient --socket-name=emacs --tty
+	editor = nvim
