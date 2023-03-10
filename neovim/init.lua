@@ -92,7 +92,6 @@ cmd("colorscheme nord")
 g.mapleader = ','
 
 local opts = { noremap = true, silent = true }
-keymap('n', '<leader>f', '<cmd>Telescope fd <CR>', opts)
 keymap('v', 'p', '"_dP', opts)
 
 set.clipboard = 'unnamedplus'
