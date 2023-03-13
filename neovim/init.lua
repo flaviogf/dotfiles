@@ -1,4 +1,5 @@
 require 'user.gitsigns'
+require 'user.lualine'
 require 'user.options'
 
 local cmd = vim.cmd
@@ -26,14 +27,6 @@ require('packer').startup(function(use)
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
 end)
-
-require('lualine').setup({
-  options = {
-    component_separators = '',
-    section_separators = '',
-    theme = 'nord',
-  },
-})
 
 require('telescope').setup({})
 
