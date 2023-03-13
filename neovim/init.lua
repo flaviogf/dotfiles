@@ -1,5 +1,6 @@
 require 'user.gitsigns'
 require 'user.keymaps'
+require 'user.lsp'
 require 'user.lualine'
 require 'user.options'
 require 'user.telescope'
@@ -32,30 +33,6 @@ require('nvim-treesitter.configs').setup({
   highlight = {
     enable = true,
   },
-})
-
-require('lspconfig')['solargraph'].setup({
-  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  end,
-})
-
-require('lspconfig')['jdtls'].setup({
-  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  on_attach = function(client, bufnr)
-    require('jdtls').start_or_attach({
-      cmd = { 'jdtls' },
-    })
-
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-    keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    keymap('n', '==', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  end,
 })
 
 local cmp = require('cmp')
