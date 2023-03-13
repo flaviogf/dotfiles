@@ -1,6 +1,7 @@
 require 'user.gitsigns'
 require 'user.lualine'
 require 'user.options'
+require 'user.telescope'
 
 local cmd = vim.cmd
 local keymap = vim.keymap.set
@@ -27,8 +28,6 @@ require('packer').startup(function(use)
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
 end)
-
-require('telescope').setup({})
 
 require('nvim-tree').setup({})
 
