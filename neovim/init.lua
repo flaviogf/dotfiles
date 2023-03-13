@@ -1,4 +1,5 @@
 require 'user.gitsigns'
+require 'user.keymaps'
 require 'user.lualine'
 require 'user.options'
 require 'user.telescope'

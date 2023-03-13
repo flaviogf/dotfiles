@@ -1,6 +1,5 @@
 local cmd = vim.cmd
 local g = vim.g
-local keymap = vim.keymap.set
 local set = vim.opt
 
 cmd("colorscheme nord")
@@ -31,6 +30,3 @@ set.termguicolors = true
 set.wildmenu = true
 set.wildmode = 'full'
 set.wrap = false
-
-local opts = { noremap = true, silent = true }
-keymap('v', 'p', '"_dP', opts)
