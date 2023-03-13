@@ -5,12 +5,15 @@ require 'user.lualine'
 require 'user.options'
 require 'user.telescope'
 
-local cmd = vim.cmd
-local keymap = vim.keymap.set
+vim.cmd('packadd packer.nvim')
 
-cmd('packadd packer.nvim')
+local ok, packer = pcall(require, 'packer')
 
-require('packer').startup(function(use)
+if not ok then
+  return
+end
+
+packer.startup(function(use)
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'hrsh7th/nvim-cmp' }
