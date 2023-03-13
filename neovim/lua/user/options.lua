@@ -1,6 +1,9 @@
+local cmd = vim.cmd
 local g = vim.g
 local keymap = vim.keymap.set
 local set = vim.opt
+
+cmd("colorscheme nord")
 
 g.mapleader = ','
 

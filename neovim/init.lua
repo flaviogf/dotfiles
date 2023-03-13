@@ -8,8 +8,6 @@ local keymap = vim.keymap.set
 
 cmd('packadd packer.nvim')
 
-cmd("colorscheme nord")
-
 require('packer').startup(function(use)
   use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
