@@ -8,6 +8,8 @@ local keymap = vim.keymap.set
 
 cmd('packadd packer.nvim')
 
+cmd("colorscheme nord")
+
 require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
@@ -77,5 +79,3 @@ cmp.setup({
     { name = 'nvim_lsp' },
   }),
 })
-
-cmd("colorscheme nord")
