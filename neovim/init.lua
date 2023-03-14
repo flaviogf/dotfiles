@@ -4,8 +4,11 @@ require 'user.lsp'
 require 'user.lualine'
 require 'user.options'
 require 'user.telescope'
+require 'user.tree'
 
-vim.cmd('packadd packer.nvim')
+local cmd = vim.cmd
+
+cmd('packadd packer.nvim')
 
 local ok, packer = pcall(require, 'packer')
 
@@ -28,8 +31,6 @@ packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'wbthomason/packer.nvim' }
 end)
-
-require('nvim-tree').setup({})
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = { 'go', 'java', 'ruby' },
