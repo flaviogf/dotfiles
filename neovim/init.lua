@@ -1,3 +1,4 @@
+require 'user.cmp'
 require 'user.gitsigns'
 require 'user.keymaps'
 require 'user.lsp'
@@ -32,19 +33,3 @@ packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'wbthomason/packer.nvim' }
 end)
-
-local cmp = require('cmp')
-
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ['<C-n>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then cmp.select_next_item() else fallback() end
-    end),
-    ['<C-p>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then cmp.select_prev_item() else fallback() end
-    end),
-  }),
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-  }),
-})
