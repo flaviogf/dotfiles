@@ -5,6 +5,7 @@ require 'user.lualine'
 require 'user.options'
 require 'user.telescope'
 require 'user.tree'
+require 'user.treesitter'
 
 local cmd = vim.cmd
 
@@ -31,13 +32,6 @@ packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'wbthomason/packer.nvim' }
 end)
-
-require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'go', 'java', 'ruby' },
-  highlight = {
-    enable = true,
-  },
-})
 
 local cmp = require('cmp')
 
