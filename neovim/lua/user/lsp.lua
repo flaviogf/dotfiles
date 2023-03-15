@@ -14,7 +14,7 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-function on_attach(client, bufnr)
+local on_attach = function(_, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
   keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -23,7 +23,7 @@ end
 
 lspconfig['jdtls'].setup({
   capabilities = capabilities,
-  on_attach = function(client, bufnr)
+  on_attach = function(_, bufnr)
     require('jdtls').start_or_attach({
       cmd = { 'jdtls' },
     })
