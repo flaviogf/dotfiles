@@ -2,13 +2,13 @@ local cmd = vim.cmd
 local g = vim.g
 local set = vim.opt
 
-g.nord_contrast = false
-g.nord_borders = false
-g.nord_disable_backgrounds = false
-g.nord_cursorline_transparent = false
-g.nord_enable_sidebar_background = false
+g.nord_contrast = true
+g.nord_borders = true
+g.nord_disable_backgrounds = true
+g.nord_cursorline_transparent = true
+g.nord_enable_sidebar_background = true
 g.nord_italic = true
-g.nord_uniform_diff_background = false
+g.nord_uniform_diff_background = true
 g.nord_bold = true
 
 cmd("colorscheme nord")
