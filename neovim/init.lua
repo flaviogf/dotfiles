@@ -7,6 +7,7 @@ require 'user.options'
 require 'user.telescope'
 require 'user.tree'
 require 'user.treesitter'
+require 'user.which_key'
 
 local cmd = vim.cmd
 
@@ -19,8 +20,8 @@ if not ok then
 end
 
 packer.startup(function(use)
-  use { 'arcticicestudio/nord-vim' }
   use { 'editorconfig/editorconfig-vim' }
+  use { 'folke/which-key.nvim' }
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'lewis6991/gitsigns.nvim' }
@@ -31,5 +32,6 @@ packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim' }
   use { 'nvim-tree/nvim-tree.lua' }
   use { 'nvim-treesitter/nvim-treesitter' }
+  use { 'shaunsingh/nord.nvim' }
   use { 'wbthomason/packer.nvim' }
 end)
