@@ -4,4 +4,6 @@ if not ok then
   return
 end
 
-tree.setup({})
+tree.setup({
+  sync_root_with_cwd = true,
+})
