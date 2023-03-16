@@ -13,8 +13,6 @@ g.nord_bold = true
 
 cmd("colorscheme nord")
 
-g.mapleader = ','
-
 set.clipboard = 'unnamedplus'
 set.cursorline = true
 set.encoding = 'utf-8'

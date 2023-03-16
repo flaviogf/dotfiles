@@ -5,6 +5,7 @@ require 'user.lsp'
 require 'user.lualine'
 require 'user.options'
 require 'user.telescope'
+require 'user.toggleterm'
 require 'user.tree'
 require 'user.treesitter'
 require 'user.which_key'
@@ -20,6 +21,7 @@ if not ok then
 end
 
 packer.startup(function(use)
+  use { 'akinsho/toggleterm.nvim' }
   use { 'editorconfig/editorconfig-vim' }
   use { 'folke/which-key.nvim' }
   use { 'hrsh7th/nvim-cmp' }
