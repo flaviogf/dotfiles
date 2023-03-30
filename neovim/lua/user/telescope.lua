@@ -5,3 +5,5 @@ if not ok then
 end
 
 telescope.setup({})
+
+telescope.load_extension('dap')
