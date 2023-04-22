@@ -27,13 +27,11 @@ packer.startup(function(use)
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'lewis6991/gitsigns.nvim' }
-  use { 'mfussenegger/nvim-dap' }
   use { 'mfussenegger/nvim-jdtls' }
   use { 'neovim/nvim-lspconfig' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
-  use { 'nvim-telescope/telescope-dap.nvim' }
   use { 'nvim-tree/nvim-tree.lua' }
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'shaunsingh/nord.nvim' }
