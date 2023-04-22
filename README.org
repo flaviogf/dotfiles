@@ -10,7 +10,7 @@
 This repository is destined to save all my dotfiles.
 
 * :computer: Techs
-- [[file:emacs/README.org][Emacs]]
+- [[file:.config/emacs/README.org][Emacs]]
 - Fish
 - Git
 - Neovim
