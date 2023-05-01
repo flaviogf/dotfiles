@@ -4,4 +4,10 @@ if not ok then
   return
 end
 
-telescope.setup({})
+telescope.setup({
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
+})
