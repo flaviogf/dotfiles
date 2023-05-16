@@ -10,6 +10,12 @@ if not ok then
   return
 end
 
+local ok, jdtls = pcall(require, 'jdtls')
+
+if not ok then
+  return
+end
+
 lspconfig.lua_ls.setup({
   capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
