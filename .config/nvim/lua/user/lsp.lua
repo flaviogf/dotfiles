@@ -16,6 +16,12 @@ if not ok then
   return
 end
 
+local ok, setup = pcall(require, 'jdtls.setup')
+
+if not ok then
+  return
+end
+
 lspconfig.lua_ls.setup({
   capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
@@ -29,6 +35,6 @@ lspconfig.solargraph.setup({
 })
 
 jdtls.start_or_attach({
-  root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+  root_dir = setup.find_root({'.git', 'mvnw', 'gradlew'}),
   cmd = {'jdtls'},
 })

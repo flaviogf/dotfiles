@@ -24,7 +24,6 @@ set.incsearch = true
 set.mouse = 'a'
 set.number = true
 set.relativenumber = true
-set.scrolloff = 8
 set.shiftwidth = 2
 set.sidescrolloff = 8
 set.smartcase = true
