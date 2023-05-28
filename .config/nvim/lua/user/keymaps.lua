@@ -5,13 +5,13 @@ local mapleader = ' '
 
 local opts = { noremap = true, silent = true }
 
-keymap('', mapleader, '<Nop>', opts)
+keymap('n', mapleader, '<Nop>', opts)
 
 g.mapleader = mapleader
 
 keymap('v', 'p', '"_dP', opts)
 
-keymap('n', '<leader>1', ':NvimTreeToggle <cr>', opts)
+keymap('n', '<leader>e', ':NvimTreeToggle <cr>', opts)
 keymap('n', '<leader>f', ':Telescope find_files<cr>', opts)
 keymap('n', '<leader>g', '<cmd>lua require("toggleterm.terminal").Terminal:new({ cmd = "lazygit", direction = "float", hidden = true }):toggle()<cr>', opts)
 keymap('n', '<leader>rg', ':Telescope live_grep<cr>', opts)
