@@ -2,6 +2,9 @@ local cmd = vim.cmd
 local g = vim.g
 local set = vim.opt
 
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 g.nord_contrast = true
 g.nord_borders = true
 g.nord_disable_backgrounds = true

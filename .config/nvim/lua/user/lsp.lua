@@ -35,6 +35,6 @@ lspconfig.solargraph.setup({
 })
 
 jdtls.start_or_attach({
-  root_dir = setup.find_root({'.git', 'mvnw', 'gradlew'}),
+  root_dir = setup.find_root({'mvnw'}),
   cmd = {'jdtls'},
 })
