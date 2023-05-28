@@ -5,7 +5,6 @@ if not ok then
 end
 
 toggleterm.setup({
-  open_mapping = [[<C-\>]],
-  direction = 'vertical',
-  size = 80,
+  open_mapping = '<leader>2',
+  direction = 'float',
 })
