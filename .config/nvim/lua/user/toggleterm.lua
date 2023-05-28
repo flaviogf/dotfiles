@@ -6,5 +6,7 @@ end
 
 toggleterm.setup({
   open_mapping = '<leader>2',
-  direction = 'float',
+  direction = 'vertical',
+  terminal_mappings = false,
+  size = 80,
 })
