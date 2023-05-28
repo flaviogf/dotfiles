@@ -5,8 +5,8 @@ if not ok then
 end
 
 toggleterm.setup({
-  open_mapping = '<leader>2',
   direction = 'vertical',
+  open_mapping = '<leader>2',
   terminal_mappings = false,
   size = 80,
 })
