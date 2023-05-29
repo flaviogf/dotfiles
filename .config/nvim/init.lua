@@ -28,6 +28,7 @@ packer.startup(function(use)
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
+  use { 'mfussenegger/nvim-dap' }
   use { 'mfussenegger/nvim-jdtls' }
   use { 'neovim/nvim-lspconfig' }
   use { 'nvim-lua/plenary.nvim' }
