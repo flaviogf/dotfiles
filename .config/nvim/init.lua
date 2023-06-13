@@ -26,7 +26,6 @@ packer.startup(function(use)
   use { 'folke/which-key.nvim' }
   use { 'hrsh7th/nvim-cmp' }
   use { 'hrsh7th/cmp-nvim-lsp' }
-  use { 'kyazdani42/nvim-web-devicons' }
   use { 'lewis6991/gitsigns.nvim' }
   use { 'mfussenegger/nvim-dap' }
   use { 'mfussenegger/nvim-jdtls' }
