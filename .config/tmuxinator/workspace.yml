@@ -1,9 +1,0 @@
-# /home/flaviogf/.config/tmuxinator/rdstation.yml
-
-name: workspace
-root: ~/
-
-attach: false
-
-windows:
-  - shell: clear

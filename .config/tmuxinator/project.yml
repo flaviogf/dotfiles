@@ -1,0 +1,16 @@
+# /home/flaviogf/.config/tmuxinator/project.yml
+
+name: project
+
+root: <%= @settings['root'] %>
+
+attach: false
+
+<% if %w[1 true yes].include?(@settings['editor']) %>
+windows:
+  - editor: vi .
+  - shell: clear
+<% else %>
+windows:
+  - shell: clear
+<% end %>
