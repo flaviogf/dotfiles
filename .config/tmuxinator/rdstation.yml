@@ -1,0 +1,10 @@
+# /home/flaviogf/.config/tmuxinator/rdstation.yml
+
+name: rdstation
+root: ~/dev/rdstation
+
+attach: false
+
+windows:
+  - editor: vi .
+  - shell:
