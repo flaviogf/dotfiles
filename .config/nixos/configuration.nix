@@ -17,7 +17,6 @@
 
     systemPackages = [
       alacritty
-      alsa-utils
       asdf-vm
       dmenu
       exa
@@ -39,12 +38,9 @@
   hardware.bluetooth.enable = true;
 
   networking = {
-    wireless.enable = true;
-
-    wireless.networks = {
-      "Fernandes 5G" = {
-        psk = "Bicuco2020!";
-      };
+    wireless = {
+      enable = true;
+      userControlled.enable = true;
     };
   };
 
