@@ -39,7 +39,10 @@ myLayoutHook = avoidStruts $ tall ||| threeCol
       $ limitWindows 3
       $ mySpacing 3
       $ Tall 1 (3/100) (1/2)
-    threeCol = limitWindows 5 $ mySpacing 3 $ ThreeColMid 1 (3/100) (1/2)
+    threeCol = renamed [Replace "threeCol"]
+      $ limitWindows 5
+      $ mySpacing 3
+      $ ThreeColMid 1 (3/100) (1/2)
 
 myStartupHook :: X ()
 myStartupHook = do
