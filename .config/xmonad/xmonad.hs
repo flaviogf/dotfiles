@@ -29,7 +29,7 @@ mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 myLayoutHook = avoidStruts $ tall
   where
-    tall = withBorder myBorderWidth $ limitWindows 5 $ mySpacing 4 $ Tall 1 (3/100) (1/2)
+    tall = withBorder myBorderWidth $ limitWindows 4 $ mySpacing 4 $ Tall 1 (3/100) (1/2)
 
 myStartupHook :: X ()
 myStartupHook = do
