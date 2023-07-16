@@ -18,12 +18,15 @@
     systemPackages = [
       alacritty
       asdf-vm
+      docker
+      docker-compose
       dmenu
       exa
       fish
       gcc
       git
       google-chrome
+      lazydocker
       lazygit
       neovim
       nitrogen
@@ -116,11 +119,13 @@
   time.timeZone = "America/Sao_Paulo";
 
   users.users.flaviogf = {
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "docker" "wheel" ];
     home = "/home/flaviogf";
     isNormalUser = true;
     shell = pkgs.fish;
   };
+
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "23.05";
 }
