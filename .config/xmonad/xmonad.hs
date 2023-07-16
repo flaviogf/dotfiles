@@ -50,6 +50,7 @@ myLayoutHook = avoidStruts $ withBorder myBorderWidth tall ||| withBorder myBord
 
 myStartupHook :: X ()
 myStartupHook = do
+  spawn "xsetroot -cursor_name left_ptr"
   spawnOnce "nitrogen --restore &"
 
 main :: IO ()
