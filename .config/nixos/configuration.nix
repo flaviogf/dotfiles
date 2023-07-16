@@ -17,26 +17,32 @@
 
     systemPackages = [
       alacritty
-      asdf-vm
       docker
       docker-compose
       dmenu
       exa
       fd
       fish
-      gcc
       git
+      go
       google-chrome
       haskellPackages.xmobar
-      htop
+      jdk11
+      jdt-language-server
       lazydocker
       lazygit
+      lua-language-server
+      lxappearance
       neovim
       nitrogen
+      rubyPackages.solargraph
       picom
       pavucontrol
+      ripgrep
+      slack
       starship
       tmux
+      xclip
     ];
   };
 
@@ -49,7 +55,13 @@
     };
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1u"
+  ];
 
   programs.fish.enable = true;
 
