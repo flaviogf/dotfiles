@@ -26,6 +26,7 @@
       git
       go
       google-chrome
+      google-cloud-sdk
       haskellPackages.xmobar
       jdk11
       jdt-language-server
@@ -82,30 +83,9 @@
       enable = true;
 
       settings = {
-        shadow-offset-x = -3;
-        shadow-offset-y = -3;
-        shadow-opacity = 0.6;
-        shadow-radius = 8;
-        shadow = true;
-
         fade-out-step = 0.03;
         fade-in-step = 0.03;
         fading = true;
-
-        inactive-opacity-override = false;
-        inactive-opacity = 1.0;
-        active-opacity = 1.0;
-        frame-opacity = 1.0;
-
-        dropdown_menu = {
-          opacity = 1.0;
-        };
-
-        popup_menu = {
-          opacity = 1.0;
-        };
-
-        opacity-rule = [];
       };
     };
     pipewire = {
