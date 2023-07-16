@@ -6,6 +6,7 @@ import XMonad.Layout.LayoutModifier
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
+import XMonad.Layout.ThreeColumns
 import XMonad.Util.EZConfig
 import XMonad.Util.SpawnOnce
 
@@ -27,9 +28,10 @@ myFocusColor = "#8FBCBB"
 mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
 mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
-myLayoutHook = avoidStruts $ tall
+myLayoutHook = avoidStruts $ tall ||| threeCol
   where
-    tall = withBorder myBorderWidth $ limitWindows 4 $ mySpacing 4 $ Tall 1 (3/100) (1/2)
+    tall = withBorder myBorderWidth $ limitWindows 3 $ mySpacing 3 $ Tall 1 (3/100) (1/2)
+    threeCol = limitWindows 5 $ mySpacing 3 $ ThreeColMid 1 (3/100) (1/2)
 
 myStartupHook :: X ()
 myStartupHook = do
