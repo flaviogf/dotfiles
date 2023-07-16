@@ -7,6 +7,7 @@ import XMonad.Layout.LimitWindows
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
+import XMonad.Util.SpawnOnce
 
 myBrowser :: String
 myBrowser = "google-chrome-stable"
@@ -33,6 +34,10 @@ myLayoutHook = avoidStruts $ tall
   where
     tall = withBorder myBorderWidth $ limitWindows 5 $ mySpacing 4 $ Tall 1 (3/100) (1/2)
 
+myStartupHook :: X ()
+myStartupHook = do
+  spawnOnce "nitrogen --restore &"
+
 main :: IO ()
 
 main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
@@ -40,6 +45,7 @@ main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
 myConfig = def
     { modMask = mod4Mask
     , layoutHook = myLayoutHook
+    , startupHook = myStartupHook
     , terminal = myTerminal
     , borderWidth = myBorderWidth
     , normalBorderColor = myNormalColor
