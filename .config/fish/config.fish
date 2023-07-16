@@ -3,8 +3,6 @@ set fish_greeting
 set -x VISUAL "nvim"
 set -x EDITOR "nvim"
 
-. $HOME/.asdf/asdf.fish
-
 alias df="df -h"
 
 alias find="fd"
