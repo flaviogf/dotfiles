@@ -10,9 +10,23 @@ require 'user.tree'
 require 'user.treesitter'
 require 'user.which_key'
 
+local path = '/home/flaviogf/.local/share/nvim/site/pack/packer/start/packer.nvim'
+
 local cmd = vim.cmd
 
-cmd('packadd packer.nvim')
+local fn = vim.fn
+
+local setup = function()
+  if fn.empty(fn.glob(path)) > 0 then
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', path })
+    cmd('packadd packer.nvim')
+    return true
+  end
+
+  return false
+end
+
+local started = setup()
 
 local ok, packer = pcall(require, 'packer')
 
@@ -38,4 +52,8 @@ packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter' }
   use { 'shaunsingh/nord.nvim' }
   use { 'wbthomason/packer.nvim' }
+
+  if started then
+    packer.sync()
+  end
 end)
