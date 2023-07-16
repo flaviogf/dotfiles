@@ -1,4 +1,5 @@
 require 'user.cmp'
+require 'user.colorizer'
 require 'user.gitsigns'
 require 'user.keymaps'
 require 'user.lsp'
@@ -44,6 +45,7 @@ packer.startup(function(use)
   use { 'mfussenegger/nvim-dap' }
   use { 'mfussenegger/nvim-jdtls' }
   use { 'neovim/nvim-lspconfig' }
+  use { 'norcalli/nvim-colorizer.lua' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
