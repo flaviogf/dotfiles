@@ -98,6 +98,15 @@
       enable = true;
       layout = "us";
 
+      displayManager = {
+      	autoLogin = {
+	  enable = true;
+	  user = "flaviogf";
+	};
+
+        defaultSession = "none+xmonad";
+      };
+
       windowManager = {
         xmonad = {
           enable = true;
