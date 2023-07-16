@@ -32,17 +32,21 @@ myFocusColor = "#8FBCBB"
 mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
 mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
-myLayoutHook = avoidStruts $ tall ||| threeCol
+myLayoutHook = avoidStruts $ withBorder myBorderWidth tall ||| withBorder myBorderWidth threeCol ||| noBorders full
   where
     tall = renamed [Replace "tall"]
-      $ withBorder myBorderWidth
+      $ smartBorders
       $ limitWindows 3
       $ mySpacing 3
       $ Tall 1 (3/100) (1/2)
     threeCol = renamed [Replace "threeCol"]
+      $ smartBorders
       $ limitWindows 5
       $ mySpacing 3
       $ ThreeColMid 1 (3/100) (1/2)
+    full = renamed [Replace "full"]
+      $ smartBorders
+      $ Full
 
 myStartupHook :: X ()
 myStartupHook = do
