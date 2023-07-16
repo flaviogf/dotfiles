@@ -12,7 +12,7 @@
 
   environment = with pkgs; {
     shells = [
-      zsh
+      fish
     ];
 
     systemPackages = [
@@ -22,10 +22,13 @@
       docker-compose
       dmenu
       exa
+      fd
       fish
       gcc
       git
       google-chrome
+      haskellPackages.xmobar
+      htop
       lazydocker
       lazygit
       neovim
@@ -36,7 +39,6 @@
       tmux
     ];
   };
-
 
   hardware.bluetooth.enable = true;
 
