@@ -1,8 +1,12 @@
 import XMonad
 
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ManageDocks
+import XMonad.Layout.LayoutModifier
+import XMonad.Layout.LimitWindows
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Spacing
 import XMonad.Util.EZConfig
-import XMonad.Util.Ungrab
 
 myBrowser :: String
 myBrowser = "google-chrome-stable"
@@ -19,12 +23,23 @@ myNormalColor = "#2E3440"
 myFocusColor :: String
 myFocusColor = "#8FBCBB"
 
+mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
+mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
+
+myFont :: String
+myFont = "xft:JetBrains Mono Nerd Font:regular:size=9:antialias=true:hinting=true"
+
+myLayoutHook = avoidStruts $ tall
+  where
+    tall = withBorder myBorderWidth $ limitWindows 5 $ mySpacing 4 $ Tall 1 (3/100) (1/2)
+
 main :: IO ()
 
 main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
 
 myConfig = def
     { modMask = mod4Mask
+    , layoutHook = myLayoutHook
     , terminal = myTerminal
     , borderWidth = myBorderWidth
     , normalBorderColor = myNormalColor
