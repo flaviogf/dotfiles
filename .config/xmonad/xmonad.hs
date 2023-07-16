@@ -1,10 +1,14 @@
 import XMonad
 
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.StatusBar
+import XMonad.Hooks.StatusBar.PP
 import XMonad.Layout.LayoutModifier
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.NoBorders
+import XMonad.Layout.Renamed
 import XMonad.Layout.Spacing
 import XMonad.Layout.ThreeColumns
 import XMonad.Util.EZConfig
@@ -30,7 +34,11 @@ mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 myLayoutHook = avoidStruts $ tall ||| threeCol
   where
-    tall = withBorder myBorderWidth $ limitWindows 3 $ mySpacing 3 $ Tall 1 (3/100) (1/2)
+    tall = renamed [Replace "tall"]
+      $ withBorder myBorderWidth
+      $ limitWindows 3
+      $ mySpacing 3
+      $ Tall 1 (3/100) (1/2)
     threeCol = limitWindows 5 $ mySpacing 3 $ ThreeColMid 1 (3/100) (1/2)
 
 myStartupHook :: X ()
@@ -39,7 +47,11 @@ myStartupHook = do
 
 main :: IO ()
 
-main = xmonad $ ewmhFullscreen $ ewmh $ myConfig
+main = xmonad
+  . ewmhFullscreen
+  . ewmh
+  . xmobarProp
+  $ myConfig
 
 myConfig = def
     { modMask = mod4Mask
