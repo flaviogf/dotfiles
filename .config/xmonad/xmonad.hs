@@ -16,23 +16,35 @@ import XMonad.Util.EZConfig
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Loggers
 
-myBrowser :: String
-myBrowser = "google-chrome-stable"
+color1 = "#B48EAD"
+color2 = "#81A1C1"
+color3 = "#ECEFF4"
+color4 = "#BF616A"
+color5 = "#4C566A"
+color6 = "#2E3440"
+color7 = "#8FBCBB"
 
-myTerminal :: String
+myWorkspaces = [" dev ", " www ", " chat ", " gfx ", " sys "]
+
+myBrowser = "google-chrome-stable"
 myTerminal = "alacritty"
 
-myBorderWidth :: Dimension
+myNormalColor = color6
+myFocusColor = color7
 myBorderWidth = 2
 
-myNormalColor :: String
-myNormalColor = "#2E3440"
+myStartupHook = do
+  spawn "xsetroot -cursor_name left_ptr"
+  spawn "nitrogen --restore &"
 
-myFocusColor :: String
-myFocusColor = "#8FBCBB"
-
-mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
-mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
+myXmobarPP = def
+  { ppCurrent = xmobarColor color1 "" . wrap ("<box type=Bottom width=2 mb=2 color=" ++ color1 ++ ">") "</box>"
+  , ppHidden = xmobarColor color2 "" . wrap ("<box type=Top width=2 mt=2 color=" ++ color2 ++ ">") "</box>"
+  , ppHiddenNoWindows = xmobarColor color2 ""
+  , ppTitle = xmobarColor color3 ""
+  , ppUrgent = xmobarColor color4 ""
+  , ppSep = "<fc=" ++ color5 ++ "> | </fc>"
+  }
 
 myLayoutHook = avoidStruts $ withBorder myBorderWidth tall ||| withBorder myBorderWidth threeCol ||| noBorders full
   where
@@ -49,25 +61,7 @@ myLayoutHook = avoidStruts $ withBorder myBorderWidth tall ||| withBorder myBord
     full = renamed [Replace "full"]
       $ smartBorders
       $ Full
-
-myStartupHook :: X ()
-myStartupHook = do
-  spawn "xsetroot -cursor_name left_ptr"
-  spawnOnce "nitrogen --restore &"
-
-myXmobarPP :: PP
-myXmobarPP = def
-  { ppCurrent = xmobarColor "#B48EAD" "" . wrap ("<box type=Bottom width=2 mb=2 color=" ++ "#B48EAD" ++ ">") "</box>"
-  , ppHidden = xmobarColor "#81A1C1" "" . wrap ("<box type=Top width=2 mt=2 color=" ++ "#81A1C1" ++ ">") "</box>"
-  , ppHiddenNoWindows = xmobarColor "#81A1C1" ""
-  , ppTitle = xmobarColor "#ECEFF4" ""
-  , ppUrgent = xmobarColor "#BF616A" ""
-  , ppSep = "<fc=" ++ "#4C566A" ++ "> | </fc>"
-  }
-
-myWorkspaces = [" dev ", " www ", " chat ", " gfx ", " sys "]
-
-main :: IO ()
+    mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 main = xmonad
   . ewmhFullscreen
@@ -76,13 +70,13 @@ main = xmonad
   $ myConfig
 
 myConfig = def
-    { modMask = mod4Mask
+    { borderWidth = myBorderWidth
+    , focusedBorderColor = myFocusColor
     , layoutHook = myLayoutHook
+    , modMask = mod4Mask
+    , normalBorderColor = myNormalColor
     , startupHook = myStartupHook
     , terminal = myTerminal
-    , borderWidth = myBorderWidth
-    , normalBorderColor = myNormalColor
-    , focusedBorderColor = myFocusColor
     , workspaces = myWorkspaces
     }
   `additionalKeysP`
