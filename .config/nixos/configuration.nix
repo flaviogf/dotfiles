@@ -17,7 +17,6 @@
 
     systemPackages = [
       alacritty
-      busybox
       docker
       docker-compose
       dmenu
