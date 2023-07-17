@@ -28,12 +28,14 @@
       google-chrome
       google-cloud-sdk
       haskellPackages.xmobar
+      htop
       jdk11
       jdt-language-server
       lazydocker
       lazygit
       lua-language-server
       lxappearance
+      maven
       neovim
       nitrogen
       rubyPackages.solargraph
@@ -43,6 +45,7 @@
       slack
       starship
       tmux
+      tmuxinator
       xclip
     ];
   };
