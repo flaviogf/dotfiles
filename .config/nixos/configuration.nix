@@ -53,6 +53,9 @@
     wireless = {
       enable = true;
       userControlled.enable = true;
+
+      networks = {
+      };
     };
   };
 
@@ -95,10 +98,10 @@
       layout = "us";
 
       displayManager = {
-      	autoLogin = {
-	  enable = true;
-	  user = "flaviogf";
-	};
+        autoLogin = {
+          enable = true;
+          user = "flaviogf";
+        };
 
         defaultSession = "none+xmonad";
       };
@@ -107,7 +110,7 @@
         xmonad = {
           enable = true;
           enableContribAndExtras = true;
-	};
+        };
       };
 
       xkbVariant = "intl";
@@ -117,11 +120,20 @@
 
   time.timeZone = "America/Sao_Paulo";
 
-  users.users.flaviogf = {
-    extraGroups = [ "docker" "wheel" ];
-    home = "/home/flaviogf";
-    isNormalUser = true;
-    shell = pkgs.fish;
+  users = {
+    groups = {
+      flaviogf = {};
+    };
+
+    users = {
+      flaviogf = {
+        extraGroups = [ "docker" "wheel" ];
+        group = "flaviogf";
+        home = "/home/flaviogf";
+        isNormalUser = true;
+        shell = pkgs.fish;
+      };
+    };
   };
 
   virtualisation.docker.enable = true;
