@@ -1,11 +1,12 @@
-Config { font = "JetBrains Mono Nerd Font Bold 9"
+Config { font = "JetBrainsMono Nerd Font 9"
        , bgColor = "#2E3440"
        , fgColor = "#D8DEE9"
        , position = TopSize L 100 24
-       , commands = [ Run Cpu ["-L", "3", "-H", "50", "--high", "red", "--normal", "green"] 10
-                    , Run Memory ["--template", "Mem: <usedratio>%"] 10
-                    , Run Date "%a %Y-%m-%d %H:%M" "date" 10
+       , commands = [ Run Cpu ["-t", "\xf108  cpu:<total>%" ] 10
+                    , Run Memory ["-t", "\xf233  mem:<usedratio>%"] 10
+                    , Run Uptime ["-t", "\xf0aa uptime: <hours>h <minutes>m"] 10
+                    , Run Date "\xf017 %b %d %Y %H:%M" "date" 10
                     , Run XMonadLog
                     ]
-       , template = " %XMonadLog% }{ %cpu% | %memory% | %date% "
+       , template = " %XMonadLog% }{ <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%cpu%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%memory%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%uptime%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%date%</fc></box> "
        }
