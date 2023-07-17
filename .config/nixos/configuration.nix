@@ -17,6 +17,7 @@
 
     systemPackages = [
       alacritty
+      busybox
       docker
       docker-compose
       dmenu
@@ -66,7 +67,16 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.fish.enable = true;
+  programs = {
+    fish = {
+      enable = true;
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
+  };
 
   security.rtkit.enable = true;
 
@@ -109,15 +119,17 @@
         defaultSession = "none+xmonad";
       };
 
+      videoDrivers = [ "nvidia" ];
+
+      xkbVariant = "intl";
+      xkbOptions = "ctrl:nocaps";
+
       windowManager = {
         xmonad = {
           enable = true;
           enableContribAndExtras = true;
         };
       };
-
-      xkbVariant = "intl";
-      xkbOptions = "ctrl:nocaps";
     };
   };
 
