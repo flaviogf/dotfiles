@@ -47,6 +47,7 @@
       tmux
       tmuxinator
       xclip
+      (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
     ];
   };
 
