@@ -11,8 +11,10 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed
 import XMonad.Layout.Spacing
 import XMonad.Layout.ThreeColumns
+import XMonad.Util.ClickableWorkspaces
 import XMonad.Util.EZConfig
 import XMonad.Util.SpawnOnce
+import XMonad.Util.Loggers
 
 myBrowser :: String
 myBrowser = "google-chrome-stable"
@@ -53,12 +55,24 @@ myStartupHook = do
   spawn "xsetroot -cursor_name left_ptr"
   spawnOnce "nitrogen --restore &"
 
+myXmobarPP :: PP
+myXmobarPP = def
+  { ppCurrent = xmobarColor "#B48EAD" "" . wrap ("<box type=Bottom width=2 mb=2 color=" ++ "#B48EAD" ++ ">") "</box>"
+  , ppHidden = xmobarColor "#81A1C1" "" . wrap ("<box type=Top width=2 mt=2 color=" ++ "#81A1C1" ++ ">") "</box>"
+  , ppHiddenNoWindows = xmobarColor "#81A1C1" ""
+  , ppTitle = xmobarColor "#ECEFF4" ""
+  , ppUrgent = xmobarColor "#BF616A" ""
+  , ppSep = "<fc=" ++ "#4C566A" ++ "> | </fc>"
+  }
+
+myWorkspaces = [" dev ", " www ", " chat ", " gfx ", " sys "]
+
 main :: IO ()
 
 main = xmonad
   . ewmhFullscreen
   . ewmh
-  . xmobarProp
+  . withEasySB (statusBarProp "xmobar" (pure myXmobarPP)) defToggleStrutsKey
   $ myConfig
 
 myConfig = def
@@ -69,6 +83,7 @@ myConfig = def
     , borderWidth = myBorderWidth
     , normalBorderColor = myNormalColor
     , focusedBorderColor = myFocusColor
+    , workspaces = myWorkspaces
     }
   `additionalKeysP`
     [ ("M-w", spawn myBrowser)
