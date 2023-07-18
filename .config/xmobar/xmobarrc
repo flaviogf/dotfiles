@@ -6,6 +6,7 @@ Config { font = "JetBrainsMono Nerd Font 9"
                     , Run Memory ["-t", "\xf233  mem:<usedratio>%"] 10
                     , Run Uptime ["-t", "\xf0aa uptime: <hours>h <minutes>m"] 10
                     , Run Date "\xf017 %b %d %Y %H:%M" "date" 10
+                    , Run Com ".config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 10
                     , Run XMonadLog
                     ]
        , template = " %XMonadLog% }{ <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%cpu%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%memory%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%uptime%</fc></box>  <box type=Bottom width=2 mb=2 color=#81A1C1><fc=#81A1C1>%date%</fc></box> "
