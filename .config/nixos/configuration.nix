@@ -37,6 +37,8 @@
       lxappearance
       maven
       neovim
+      networkmanagerapplet
+      networkmanager-fortisslvpn
       nitrogen
       rubyPackages.solargraph
       picom
@@ -46,6 +48,7 @@
       starship
       tmux
       tmuxinator
+      trayer
       xclip
       (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
       steamPackages.steamcmd
@@ -55,12 +58,8 @@
   hardware.bluetooth.enable = true;
 
   networking = {
-    wireless = {
+    networkmanager = {
       enable = true;
-      userControlled.enable = true;
-
-      networks = {
-      };
     };
   };
 
@@ -143,7 +142,7 @@
 
     users = {
       flaviogf = {
-        extraGroups = [ "docker" "wheel" ];
+        extraGroups = [ "docker" "networkmanager" "wheel" ];
         group = "flaviogf";
         home = "/home/flaviogf";
         isNormalUser = true;
