@@ -35,12 +35,8 @@ myFocusColor = color7
 myBorderWidth = 2
 
 myStartupHook = do
-  spawn "kill --all nm-applet"
-  spawn "kill --all trayer"
   spawn "xsetroot -cursor_name left_ptr"
   spawn "nitrogen --restore"
-  spawn "nm-applet"
-  spawn ("trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 " ++ color8 ++ " --height 22")
 
 myXmobarPP = def
   { ppCurrent = xmobarColor color1 "" . wrap ("<box type=Bottom width=2 mb=2 color=" ++ color1 ++ ">") "</box>"
