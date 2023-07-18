@@ -11,6 +11,12 @@
   };
 
   environment = with pkgs; {
+    etc = {
+      "ppp/options" = {
+        text = "ipcp-accept-remote";
+      };
+    };
+
     shells = [
       fish
     ];
@@ -37,9 +43,9 @@
       lxappearance
       maven
       neovim
-      networkmanagerapplet
       networkmanager-fortisslvpn
       nitrogen
+      openfortivpn
       rubyPackages.solargraph
       picom
       pavucontrol
@@ -48,7 +54,6 @@
       starship
       tmux
       tmuxinator
-      trayer
       xclip
       (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
       steamPackages.steamcmd
@@ -60,6 +65,9 @@
   networking = {
     networkmanager = {
       enable = true;
+      plugins = with pkgs; [
+        networkmanager-fortisslvpn
+      ];
     };
   };
 
