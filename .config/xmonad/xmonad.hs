@@ -81,4 +81,5 @@ myConfig = def
     }
   `additionalKeysP`
     [ ("M-w", spawn myBrowser)
+    , ("M-f", spawn "flameshot gui")
     ]
