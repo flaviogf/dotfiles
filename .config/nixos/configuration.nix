@@ -23,6 +23,7 @@
 
     systemPackages = [
       alacritty
+      bundix
       docker
       docker-compose
       dmenu
@@ -46,10 +47,10 @@
       networkmanager-fortisslvpn
       nitrogen
       openfortivpn
-      rubyPackages.solargraph
       picom
       pavucontrol
       ripgrep
+      ruby
       slack
       starship
       tmux
