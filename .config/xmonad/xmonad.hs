@@ -23,9 +23,8 @@ color4 = "#BF616A"
 color5 = "#4C566A"
 color6 = "#2E3440"
 color7 = "#8FBCBB"
-color8 = "--tint 0x2E3440"
 
-myWorkspaces = [" dev ", " www ", " chat ", " gfx ", " sys "]
+myWorkspaces = [" dev ", " www ", " chat ", " gfx ", " sys ", " wtv "]
 
 myBrowser = "google-chrome-stable"
 myTerminal = "alacritty"
