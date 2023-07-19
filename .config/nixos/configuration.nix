@@ -23,21 +23,22 @@
 
     systemPackages = [
       alacritty
-      bundix
       docker
       docker-compose
       dmenu
       exa
       fd
       fish
+      flameshot
       git
       go
       google-chrome
-      google-cloud-sdk
+      (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
       haskellPackages.xmobar
       htop
       jdk11
       jdt-language-server
+      kubectl
       lazydocker
       lazygit
       lua-language-server
@@ -50,7 +51,7 @@
       picom
       pavucontrol
       ripgrep
-      ruby
+      (ruby.withPackages (ps: with ps; [ solargraph ]))
       slack
       starship
       tmux
