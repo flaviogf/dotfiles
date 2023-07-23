@@ -23,7 +23,6 @@
 
     systemPackages = [
       alacritty
-      docker
       docker-compose
       dmenu
       exa
@@ -31,6 +30,7 @@
       fish
       flameshot
       git
+      gnumake
       go
       google-chrome
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
