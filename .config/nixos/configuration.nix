@@ -23,7 +23,6 @@
 
     systemPackages = [
       alacritty
-      docker-compose
       dmenu
       exa
       fd
@@ -48,8 +47,10 @@
       networkmanager-fortisslvpn
       nitrogen
       openfortivpn
-      picom
       pavucontrol
+      picom
+      podman-compose
+      podman-desktop
       ripgrep
       (ruby.withPackages (ps: with ps; [ solargraph ]))
       slack
@@ -161,7 +162,13 @@
     };
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
 
   system.stateVersion = "23.05";
 }
