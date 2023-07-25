@@ -24,6 +24,7 @@
     systemPackages = [
       alacritty
       dmenu
+      docker-compose
       exa
       fd
       fish
@@ -49,8 +50,6 @@
       openfortivpn
       pavucontrol
       picom
-      podman-compose
-      podman-desktop
       ripgrep
       (ruby.withPackages (ps: with ps; [ solargraph ]))
       slack
@@ -163,10 +162,8 @@
   };
 
   virtualisation = {
-    podman = {
+    docker = {
       enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
     };
   };
 
