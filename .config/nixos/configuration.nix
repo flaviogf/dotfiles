@@ -38,6 +38,7 @@
       htop
       jdk11
       jdt-language-server
+      jq
       kubectl
       lazydocker
       lazygit
@@ -72,6 +73,12 @@
       ];
     };
   };
+
+  nix.nixPath = [
+    "nixpkgs=https://github.com/NixOS/nixpkgs/archive/b6bbc53029a31f788ffed9ea2d459f0bb0f0fbfc.tar.gz"
+    "nixos-config=/etc/nixos/configuration.nix"
+    "/nix/var/nix/profiles/per-user/root/channels"
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
