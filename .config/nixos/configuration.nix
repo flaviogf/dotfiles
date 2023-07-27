@@ -48,6 +48,8 @@
       neovim
       networkmanager-fortisslvpn
       nitrogen
+      openconnect
+      openconnect-sso
       openfortivpn
       pavucontrol
       picom
@@ -83,6 +85,10 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.overlays = [
+    (import "${builtins.fetchTarball https://github.com/vlaci/openconnect-sso/archive/master.tar.gz}/overlay.nix")
+  ];
 
   programs = {
     fish = {
