@@ -59,6 +59,7 @@
       starship
       tmux
       tmuxinator
+      unzip
       xclip
       (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
       steamPackages.steamcmd
