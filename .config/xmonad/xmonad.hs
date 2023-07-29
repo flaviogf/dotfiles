@@ -79,7 +79,10 @@ myConfig = def
     , terminal = myTerminal
     , workspaces = myWorkspaces
     }
-  `additionalKeysP`
-    [ ("M-w", spawn myBrowser)
-    , ("M-f", spawn "flameshot gui")
+  `additionalKeys`
+    [ ((mod4Mask, xK_w), spawn myBrowser)
+    , ((mod4Mask, xK_f), spawn "flameshot gui")
+    , ((0, 0x1008ff13), spawn "amixer -q sset Master 5%+")
+    , ((0, 0x1008ff11), spawn "amixer -q sset Master 5%-")
+    , ((0, 0x1008ff12), spawn "amixer -q sset Master toggle")
     ]
