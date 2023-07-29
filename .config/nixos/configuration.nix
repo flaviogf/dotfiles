@@ -61,6 +61,7 @@
       tmuxinator
       unzip
       xclip
+      xorg.xev
       (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
       steamPackages.steamcmd
     ];
