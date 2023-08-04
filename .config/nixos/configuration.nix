@@ -39,6 +39,7 @@
       jdk11
       jdt-language-server
       jq
+      kaf
       kubectl
       lazydocker
       lazygit
@@ -60,6 +61,8 @@
       tmux
       tmuxinator
       unzip
+      usbutils
+      xboxdrv
       xclip
       xorg.xev
       (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
