@@ -82,7 +82,6 @@ myConfig = def
   `additionalKeys`
     [ ((mod4Mask, xK_w), spawn myBrowser)
     , ((mod4Mask, xK_f), spawn "flameshot gui")
-    , ((0, 0x1008ff13), spawn "amixer -q sset Master 5%+")
-    , ((0, 0x1008ff11), spawn "amixer -q sset Master 5%-")
-    , ((0, 0x1008ff12), spawn "amixer -q sset Master toggle")
+    , ((mod4Mask, xK_equal), spawn "amixer -q sset Master 5%+")
+    , ((mod4Mask, xK_minus), spawn "amixer -q sset Master 5%-")
     ]
