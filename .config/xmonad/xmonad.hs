@@ -82,6 +82,8 @@ myConfig = def
   `additionalKeys`
     [ ((mod4Mask, xK_w), spawn myBrowser)
     , ((mod4Mask, xK_f), spawn "flameshot gui")
-    , ((mod4Mask, xK_equal), spawn "amixer -q sset Master 5%+")
-    , ((mod4Mask, xK_minus), spawn "amixer -q sset Master 5%-")
+    , ((mod4Mask, xK_equal), spawn "pactl set-sink-volume $(pactl get-default-sink) +5%")
+    , ((mod4Mask, xK_minus), spawn "pactl set-sink-volume $(pactl get-default-sink) -5%")
+    , ((mod4Mask, xK_0), spawn "pactl set-default-sink 53")
+    , ((mod4Mask, xK_9), spawn "pactl set-default-sink 54")
     ]
