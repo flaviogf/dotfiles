@@ -2,6 +2,7 @@ import XMonad
 
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
@@ -63,6 +64,8 @@ myLayoutHook = avoidStruts $ withBorder myBorderWidth tall ||| withBorder myBord
       $ Full
     mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
+myManageHook = insertPosition Below Newer
+
 main = xmonad
   . ewmhFullscreen
   . ewmh
@@ -73,6 +76,7 @@ myConfig = def
     { borderWidth = myBorderWidth
     , focusedBorderColor = myFocusColor
     , layoutHook = myLayoutHook
+    , manageHook = myManageHook
     , modMask = mod4Mask
     , normalBorderColor = myNormalColor
     , startupHook = myStartupHook
