@@ -88,6 +88,6 @@ myConfig = def
     , ((mod4Mask, xK_f), spawn "flameshot gui")
     , ((mod4Mask, xK_equal), spawn "pactl set-sink-volume $(pactl get-default-sink) +5%")
     , ((mod4Mask, xK_minus), spawn "pactl set-sink-volume $(pactl get-default-sink) -5%")
-    , ((mod4Mask, xK_0), spawn "pactl set-default-sink 52")
-    , ((mod4Mask, xK_9), spawn "pactl set-default-sink 54")
+    , ((mod4Mask, xK_0), spawn "pactl set-default-sink alsa_output.usb-Logitech_G_series_G435_Wireless_Gaming_Headset_202105190004-00.analog-stereo")
+    , ((mod4Mask, xK_9), spawn "pactl set-default-sink alsa_output.pci-0000_07_00.1.hdmi-stereo")
     ]
