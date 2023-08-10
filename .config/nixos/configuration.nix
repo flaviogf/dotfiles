@@ -23,6 +23,8 @@
 
     systemPackages = [
       alacritty
+      bitwarden-cli
+      bitwarden-menu
       dmenu
       docker-compose
       exa
@@ -43,6 +45,7 @@
       kubectl
       lazydocker
       lazygit
+      lf
       lua-language-server
       lxappearance
       maven
@@ -54,10 +57,13 @@
       openfortivpn
       pavucontrol
       picom
+      pulseaudio
       ripgrep
       (ruby.withPackages (ps: with ps; [ solargraph ]))
       slack
       starship
+      (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
+      steamPackages.steamcmd
       tmux
       tmuxinator
       unzip
@@ -65,8 +71,7 @@
       xboxdrv
       xclip
       xorg.xev
-      (steam.override { extraPkgs = pkgs: [ pango harfbuzz libthai ]; }).run
-      steamPackages.steamcmd
+      whois
     ];
   };
 
