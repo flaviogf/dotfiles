@@ -46,12 +46,14 @@
       lazydocker
       lazygit
       lf
+      libreoffice-qt
       lua-language-server
       lxappearance
       maven
       neovim
       networkmanager-fortisslvpn
       nitrogen
+      nmap
       openconnect
       openconnect-sso
       openfortivpn
