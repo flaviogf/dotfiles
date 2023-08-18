@@ -29,6 +29,7 @@
       docker-compose
       exa
       fd
+      ffmpeg_6-full
       fish
       flameshot
       git
@@ -70,6 +71,7 @@
       tmuxinator
       unzip
       usbutils
+      virtualbox
       xboxdrv
       xclip
       xorg.xev
