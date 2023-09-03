@@ -23,6 +23,7 @@
 
     systemPackages = [
       alacritty
+      anki-bin
       bitwarden-cli
       bitwarden-menu
       dmenu
