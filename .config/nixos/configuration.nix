@@ -61,6 +61,7 @@
       openfortivpn
       pavucontrol
       picom
+      prismlauncher
       pulseaudio
       ripgrep
       (ruby.withPackages (ps: with ps; [ solargraph ]))
