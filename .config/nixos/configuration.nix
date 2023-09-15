@@ -36,6 +36,7 @@
       git
       gnumake
       go
+      gopls
       google-chrome
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
       haskellPackages.xmobar
@@ -60,6 +61,7 @@
       openconnect-sso
       openfortivpn
       pavucontrol
+      pcmanfm
       picom
       prismlauncher
       pulseaudio
@@ -78,6 +80,7 @@
       xclip
       xorg.xev
       whois
+      zip
     ];
   };
 
