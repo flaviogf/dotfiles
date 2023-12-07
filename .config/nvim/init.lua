@@ -31,6 +31,7 @@ vim.g.mapleader = mapleader
 
 vim.keymap.set('v', 'p', '"_dP', opts)
 vim.keymap.set('n', '<leader>1', ':NvimTreeToggle <cr>', opts)
+vim.keymap.set('n', '<leader>f', ':Telescope find_files<cr>', opts)
 vim.keymap.set('n', '<leader>rg', ':Telescope live_grep<cr>', opts)
 vim.keymap.set('n', '<leader><C-l>.', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
 vim.keymap.set('n', '<leader><C-l>d', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
