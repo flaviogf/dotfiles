@@ -8,6 +8,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   'nvim-lua/plenary.nvim',
+  'folke/tokyonight.nvim',
   'editorconfig/editorconfig-vim',
   'nvim-lualine/lualine.nvim',
   'nvim-telescope/telescope.nvim',
@@ -19,6 +20,8 @@ require('lualine').setup({})
 require('nvim-tree').setup({})
 require('telescope').setup({})
 require('nvim-treesitter.configs').setup({})
+
+vim.cmd('colorscheme tokyonight-night')
 
 local mapleader = ' '
 
