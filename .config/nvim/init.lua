@@ -22,10 +22,13 @@ require('lazy').setup({
 require('lualine').setup({})
 require('mason').setup({})
 require('mason-lspconfig').setup({})
-require('lspconfig').solargraph.setup({})
 require('nvim-tree').setup({})
 require('nvim-treesitter.configs').setup({})
 require('telescope').setup({})
+
+for _, name in ipairs({ 'solargraph' }) do
+  require('lspconfig')[name].setup({})
+end
 
 vim.cmd('colorscheme tokyonight-night')
 
