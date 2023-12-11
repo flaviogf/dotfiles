@@ -10,16 +10,22 @@ require('lazy').setup({
   'nvim-lua/plenary.nvim',
   'folke/tokyonight.nvim',
   'editorconfig/editorconfig-vim',
+  'neovim/nvim-lspconfig',
   'nvim-lualine/lualine.nvim',
   'nvim-telescope/telescope.nvim',
   'nvim-tree/nvim-tree.lua',
   'nvim-treesitter/nvim-treesitter',
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
 })
 
 require('lualine').setup({})
+require('mason').setup({})
+require('mason-lspconfig').setup({})
+require('lspconfig').solargraph.setup({})
 require('nvim-tree').setup({})
-require('telescope').setup({})
 require('nvim-treesitter.configs').setup({})
+require('telescope').setup({})
 
 vim.cmd('colorscheme tokyonight-night')
 
