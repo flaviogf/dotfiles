@@ -1,7 +1,14 @@
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({ 'git', 'clone', '--filter=blob:none', 'https://github.com/folke/lazy.nvim.git', '--branch=stable', lazypath })
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable',
+    lazypath,
+  })
 end
 
 vim.opt.rtp:prepend(lazypath)
@@ -26,7 +33,7 @@ require('nvim-tree').setup({})
 require('nvim-treesitter.configs').setup({})
 require('telescope').setup({})
 
-for _, name in ipairs({ 'solargraph' }) do
+for _, name in ipairs({ 'lua_ls', 'solargraph' }) do
   require('lspconfig')[name].setup({})
 end
 
