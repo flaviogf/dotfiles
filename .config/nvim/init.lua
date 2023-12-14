@@ -14,27 +14,62 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- shared
   'nvim-lua/plenary.nvim',
-  'folke/tokyonight.nvim',
+
+  -- core
   'editorconfig/editorconfig-vim',
-  'neovim/nvim-lspconfig',
+  'folke/tokyonight.nvim',
   'nvim-lualine/lualine.nvim',
   'nvim-telescope/telescope.nvim',
   'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
   'nvim-treesitter/nvim-treesitter',
+
+  -- lsp
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/nvim-cmp',
+  'neovim/nvim-lspconfig',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
 })
 
+-- core
 require('lualine').setup({})
-require('mason').setup({})
-require('mason-lspconfig').setup({})
 require('nvim-tree').setup({})
 require('nvim-treesitter.configs').setup({})
 require('telescope').setup({})
 
-for _, name in ipairs({ 'lua_ls', 'solargraph' }) do
-  require('lspconfig')[name].setup({})
+-- lsp
+require('mason').setup({})
+require('mason-lspconfig').setup({})
+
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-n>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end),
+    ['<C-p>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+  }),
+})
+
+for _, name in ipairs({ 'jdtls', 'lua_ls', 'solargraph' }) do
+  require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
 vim.cmd('colorscheme tokyonight-night')
