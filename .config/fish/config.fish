@@ -20,3 +20,9 @@ alias vi="nvim"
 alias vim="nvim"
 
 starship init fish | source
+
+set -x DOCKER_BUILDKIT 1
+
+set -x GPG_TTY $(tty)
+
+source ~/.asdf/asdf.fish
