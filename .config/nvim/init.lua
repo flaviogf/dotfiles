@@ -68,7 +68,7 @@ cmp.setup({
   }),
 })
 
-for _, name in ipairs({ 'jdtls', 'lua_ls', 'solargraph' }) do
+for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'solargraph' }) do
   require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
