@@ -26,4 +26,4 @@ set -x GPG_TTY $(tty)
 
 source ~/.asdf/asdf.fish
 
-if [ -f '/usr/local/src/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/src/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/home/flaviogf/dev/google-cloud-sdk/path.fish.inc' ]; . '/home/flaviogf/dev/google-cloud-sdk/path.fish.inc'; end

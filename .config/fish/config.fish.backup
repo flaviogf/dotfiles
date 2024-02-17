@@ -22,7 +22,8 @@ alias vim="nvim"
 starship init fish | source
 
 set -x DOCKER_BUILDKIT 1
+set -x GPG_TTY $(tty)
 
 source ~/.asdf/asdf.fish
 
-if [ -f '/tmp/google-cloud-sdk/path.fish.inc' ]; . '/tmp/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/usr/local/src/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/src/google-cloud-sdk/path.fish.inc'; end
