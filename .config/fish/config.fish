@@ -19,3 +19,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 starship init fish | source
+
+for i in ~/.asdf/asdf.fish ~/dev/google-cloud-sdk/path.fish.inc
+  if test -f $i; source $i; end
+end
