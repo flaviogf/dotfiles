@@ -32,6 +32,9 @@ require('lazy').setup({
   'neovim/nvim-lspconfig',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
+
+  --copilot
+  'github/copilot.vim',
 })
 
 -- core
@@ -68,7 +71,7 @@ cmp.setup({
   }),
 })
 
-for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'solargraph' }) do
+for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'solargraph' }) do
   require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
