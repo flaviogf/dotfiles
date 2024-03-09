@@ -1,7 +1,7 @@
 [init]
 	defaultBranch = main
 [pull]
-	rebase = false
+	rebase = true
 [user]
 	name = flaviogf
 	email = flavio.fernandes6@gmail.com
