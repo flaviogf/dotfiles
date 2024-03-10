@@ -1,0 +1,31 @@
+snippet frozen
+	# frozen_string_literal: true
+
+snippet cla class .. end
+	class ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+		${0}
+	end
+
+snippet claself class << self .. end
+	class << ${1:self}
+		${0}
+	end
+
+snippet r
+	attr_reader :${0:attr_names}
+
+snippet w
+	attr_writer :${0:attr_names}
+
+snippet rw
+	attr_accessor :${0:attr_names}
+
+snippet def
+	def ${1:method_name}
+		${0}
+	end
+
+snippet defm
+	def ${1:method}
+		@$1 ||= ${0}
+	end

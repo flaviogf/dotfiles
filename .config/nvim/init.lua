@@ -47,6 +47,10 @@ require('telescope').setup({})
 require('mason').setup({})
 require('mason-lspconfig').setup({})
 
+-- code completion
+
+require('luasnip.loaders.from_snipmate').lazy_load()
+
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
