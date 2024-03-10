@@ -26,15 +26,15 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
   'nvim-treesitter/nvim-treesitter',
 
-  -- lsp
+  -- code completion
+  'github/copilot.vim',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/nvim-cmp',
+  'L3MON4D3/LuaSnip',
   'neovim/nvim-lspconfig',
+  'saadparwaiz1/cmp_luasnip',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
-
-  --copilot
-  'github/copilot.vim',
 })
 
 -- core
@@ -48,12 +48,24 @@ require('mason').setup({})
 require('mason-lspconfig').setup({})
 
 local cmp = require('cmp')
+local luasnip = require('luasnip')
 
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
     ['<C-n>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -61,6 +73,8 @@ cmp.setup({
     ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
       else
         fallback()
       end
@@ -68,6 +82,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   }),
 })
 
@@ -87,6 +102,7 @@ vim.g.mapleader = mapleader
 
 vim.keymap.set('v', 'p', '"_dP', opts)
 vim.keymap.set('n', '<leader>1', ':NvimTreeToggle <cr>', opts)
+vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr>', opts)
 vim.keymap.set('n', '<leader>f', ':Telescope find_files<cr>', opts)
 vim.keymap.set('n', '<leader>rg', ':Telescope live_grep<cr>', opts)
 vim.keymap.set('n', '<leader><C-l>.', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
