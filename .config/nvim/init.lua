@@ -48,7 +48,6 @@ require('mason').setup({})
 require('mason-lspconfig').setup({})
 
 -- code completion
-
 require('luasnip.loaders.from_snipmate').lazy_load()
 
 local cmp = require('cmp')
@@ -94,6 +93,7 @@ for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'solargraph' }) do
   require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
+-- options
 vim.cmd('colorscheme tokyonight-night')
 
 local mapleader = ' '
