@@ -39,7 +39,7 @@ require('lazy').setup({
 
 -- core
 require('lualine').setup({})
-require('nvim-tree').setup({})
+require('nvim-tree').setup({ view = { side = 'right', } })
 require('nvim-treesitter.configs').setup({})
 require('telescope').setup({})
 
