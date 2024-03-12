@@ -30,9 +30,7 @@ require('lazy').setup({
   'github/copilot.vim',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/nvim-cmp',
-  'L3MON4D3/LuaSnip',
   'neovim/nvim-lspconfig',
-  'saadparwaiz1/cmp_luasnip',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
 })
@@ -43,22 +41,13 @@ require('nvim-tree').setup({ view = { side = 'right', } })
 require('nvim-treesitter.configs').setup({})
 require('telescope').setup({})
 
--- lsp
+-- code completion
 require('mason').setup({})
 require('mason-lspconfig').setup({})
 
--- code completion
-require('luasnip.loaders.from_snipmate').lazy_load()
-
 local cmp = require('cmp')
-local luasnip = require('luasnip')
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
@@ -67,8 +56,6 @@ cmp.setup({
     ['<C-n>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -76,16 +63,12 @@ cmp.setup({
     ['<C-p>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
         fallback()
       end
     end),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
   }),
 })
 
@@ -93,15 +76,13 @@ for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'solargraph' }) do
   require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
--- options
+-- customizations
 vim.cmd('colorscheme tokyonight-night')
-
-local mapleader = ' '
 
 local opts = { noremap = true, silent = true }
 
+local mapleader = ' '
 vim.keymap.set('n', mapleader, '<Nop>', opts)
-
 vim.g.mapleader = mapleader
 
 vim.keymap.set('v', 'p', '"_dP', opts)
