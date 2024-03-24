@@ -96,6 +96,7 @@ vim.keymap.set('n', '<leader><C-l>f', '<cmd>lua vim.lsp.buf.format()<cr>', opts)
 vim.keymap.set('n', '<leader><C-l>r', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.colorcolumn = { 80, 120 }
 vim.opt.cursorline = true
 vim.opt.encoding = 'utf-8'
 vim.opt.expandtab = true
