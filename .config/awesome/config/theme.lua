@@ -20,12 +20,12 @@ theme.dir = os.getenv('HOME') .. '/.config/awesome/config'
 theme.wallpaper = theme.dir .. '/wall.jpg'
 theme.bg_focus = background
 theme.bg_normal = background
-theme.border_focus = purple
+theme.border_focus = blue
 theme.border_normal = black
 theme.border_width = dpi(2)
 theme.font = 'JetBrainsMono Nerd Font 12'
-theme.fg_focus = foreground
-theme.fg_normal = foreground
+theme.fg_focus = white
+theme.fg_normal = white
 theme.layout_txt_tile = '[t]'
 theme.layout_txt_tilebottom = '[b]'
 theme.layout_txt_max = '[m]'
@@ -37,19 +37,19 @@ awful.util.tagnames = { ' 1 ', ' 2 ', ' 3 ', ' 4 ', ' 5 ' }
 
 local cpu = lain.widget.cpu({
   settings = function()
-    widget:set_markup(markup.font(theme.font, markup(purple, ' cpu: ') .. cpu_now.usage .. '% '))
+    widget:set_markup(markup.font(theme.font, markup(blue, ' cpu: ') .. cpu_now.usage .. '% '))
   end
 })
 
 local mem = lain.widget.mem({
   settings = function()
-    widget:set_markup(markup.font(theme.font, markup(purple, ' mem: ') .. mem_now.used .. 'M '))
+    widget:set_markup(markup.font(theme.font, markup(blue, ' mem: ') .. mem_now.used .. 'M '))
   end
 })
 
 local bat = lain.widget.bat({
   settings = function()
-    widget:set_markup(markup.font(theme.font, markup(purple, ' bat: ') .. bat_now.perc .. '% '))
+    widget:set_markup(markup.font(theme.font, markup(blue, ' bat: ') .. bat_now.perc .. '% '))
   end
 })
 
@@ -67,7 +67,7 @@ function theme.at_screen_connect(s)
     s,
     awful.widget.taglist.filter.all,
     awful.util.taglist_buttons,
-    { bg_normal = background, bg_focus = purple }
+    { bg_normal = background, bg_focus = blue }
   )
 
   s.mypromptbox = awful.widget.prompt()
