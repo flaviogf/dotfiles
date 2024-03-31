@@ -68,6 +68,11 @@ function M.setup(_)
       { modkey, 'Shift' }, 'space',
       function() awful.layout.inc(-1) end,
       { description = 'select previous', group = 'layout' }
+    ),
+    awful.key(
+      { modkey, 'Control' }, 'space',
+      awful.client.floating.toggle,
+      { description = 'toggle floating', group = 'client' }
     )
   )
 
