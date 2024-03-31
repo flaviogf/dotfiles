@@ -6,6 +6,7 @@ local M = {}
 function M.setup(_)
   local modkey = 'Mod4'
 
+  local myBrowser = 'firefox'
   local myTerminal = 'kitty'
 
   local globalkeys = gears.table.join(
@@ -73,6 +74,11 @@ function M.setup(_)
       { modkey, 'Control' }, 'space',
       awful.client.floating.toggle,
       { description = 'toggle floating', group = 'client' }
+    ),
+    awful.key(
+      { modkey }, 'w',
+      function() awful.spawn(myBrowser) end,
+      { description = 'open a terminal', group = 'launcher' }
     )
   )
 
