@@ -37,8 +37,14 @@ require('lazy').setup({
 
 -- core
 require('lualine').setup({})
-require('nvim-tree').setup({ view = { side = 'right', } })
-require('nvim-treesitter.configs').setup({})
+require('nvim-tree').setup({ view = { side = 'right' } })
+
+require('nvim-treesitter.configs').setup({
+  ensure_installed = 'all',
+  auto_install = true,
+  highlight = { enable = true },
+})
+
 require('telescope').setup({})
 
 -- code completion
@@ -72,7 +78,7 @@ cmp.setup({
   }),
 })
 
-for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'solargraph' }) do
+for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'solargraph' }) do
   require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
 end
 
@@ -108,7 +114,6 @@ vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 2
-vim.opt.sidescrolloff = 8
 vim.opt.smartcase = true
 vim.opt.smartindent = true
 vim.opt.softtabstop = 2
