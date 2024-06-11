@@ -2,6 +2,7 @@ fish_add_path ~/.local/bin
 
 set fish_greeting
 
+set -x DISPLAY ":0"
 set -x DOCKER_BUILDKIT 1
 set -x EDITOR "nvim"
 set -x GPG_TTY $(tty)
