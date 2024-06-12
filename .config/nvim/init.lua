@@ -84,9 +84,7 @@ end
 vim.cmd('colorscheme tokyonight-night')
 
 local mapleader = ' '
-
 vim.g.mapleader = mapleader
-vim.g.netrw_keepdir = 0
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', mapleader, '<Nop>', opts)
