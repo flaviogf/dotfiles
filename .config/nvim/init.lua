@@ -22,7 +22,6 @@ require('lazy').setup({
   'folke/tokyonight.nvim',
   'nvim-lualine/lualine.nvim',
   'nvim-telescope/telescope.nvim',
-  'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-treesitter/nvim-treesitter',
 
@@ -37,7 +36,6 @@ require('lazy').setup({
 
 -- core
 require('lualine').setup({})
-require('nvim-tree').setup({ view = { side = 'right' } })
 
 require('nvim-treesitter.configs').setup({
   ensure_installed = 'all',
@@ -85,14 +83,14 @@ end
 -- customizations
 vim.cmd('colorscheme tokyonight-night')
 
-local opts = { noremap = true, silent = true }
-
 local mapleader = ' '
-vim.keymap.set('n', mapleader, '<Nop>', opts)
-vim.g.mapleader = mapleader
 
+vim.g.mapleader = mapleader
+vim.g.netrw_keepdir = 0
+
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', mapleader, '<Nop>', opts)
 vim.keymap.set('v', 'p', '"_dP', opts)
-vim.keymap.set('n', '<leader>1', ':NvimTreeToggle <cr>', opts)
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr>', opts)
 vim.keymap.set('n', '<leader>f', ':Telescope find_files<cr>', opts)
 vim.keymap.set('n', '<leader>rg', ':Telescope live_grep<cr>', opts)
