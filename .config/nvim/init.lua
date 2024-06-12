@@ -27,8 +27,6 @@ require('lazy').setup({
 
   -- code completion
   'github/copilot.vim',
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/nvim-cmp',
   'neovim/nvim-lspconfig',
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
@@ -36,48 +34,15 @@ require('lazy').setup({
 
 -- core
 require('lualine').setup({})
-
-require('nvim-treesitter.configs').setup({
-  ensure_installed = 'all',
-  auto_install = true,
-  highlight = { enable = true },
-})
-
 require('telescope').setup({})
+require('nvim-treesitter.configs').setup({ ensure_installed = 'all', auto_install = true, highlight = { enable = true } })
 
 -- code completion
 require('mason').setup({})
 require('mason-lspconfig').setup({})
 
-local cmp = require('cmp')
-
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    }),
-    ['<C-n>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback()
-      end
-    end),
-    ['<C-p>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-        fallback()
-      end
-    end),
-  }),
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-  }),
-})
-
-for _, name in ipairs({ 'gopls', 'jdtls', 'lua_ls', 'solargraph' }) do
-  require('lspconfig')[name].setup({ capabilities = require('cmp_nvim_lsp').default_capabilities() })
+for _, name in ipairs({ 'gopls', 'lua_ls', 'solargraph' }) do
+  require('lspconfig')[name].setup({})
 end
 
 -- customizations
@@ -92,10 +57,6 @@ vim.keymap.set('v', 'p', '"_dP', opts)
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr>', opts)
 vim.keymap.set('n', '<leader>f', ':Telescope find_files<cr>', opts)
 vim.keymap.set('n', '<leader>rg', ':Telescope live_grep<cr>', opts)
-vim.keymap.set('n', '<leader><C-l>.', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-vim.keymap.set('n', '<leader><C-l>d', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-vim.keymap.set('n', '<leader><C-l>f', '<cmd>lua vim.lsp.buf.format()<cr>', opts)
-vim.keymap.set('n', '<leader><C-l>r', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.colorcolumn = { 80, 120 }
