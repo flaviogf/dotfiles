@@ -8,7 +8,7 @@ set -x EDITOR "nvim"
 set -x GPG_TTY $(tty)
 set -x VISUAL "nvim"
 
-alias cat="batcat"
+alias cat="bat"
 alias df="df -h"
 alias find="fd"
 alias free="free -m"
