@@ -3,6 +3,7 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+    'mfussenegger/nvim-jdtls',
   },
   config = function()
     local lspconfig = require('lspconfig')
@@ -11,7 +12,14 @@ return {
 
     mason.setup({})
 
-    mason_lspconfig.setup({})
+    mason_lspconfig.setup({
+      ensure_installed = {
+        'gopls',
+        'jdtls',
+        'lua_ls',
+        'solargraph',
+      },
+    })
 
     mason_lspconfig.setup_handlers({
       function(server_name)
