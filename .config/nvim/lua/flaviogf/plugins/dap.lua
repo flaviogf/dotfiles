@@ -1,3 +1,5 @@
+local home = os.getenv('HOME')
+
 return {
   'mfussenegger/nvim-dap',
   dependencies = {
@@ -6,6 +8,12 @@ return {
   },
   config = function()
     local dap = require('dap')
+
+    dap.adapters.kotlin = {
+      type = 'executable',
+      command = home .. '/.local/share/nvim/mason/packages/kotlin-debug-adapter/adapter/bin/kotlin-debug-adapter',
+      options = { auto_continue_if_many_stopped = false },
+    }
 
     dap.adapters.ruby = function(callback, config)
       callback({
@@ -21,6 +29,19 @@ return {
         },
       })
     end
+
+    dap.configurations.kotlin = {
+      {
+        type = 'kotlin',
+        name = 'Debug',
+        request = 'attach',
+        port = 5005,
+        args = {},
+        projectRoot = vim.fn.getcwd,
+        hostName = 'localhost',
+        timeout = 2000,
+      },
+    }
 
     dap.configurations.ruby = {
       {

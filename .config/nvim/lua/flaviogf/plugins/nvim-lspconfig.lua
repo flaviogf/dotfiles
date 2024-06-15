@@ -16,6 +16,7 @@ return {
       ensure_installed = {
         'gopls',
         'jdtls',
+        'kotlin_language_server',
         'lua_ls',
         'solargraph',
       },
