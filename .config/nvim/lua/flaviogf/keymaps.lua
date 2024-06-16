@@ -17,7 +17,8 @@ keymap.set('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format()<cr>', opts)
 
 keymap.set('n', '<leader>db', ':DapToggleBreakpoint<cr>', opts)
 keymap.set('n', '<leader>dc', ':DapContinue<cr>', opts)
-keymap.set('n', '<leader>ds', ':DapStepInto<cr>', opts)
+keymap.set('n', '<leader>dso', ':DapStepOver<cr>', opts)
+keymap.set('n', '<leader>dsi', ':DapStepInto<cr>', opts)
 keymap.set('n', '<leader>dui', '<cmd>lua require("dapui").toggle()<cr>', opts)
 
 keymap.set('n', '<leader>jtc', '<cmd>lua require("jdtls").test_class()<cr>', opts)
