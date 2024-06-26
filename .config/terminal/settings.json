@@ -11,6 +11,8 @@
   ],
   "profiles": {
     "defaults": {
+      "backgroundImage": "desktopWallpaper",
+      "backgroundImageOpacity": 0.0,
       "colorScheme": "TokyoNight",
       "cursorShape": "filledBox",
       "font": {
