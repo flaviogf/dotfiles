@@ -3,6 +3,7 @@ local home = os.getenv('HOME')
 return {
   'mfussenegger/nvim-dap',
   dependencies = {
+    'mfussenegger/nvim-jdtls',
     'nvim-neotest/nvim-nio',
     'rcarriga/nvim-dap-ui',
   },

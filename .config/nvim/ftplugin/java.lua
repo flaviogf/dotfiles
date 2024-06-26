@@ -68,3 +68,5 @@ jdtls.start_or_attach({
     },
   },
 })
+
+jdtls.setup_dap()
