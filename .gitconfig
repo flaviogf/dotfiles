@@ -7,7 +7,3 @@
 	email = flavio.fernandes6@gmail.com
 [core]
 	editor = nvim
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-[commit]
-	gpgsign = true
