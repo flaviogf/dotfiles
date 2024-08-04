@@ -1,3 +1,2 @@
-require('flaviogf.options')
-require('flaviogf.keymaps')
-require('flaviogf.lazy')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
