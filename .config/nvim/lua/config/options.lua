@@ -4,4 +4,6 @@
 
 vim.g.autoformat = false
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.scrolloff = 0
