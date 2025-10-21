@@ -8,6 +8,6 @@ config.enable_tab_bar = false
 config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
 config.font_size = 14
 config.window_close_confirmation = 'NeverPrompt'
-config.window_decorations = 'RESIZE'
+config.window_decorations = 'NONE'
 
 return config
